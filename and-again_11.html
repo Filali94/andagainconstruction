@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>And Again Konstruktion · Arkitektur &amp; Strukturberegning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Cream-dominant palette */
+    --cream: #F0F2F7;
+    --cream-light: #F7F8FB;
+    --cream-warm: #E2E5EE;
+
+    /* Brand blue — used for text & accents */
+    --green: #0F1D35;
+    --green-2: #0A1528;
+    --green-soft: rgba(15, 29, 53, 0.7);
+    --green-faded: rgba(15, 29, 53, 0.4);
+
+    /* Blue accent */
+    --gold: #2E6BB5;
+    --gold-bright: #4A8FE0;
+
+    /* On dark */
+    --on-dark: #EDF1F8;
+    --on-dark-soft: rgba(237, 241, 248, 0.65);
+    --on-dark-faded: rgba(237, 241, 248, 0.35);
+
+    /* Lines */
+    --line: rgba(15, 29, 53, 0.18);
+    --line-soft: rgba(15, 29, 53, 0.08);
+    --line-dark: rgba(237, 241, 248, 0.15);
+
+    --display: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --body: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --serif: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--green);
+    font-family: var(--body);
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 9990;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ── Cursor disabled ── */
+
+  /* ── Loader ── */
+  .loader {
+    position: fixed; inset: 0;
+    background: var(--cream);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    transition: opacity 0.8s 0.4s, visibility 0.8s 0.4s;
+  }
+  .loader.done { opacity: 0; visibility: hidden; }
+  .loader-logo { animation: pulse 1.2s ease-in-out infinite; color: var(--green); }
+  .loader-bar {
+    width: 240px; height: 1px;
+    background: var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .loader-bar::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--green);
+    transform-origin: left;
+    animation: loadFill 0.7s ease-in-out forwards;
+  }
+  .loader-text {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--green-faded);
+    text-transform: uppercase;
+  }
+  @keyframes loadFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+  /* ── Logo ── */
+  .logo-svg .peak { fill: currentColor; }
+  .logo-svg .text { fill: currentColor; font-family: var(--display); font-weight: 300; }
+  .logo-svg .sub { fill: currentColor; font-family: var(--mono); font-weight: 400; letter-spacing: 0.4em; }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 22px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(240, 242, 247, 0.85);
+    border-bottom: 1px solid var(--line-soft);
+    transition: padding 0.4s ease;
+    color: var(--green);
+  }
+  nav.scrolled { padding: 14px 48px; }
+  .nav-links {
+    display: flex; gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+    position: relative;
+  }
+  .nav-links a:hover { opacity: 1; }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; left: 0; right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.6, 0, 0.4, 1);
+  }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .lang-switch {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  .lang-switch button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    opacity: 0.4;
+
+    padding: 6px 8px;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .lang-switch button.active { color: var(--gold); opacity: 1; }
+  .lang-switch button:hover { opacity: 1; }
+  .lang-divider { opacity: 0.3; }
+  .nav-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--green);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    margin-left: 12px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+  }
+  .nav-cta:hover {
+    background: var(--green);
+    color: var(--gold-bright);
+    transform: translateY(-1px);
+  }
+
+  /* ── Sections base ── */
+  section { padding: 120px 48px; position: relative; }
+  .wrap { max-width: 1440px; margin: 0 auto; }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 140px 48px 60px;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .hero-grid {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-left .hero-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-meta .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(56px, 8.5vw, 130px);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    margin-bottom: 48px;
+    color: var(--green);
+  }
+  .hero h1 .italic {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .hero-desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--green-soft);
+    max-width: 440px;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero-tag::before { content: '# '; opacity: 0.6; }
+
+  /* Hero image with floating card */
+  .hero-right {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+  }
+  .hero-right img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.4s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+  .hero-right:hover img { transform: scale(1.04); }
+  .floating-card {
+    position: absolute;
+    right: -32px;
+    bottom: 48px;
+    width: 240px;
+    background: var(--cream-light);
+    border: 1px solid var(--line);
+    padding: 24px;
+    box-shadow: 0 24px 60px rgba(15, 29, 53, 0.18);
+    z-index: 3;
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+  .floating-card:hover { transform: translateY(-6px); }
+  .floating-card-thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 16px;
+  }
+  .floating-card h5 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .floating-card p {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--green-soft);
+    text-transform: uppercase;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green-faded);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    text-decoration: none;
+  }
+  .scroll-cue-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(180deg, transparent, var(--gold));
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(0.4); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+  }
+
+  /* ── Section headers ── */
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-num::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+  .section-title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(40px, 5.5vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+  }
+  .section-title .italic {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* ── About ── */
+  .about { background: var(--cream-light); border-top: 1px solid var(--line-soft); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  .about-text p:last-child {
+    color: var(--green-soft);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .about-image {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+  }
+  .about-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.4s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+  .about-image:hover img { transform: scale(1.05); }
+  .about-image-label {
+    position: absolute;
+    bottom: 24px; left: 24px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--on-dark);
+    background: rgba(15, 29, 53, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 8px 14px;
+  }
+
+  /* ── Services ── */
+  .services { background: var(--cream); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 64px;
+  }
+  .service-card {
+    background: var(--cream-light);
+    padding: 56px 48px;
+    transition: background 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 0;
+    background: var(--green);
+    transition: height 0.7s cubic-bezier(0.2, 0, 0.2, 1);
+    z-index: 0;
+  }
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover { color: var(--on-dark); }
+  .service-card:hover .service-num,
+  .service-card:hover .service-list .num { color: var(--gold-bright); }
+  .service-card:hover h3 .italic { color: var(--gold-bright); }
+  .service-card:hover .service-list li { border-bottom-color: var(--line-dark); }
+  .service-card > * { position: relative; z-index: 1; transition: color 0.6s, border-color 0.6s; }
+  .service-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+  }
+  .service-card h3 {
+    font-family: var(--display);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .service-card h3 .italic {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 700;
+    transition: color 0.6s;
+  }
+  .service-card p {
+    color: var(--green-soft);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 460px;
+    transition: color 0.6s;
+  }
+  .service-card:hover p { color: var(--on-dark-soft); }
+  .service-list {
+    list-style: none;
+    margin-top: auto;
+  }
+  .service-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    transition: padding 0.4s, border-color 0.6s;
+  }
+  .service-card:hover .service-list li { padding-left: 8px; }
+  .service-list li:last-child { border-bottom: none; }
+  .service-list .num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--gold);
+    transition: color 0.6s;
+  }
+
+  /* ── Why us ── */
+  .why { background: var(--cream-light); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 64px;
+  }
+  .why-cell {
+    background: var(--cream);
+    padding: 48px 36px;
+    transition: background 0.4s;
+  }
+  .why-cell:hover { background: var(--cream-warm); }
+  .why-icon {
+    width: 48px; height: 48px;
+    margin-bottom: 24px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1;
+  }
+  .why-cell h4 {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .why-cell p {
+    font-size: 14px;
+    color: var(--green-soft);
+    line-height: 1.6;
+  }
+
+  /* ── Stats — feature row on cream ── */
+  .stats {
+    background: var(--cream);
+    padding: 80px 48px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .stat {
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
+  }
+  .stat-num {
+    font-family: var(--display);
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .stat-num .suffix {
+    font-size: 32px;
+    color: var(--gold);
+  }
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+    margin-top: 16px;
+  }
+
+  /* ── Portfolio ── */
+  .portfolio { background: var(--cream-light); }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+  }
+  .project {
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+    color: inherit;
+  }
+  .project img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.4s cubic-bezier(0.2, 0, 0.2, 1), filter 1s;
+    filter: grayscale(8%) brightness(0.98);
+  }
+  .project:hover img {
+    transform: scale(1.06);
+    filter: grayscale(0%) brightness(1);
+  }
+  .project-info {
+    position: absolute;
+    bottom: 24px; left: 24px; right: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    pointer-events: none;
+    color: var(--on-dark);
+  }
+  .project-info::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(180deg, transparent, rgba(15, 29, 53, 0.85));
+    z-index: -1;
+  }
+  .project-name {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .project-name em {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold-bright);
+    font-weight: 400;
+  }
+  .project-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+  .p1 { grid-column: span 7; aspect-ratio: 16/10; }
+  .p2 { grid-column: span 5; aspect-ratio: 4/5; }
+  .p3 { grid-column: span 5; aspect-ratio: 4/5; }
+  .p4 { grid-column: span 7; aspect-ratio: 16/10; }
+  .p5 { grid-column: span 4; aspect-ratio: 1/1; }
+  .p6 { grid-column: span 4; aspect-ratio: 1/1; }
+  .p7 { grid-column: span 4; aspect-ratio: 1/1; }
+
+  /* ── Process ── */
+  .process { background: var(--cream); }
+  .process-list { margin-top: 64px; }
+  .process-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 120px;
+    gap: 48px;
+    padding: 36px 0;
+    border-top: 1px solid var(--line-soft);
+    align-items: start;
+    transition: padding 0.4s;
+  }
+  .process-row:hover { padding-left: 12px; }
+  .process-row:last-child { border-bottom: 1px solid var(--line-soft); }
+  .process-step {
+    font-family: var(--display);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .process-row h4 {
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .process-row h4 .italic {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold);
+  }
+  .process-row p {
+    font-size: 14.5px;
+    color: var(--green-soft);
+    line-height: 1.6;
+  }
+  .process-time {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+    text-align: right;
+    padding-top: 10px;
+  }
+
+  /* ── Testimonials ── */
+  .testimonials { background: var(--cream-light); }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+  }
+  .testimonial {
+    background: var(--cream);
+    padding: 40px 32px;
+    border: 1px solid var(--line-soft);
+    position: relative;
+    transition: transform 0.5s, border-color 0.4s, background 0.4s;
+  }
+  .testimonial:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    background: var(--cream-warm);
+  }
+  .testimonial-quote {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+  .testimonial-quote::before {
+    content: '"';
+    font-size: 56px;
+    color: var(--gold);
+    line-height: 0;
+    vertical-align: -16px;
+    margin-right: 6px;
+    opacity: 0.6;
+  }
+  .testimonial-author {
+    border-top: 1px solid var(--line-soft);
+    padding-top: 20px;
+  }
+  .testimonial-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .testimonial-role {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+  }
+  .stars {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+
+  /* ── Appointment — single dark accent section ── */
+  .appointment {
+    background: var(--green);
+    color: var(--on-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  .appointment::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+  }
+  .appointment .section-num { color: var(--gold-bright); }
+  .appointment .section-num::before { background: var(--gold-bright); }
+  .appointment-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 48px;
+  }
+  .appointment-info h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+  }
+  .appointment-info h2 .italic {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold-bright);
+    font-weight: 700;
+  }
+  .appointment-info p {
+    color: var(--on-dark-soft);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 420px;
+  }
+  .meet-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(237, 241, 248, 0.08);
+    border: 1px solid var(--line-dark);
+    border-radius: 100px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .meet-badge svg { width: 18px; height: 18px; }
+
+  .info-block {
+    border-top: 1px solid var(--line-dark);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .info-block:last-child { border-bottom: 1px solid var(--line-dark); }
+  .info-icon {
+    width: 36px; height: 36px;
+    stroke: var(--gold-bright);
+    fill: none;
+    stroke-width: 1.2;
+    flex-shrink: 0;
+  }
+  .info-block-text small {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--on-dark-soft);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .info-block-text strong {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  /* form card on dark */
+  .form-card {
+    padding: 48px;
+    position: relative;
+    border: 1px solid;
+  }
+  .form-card-dark {
+    background: var(--green-2);
+    border-color: var(--line-dark);
+    color: var(--on-dark);
+  }
+  .form-card-light {
+    background: var(--cream-light);
+    border-color: var(--line);
+    color: var(--green);
+  }
+  .form-card::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 60px; height: 60px;
+    border-top: 1px solid var(--gold-bright);
+    border-left: 1px solid var(--gold-bright);
+  }
+  .form-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 60px; height: 60px;
+    border-bottom: 1px solid var(--gold-bright);
+    border-right: 1px solid var(--gold-bright);
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .form-row.single { grid-template-columns: 1fr; }
+  .field { position: relative; }
+  .field label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.75;
+  }
+  .field label .req { color: var(--gold-bright); opacity: 1; }
+  .form-card-light .field label .req { color: var(--gold); }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 12px 0;
+    color: inherit;
+    font-family: var(--body);
+    font-size: 16px;
+    transition: border-color 0.4s;
+
+  }
+  .form-card-dark .field input,
+  .form-card-dark .field select,
+  .form-card-dark .field textarea { border-bottom: 1px solid var(--line-dark); }
+  .form-card-light .field input,
+  .form-card-light .field select,
+  .form-card-light .field textarea { border-bottom: 1px solid var(--line); }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--gold-bright);
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+  }
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C9A96E' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 24px;
+  }
+  .form-card-dark .field select option { background: var(--green-2); color: var(--on-dark); }
+  .form-card-light .field select option { background: var(--cream-light); color: var(--green); }
+
+  .btn-primary {
+    width: 100%;
+    background: var(--gold-bright);
+    color: var(--green);
+    border: none;
+    padding: 20px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+  .btn-primary:hover { color: var(--on-dark); }
+  .btn-primary:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-primary span {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .btn-primary svg { width: 14px; height: 14px; transition: transform 0.4s; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+  }
+  .form-success.show { display: block; animation: fadeIn 0.6s ease both; }
+  .form-success svg {
+    width: 56px; height: 56px;
+    stroke: var(--gold-bright);
+    fill: none;
+    stroke-width: 1;
+    margin-bottom: 24px;
+  }
+  .form-card-light .form-success svg { stroke: var(--gold); }
+  .form-success h3 {
+    font-family: var(--display);
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .form-card-dark .form-success p { color: var(--on-dark-soft); font-size: 15px; }
+  .form-card-light .form-success p { color: var(--green-soft); font-size: 15px; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── Contact ── */
+  .contact { background: var(--cream); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 48px;
+  }
+  .contact-info p {
+    color: var(--green-soft);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 440px;
+  }
+  .contact-list { list-style: none; }
+  .contact-list li {
+    border-top: 1px solid var(--line-soft);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .contact-list li:last-child { border-bottom: 1px solid var(--line-soft); }
+  .contact-list small {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+  }
+  .contact-list a, .contact-list span {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--green);
+    transition: color 0.3s;
+  }
+  .contact-list a:hover { color: var(--gold); }
+
+  /* ── Footer — dark signature ── */
+  footer {
+    padding: 80px 48px 40px;
+    background: var(--green);
+    color: var(--on-dark);
+  }
+  .footer-main { max-width: 1440px; margin: 0 auto; }
+  .footer-marquee {
+    overflow: hidden;
+    border-bottom: 1px solid var(--line-dark);
+    padding: 32px 0;
+    margin-bottom: 48px;
+  }
+  .marquee-track {
+    display: flex;
+    gap: 80px;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 80px;
+    letter-spacing: -0.02em;
+  }
+  .marquee-track span.italic {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold-bright);
+    font-weight: 700;
+  }
+  .marquee-track .dot {
+    color: var(--gold-bright);
+    font-size: 56px;
+    align-self: center;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 64px;
+    margin-bottom: 64px;
+  }
+  .footer-col h5 {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 24px;
+  }
+  .footer-col a, .footer-col p {
+    color: var(--on-dark-soft);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 6px 0;
+    transition: color 0.3s, padding-left 0.3s;
+  }
+  .footer-col a:hover {
+    color: var(--on-dark);
+    padding-left: 6px;
+  }
+  .footer-bottom {
+    border-top: 1px solid var(--line-dark);
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--on-dark-faded);
+  }
+
+  /* ── Reveal animations ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s cubic-bezier(0.2, 0, 0.2, 1), transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: 0.05s; }
+  .reveal.d2 { transition-delay: 0.1s; }
+  .reveal.d3 { transition-delay: 0.15s; }
+  .reveal.d4 { transition-delay: 0.2s; }
+  .reveal.d5 { transition-delay: 0.25s; }
+
+  /* hero entrance */
+  .hero h1 .word, .hero-left > *:not(h1), .hero-right {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .loader.done ~ .hero .hero-meta { animation: heroIn 0.4s 0.1s cubic-bezier(0.2,0,0.2,1) forwards; }
+  .loader.done ~ .hero .hero-tag { animation: heroIn 0.4s 0.15s cubic-bezier(0.2,0,0.2,1) forwards; }
+  .loader.done ~ .hero h1 .word { animation: heroIn 0.5s cubic-bezier(0.2,0,0.2,1) forwards; }
+  .loader.done ~ .hero h1 .word.w1 { animation-delay: 0.2s; }
+  .loader.done ~ .hero h1 .word.w2 { animation-delay: 0.28s; }
+  .loader.done ~ .hero h1 .word.w3 { animation-delay: 0.36s; }
+  .loader.done ~ .hero h1 .word.w4 { animation-delay: 0.44s; }
+  .loader.done ~ .hero .hero-desc { animation: heroIn 0.4s 0.5s cubic-bezier(0.2,0,0.2,1) forwards; }
+  .loader.done ~ .hero .hero-right { animation: heroIn 0.5s 0.3s cubic-bezier(0.2,0,0.2,1) forwards; }
+  @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    nav { padding: 18px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 110px 24px 48px; }
+    section { padding: 80px 24px; }
+    .stats { padding: 64px 24px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .floating-card { display: none; }
+    .about-grid, .appointment-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; gap: 16px; }
+    .p1, .p2, .p3, .p4, .p5, .p6, .p7 { grid-column: span 1; aspect-ratio: 4/3; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .process-row { grid-template-columns: 60px 1fr; gap: 16px; }
+    .process-row p, .process-time { grid-column: 2; }
+    .process-time { text-align: left; padding-top: 0; }
+    .form-card { padding: 32px 24px; }
+    .form-row { grid-template-columns: 1fr; gap: 20px; }
+    .marquee-track { font-size: 56px; }
+    footer { padding: 60px 24px 32px; }
+  }
+  @media (max-width: 600px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-logo">
+    <svg width="120" height="60" viewBox="0 0 240 120" class="logo-svg">
+      <polygon points="20,100 50,20 80,100 70,100 50,42 30,100" class="peak"/>
+      <text x="90" y="100" class="text" font-size="42">nd</text>
+      <polygon points="135,100 165,20 195,100 185,100 165,42 145,100" class="peak"/>
+      <text x="205" y="100" class="text" font-size="42">gain</text>
+    </svg>
+  </div>
+  <div class="loader-bar"></div>
+  <div class="loader-text" data-en="Loading studio" data-da="Indlæser studio">Loading studio</div>
+</div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#hero" class="logo-link" data-hover style="text-decoration:none;color:inherit">
+    <svg width="140" height="42" viewBox="0 0 320 90" class="logo-svg">
+      <polygon points="20,75 50,12 80,75 70,75 50,30 30,75" class="peak"/>
+      <text x="86" y="75" class="text" font-size="36">nd</text>
+      <polygon points="148,75 178,12 208,75 198,75 178,30 158,75" class="peak"/>
+      <text x="214" y="75" class="text" font-size="36">gain</text>
+      <text x="20" y="92" class="sub" font-size="9">KONSTRUKTION</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about" data-hover data-en="About" data-da="Om os">About</a></li>
+    <li><a href="#services" data-hover data-en="Services" data-da="Ydelser">Services</a></li>
+    <li><a href="#portfolio" data-hover data-en="Projects" data-da="Projekter">Projects</a></li>
+    <li><a href="#process" data-hover data-en="Process" data-da="Proces">Process</a></li>
+    <li><a href="#contact" data-hover data-en="Contact" data-da="Kontakt">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a href="#appointment" class="nav-cta" data-en="Create a project" data-da="Start et projekt">Create a project</a>
+    <div class="lang-switch">
+    <button class="lang-btn active" data-lang-btn="en" data-hover>EN</button>
+    <span class="lang-divider">/</span>
+    <button class="lang-btn" data-lang-btn="da" data-hover>DA</button>
+  </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-meta">
+        <span class="dot"></span>
+        <span data-en="Copenhagen · Denmark · EST. MMXXVI" data-da="København · Danmark · EST. MMXXVI">Copenhagen · Denmark · EST. MMXXVI</span>
+      </div>
+      <div class="hero-tag" data-en="Inspired Building" data-da="Inspireret byggeri">Inspired Building</div>
+      <h1>
+        <span class="word w1" data-en="Build" data-da="At bygge">Build</span>
+        <span class="word w2 italic" data-en="quietly," data-da="stille,">quietly,</span><br>
+        <span class="word w3" data-en="stand" data-da="stå">stand</span>
+        <span class="word w4 italic" data-en="forever." data-da="for altid.">forever.</span>
+      </h1>
+      <p class="hero-desc" data-en="A Copenhagen studio for architectural design and structural calculation. We craft buildings that are quiet, generous and built to last beyond us." data-da="Et københavnsk studie for arkitektonisk design og strukturberegning. Vi skaber bygninger der er stille, generøse og bygget til at vare længere end os.">A Copenhagen studio for architectural design and structural calculation. We craft buildings that are quiet, generous and built to last beyond us.</p>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80" alt="Architecture">
+      <div class="floating-card">
+        <div class="floating-card-thumb" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80')"></div>
+        <h5 data-en="Design Services" data-da="Designydelser">Design Services</h5>
+        <p data-en="Architecture · Engineering" data-da="Arkitektur · Ingeniør">Architecture · Engineering</p>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" data-hover>
+    <span data-en="Scroll" data-da="Rul ned">Scroll</span>
+    <div class="scroll-cue-line"></div>
+  </a>
+</header>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-num reveal">
+          <span data-en="01 · About us" data-da="01 · Om os">01 · About us</span>
+        </div>
+        <h2 class="section-title reveal d1">
+          <span data-en="A studio for" data-da="Et studie for">A studio for</span><br>
+          <span class="italic" data-en="enduring" data-da="varige">enduring</span>
+          <span data-en="work." data-da="værker.">work.</span>
+        </h2>
+        <div class="about-text">
+          <p class="reveal d2" data-en="And Again is an architecture and engineering practice based in Copenhagen. We design buildings and calculate the structures that hold them up — under one roof, with one set of hands." data-da="And Again er et arkitekt- og ingeniørstudie med base i København. Vi tegner bygninger og beregner de konstruktioner der holder dem oppe — under ét tag, med ét sæt hænder.">And Again is an architecture and engineering practice based in Copenhagen. We design buildings and calculate the structures that hold them up — under one roof, with one set of hands.</p>
+          <p class="reveal d3" data-en="Our work begins with the place, the climate and the client, and ends in a building that quietly belongs. We work across single-family houses, residential blocks, refurbishments and small public commissions throughout Denmark." data-da="Vores arbejde begynder med stedet, klimaet og bygherren, og slutter med en bygning der stille hører til. Vi arbejder med enfamiliehuse, boligkarréer, ombygninger og mindre offentlige opgaver i hele Danmark.">Our work begins with the place, the climate and the client, and ends in a building that quietly belongs. We work across single-family houses, residential blocks, refurbishments and small public commissions throughout Denmark.</p>
+        </div>
+      </div>
+      <div class="about-image reveal d2">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Architecture">
+        <div class="about-image-label" data-en="Studio · Nørrebro" data-da="Studio · Nørrebro">Studio · Nørrebro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="02 · What we do" data-da="02 · Hvad vi laver">02 · What we do</span>
+    </div>
+    <h2 class="section-title reveal d1">
+      <span data-en="Two disciplines," data-da="To discipliner,">Two disciplines,</span><br>
+      <span class="italic" data-en="one practice." data-da="ét studie.">one practice.</span>
+    </h2>
+
+    <div class="services-grid">
+      <div class="service-card reveal d2" data-hover>
+        <div class="service-num">— 01 / ARKITEKTUR</div>
+        <h3>
+          <span data-en="Architectural" data-da="Arkitektonisk">Architectural</span><br>
+          <span class="italic" data-en="design." data-da="design.">design.</span>
+        </h3>
+        <p data-en="From the first sketch to the keys handed over. We design with restraint, with respect for the site, and with a deep care for how a building feels in everyday use." data-da="Fra første skitse til nøglerne afleveres. Vi tegner med tilbageholdenhed, med respekt for stedet og med dyb omsorg for hvordan en bygning føles i dagligdagen.">From the first sketch to the keys handed over. We design with restraint, with respect for the site, and with a deep care for how a building feels in everyday use.</p>
+        <ul class="service-list">
+          <li><span data-en="Concept &amp; sketch design" data-da="Koncept &amp; skitseforslag">Concept &amp; sketch design</span><span class="num">01</span></li>
+          <li><span data-en="Building permit drawings" data-da="Myndighedsprojekt">Building permit drawings</span><span class="num">02</span></li>
+          <li><span data-en="Construction documents" data-da="Hovedprojekt">Construction documents</span><span class="num">03</span></li>
+          <li><span data-en="Interior &amp; material specification" data-da="Interiør &amp; materialevalg">Interior &amp; material specification</span><span class="num">04</span></li>
+          <li><span data-en="Site supervision (fagtilsyn)" data-da="Fagtilsyn">Site supervision (fagtilsyn)</span><span class="num">05</span></li>
+        </ul>
+      </div>
+      <div class="service-card reveal d3" data-hover>
+        <div class="service-num">— 02 / KONSTRUKTION</div>
+        <h3>
+          <span data-en="Structural" data-da="Struktur-">Structural</span><br>
+          <span class="italic" data-en="calculation." data-da="beregning.">calculation.</span>
+        </h3>
+        <p data-en="Calculations made to Eurocode and the Danish national annexes. We work in steel, concrete, timber and masonry — and we sign the projects we calculate." data-da="Beregninger udført efter Eurocode og de danske nationale annekser. Vi arbejder med stål, beton, træ og murværk — og vi underskriver de projekter vi beregner.">Calculations made to Eurocode and the Danish national annexes. We work in steel, concrete, timber and masonry — and we sign the projects we calculate.</p>
+        <ul class="service-list">
+          <li><span data-en="Static calculations · Eurocode" data-da="Statiske beregninger · Eurocode">Static calculations · Eurocode</span><span class="num">01</span></li>
+          <li><span data-en="Steel &amp; concrete design" data-da="Stål- &amp; betondesign">Steel &amp; concrete design</span><span class="num">02</span></li>
+          <li><span data-en="Timber &amp; CLT structures" data-da="Træ- &amp; CLT-konstruktioner">Timber &amp; CLT structures</span><span class="num">03</span></li>
+          <li><span data-en="Refurbishment assessments" data-da="Ombygning &amp; vurdering">Refurbishment assessments</span><span class="num">04</span></li>
+          <li><span data-en="Certified structural engineer" data-da="Certificeret statiker">Certified structural engineer</span><span class="num">05</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="03 · Why us" data-da="03 · Hvorfor os">03 · Why us</span>
+    </div>
+    <h2 class="section-title reveal d1">
+      <span data-en="Why choose" data-da="Hvorfor vælge">Why choose</span>
+      <span class="italic" data-en="And Again?" data-da="And Again?">And Again?</span>
+    </h2>
+
+    <div class="why-grid">
+      <div class="why-cell reveal d1">
+        <svg class="why-icon" viewBox="0 0 48 48"><path d="M8 40h32M12 40V20l12-12 12 12v20M18 40V28h12v12"/></svg>
+        <h4 data-en="One responsible hand" data-da="Én ansvarlig hånd">One responsible hand</h4>
+        <p data-en="Architecture and engineering coordinated in the same studio. Fewer interfaces, fewer misunderstandings, one number to call." data-da="Arkitektur og ingeniørarbejde koordineret i samme studie. Færre grænseflader, færre misforståelser, ét nummer at ringe til.">Architecture and engineering coordinated in the same studio. Fewer interfaces, fewer misunderstandings, one number to call.</p>
+      </div>
+      <div class="why-cell reveal d2">
+        <svg class="why-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 6v18l12 8"/></svg>
+        <h4 data-en="Built around BR18" data-da="Bygget omkring BR18">Built around BR18</h4>
+        <p data-en="Every drawing and every calculation produced to comply with the Danish Building Regulations and the relevant Eurocode annexes from day one." data-da="Hver tegning og hver beregning leveret i overensstemmelse med Bygningsreglementet og de relevante Eurocode-annekser fra dag ét.">Every drawing and every calculation produced to comply with the Danish Building Regulations and the relevant Eurocode annexes from day one.</p>
+      </div>
+      <div class="why-cell reveal d3">
+        <svg class="why-icon" viewBox="0 0 48 48"><path d="M6 24l12-12 6 6 18-18M30 0h12v12"/><path d="M6 42h36"/></svg>
+        <h4 data-en="Quiet but precise" data-da="Stille men præcis">Quiet but precise</h4>
+        <p data-en="We work without noise. Detailed budgets, honest timelines, and the kind of buildings that age well rather than make headlines." data-da="Vi arbejder uden støj. Detaljerede budgetter, ærlige tidsplaner og den slags bygninger der ældes smukt i stedet for at lave overskrifter.">We work without noise. Detailed budgets, honest timelines, and the kind of buildings that age well rather than make headlines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat reveal">
+      <div class="stat-num"><span class="counter" data-target="64">0</span><span class="suffix">+</span></div>
+      <div class="stat-label" data-en="Projects completed" data-da="Afsluttede projekter">Projects completed</div>
+    </div>
+    <div class="stat reveal d1">
+      <div class="stat-num"><span class="counter" data-target="12">0</span><span class="suffix">+</span></div>
+      <div class="stat-label" data-en="Years of practice" data-da="Års erfaring">Years of practice</div>
+    </div>
+    <div class="stat reveal d2">
+      <div class="stat-num"><span class="counter" data-target="38">0</span><span class="suffix">+</span></div>
+      <div class="stat-label" data-en="Returning clients" data-da="Tilbagevendende kunder">Returning clients</div>
+    </div>
+    <div class="stat reveal d3">
+      <div class="stat-num"><span class="counter" data-target="100">0</span><span class="suffix">%</span></div>
+      <div class="stat-label" data-en="Eurocode compliant" data-da="Eurocode-overholdelse">Eurocode compliant</div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio -->
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="04 · Selected work" data-da="04 · Udvalgte projekter">04 · Selected work</span>
+    </div>
+    <h2 class="section-title reveal d1">
+      <span data-en="Recent" data-da="Seneste">Recent</span>
+      <span class="italic" data-en="projects." data-da="projekter.">projects.</span>
+    </h2>
+
+    <div class="portfolio-grid">
+      <a href="#" class="project p1 reveal d1" data-hover>
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Søhus" data-da="Søhus">Søhus</em> <span data-en="House" data-da="Hus">House</span></div>
+          <div class="project-tag" data-en="Residential · 2025" data-da="Bolig · 2025">Residential · 2025</div>
+        </div>
+      </a>
+      <a href="#" class="project p2 reveal d2" data-hover>
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Egholm" data-da="Egholm">Egholm</em></div>
+          <div class="project-tag" data-en="Refurbishment · 2024" data-da="Ombygning · 2024">Refurbishment · 2024</div>
+        </div>
+      </a>
+      <a href="#" class="project p3 reveal d1" data-hover>
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Brønshøj" data-da="Brønshøj">Brønshøj</em> <span data-en="Block" data-da="Karré">Block</span></div>
+          <div class="project-tag" data-en="Residential · 2024" data-da="Bolig · 2024">Residential · 2024</div>
+        </div>
+      </a>
+      <a href="#" class="project p4 reveal d2" data-hover>
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1200&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Nordhavn" data-da="Nordhavn">Nordhavn</em> <span data-en="Pavilion" data-da="Pavillon">Pavilion</span></div>
+          <div class="project-tag" data-en="Public · 2025" data-da="Offentlig · 2025">Public · 2025</div>
+        </div>
+      </a>
+      <a href="#" class="project p5 reveal d1" data-hover>
+        <img src="https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=800&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Klampenborg" data-da="Klampenborg">Klampenborg</em></div>
+          <div class="project-tag" data-en="Villa · 2023" data-da="Villa · 2023">Villa · 2023</div>
+        </div>
+      </a>
+      <a href="#" class="project p6 reveal d2" data-hover>
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Frederiksberg" data-da="Frederiksberg">Frederiksberg</em></div>
+          <div class="project-tag" data-en="Interior · 2024" data-da="Interiør · 2024">Interior · 2024</div>
+        </div>
+      </a>
+      <a href="#" class="project p7 reveal d3" data-hover>
+        <img src="https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=800&q=80" alt="">
+        <div class="project-info">
+          <div class="project-name"><em data-en="Vesterbro" data-da="Vesterbro">Vesterbro</em> <span data-en="Attic" data-da="Tagbolig">Attic</span></div>
+          <div class="project-tag" data-en="Refurbishment · 2024" data-da="Ombygning · 2024">Refurbishment · 2024</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="05 · How we work" data-da="05 · Sådan arbejder vi">05 · How we work</span>
+    </div>
+    <h2 class="section-title reveal d1">
+      <span data-en="From sketch" data-da="Fra skitse">From sketch</span><br>
+      <span class="italic" data-en="to keys." data-da="til nøgler.">to keys.</span>
+    </h2>
+
+    <div class="process-list">
+      <div class="process-row reveal">
+        <div class="process-step">01</div>
+        <div><h4><span data-en="First" data-da="Første">First</span> <span class="italic" data-en="conversation" data-da="samtale">conversation</span></h4></div>
+        <p data-en="A 30-minute meeting — in person or on Google Meet — to understand your site, your brief and your dreams for the project. Always free." data-da="Et 30-minutters møde — fysisk eller på Google Meet — for at forstå din grund, dit projekt og dine drømme. Altid gratis.">A 30-minute meeting — in person or on Google Meet — to understand your site, your brief and your dreams for the project. Always free.</p>
+        <div class="process-time" data-en="30 min · Free" data-da="30 min · Gratis">30 min · Free</div>
+      </div>
+      <div class="process-row reveal">
+        <div class="process-step">02</div>
+        <div><h4><span data-en="Sketch" data-da="Skitse-">Sketch</span> <span class="italic" data-en="proposal" data-da="forslag">proposal</span></h4></div>
+        <p data-en="A first design proposal with plans, sections and a rough estimate of cost. We sit down, walk through it, and you decide if it feels right." data-da="Et første designforslag med planer, snit og et groft prisestimat. Vi sætter os ned, gennemgår det, og du afgør om det føles rigtigt.">A first design proposal with plans, sections and a rough estimate of cost. We sit down, walk through it, and you decide if it feels right.</p>
+        <div class="process-time" data-en="2–4 weeks" data-da="2–4 uger">2–4 weeks</div>
+      </div>
+      <div class="process-row reveal">
+        <div class="process-step">03</div>
+        <div><h4><span data-en="Permit" data-da="Myndigheds-">Permit</span> <span class="italic" data-en="drawings" data-da="projekt">drawings</span></h4></div>
+        <p data-en="We prepare and submit the building permit application (byggetilladelse) to the local municipality with all required documentation." data-da="Vi udarbejder og indsender byggetilladelsen til kommunen med al nødvendig dokumentation.">We prepare and submit the building permit application (byggetilladelse) to the local municipality with all required documentation.</p>
+        <div class="process-time" data-en="4–8 weeks" data-da="4–8 uger">4–8 weeks</div>
+      </div>
+      <div class="process-row reveal">
+        <div class="process-step">04</div>
+        <div><h4><span data-en="Structural" data-da="Strukturel">Structural</span> <span class="italic" data-en="calculation" data-da="beregning">calculation</span></h4></div>
+        <p data-en="Eurocode-compliant calculation report for the structure, signed by our certified structural engineer (certificeret statiker)." data-da="Eurocode-overholdt beregningsrapport for konstruktionen, underskrevet af vores certificerede statiker.">Eurocode-compliant calculation report for the structure, signed by our certified structural engineer (certificeret statiker).</p>
+        <div class="process-time" data-en="3–6 weeks" data-da="3–6 uger">3–6 weeks</div>
+      </div>
+      <div class="process-row reveal">
+        <div class="process-step">05</div>
+        <div><h4><span data-en="Construction" data-da="Hoved-">Construction</span> <span class="italic" data-en="documents" data-da="projekt">documents</span></h4></div>
+        <p data-en="Detailed drawings, material specifications and tender documents — everything the contractor needs to build the project well." data-da="Detaljerede tegninger, materialebeskrivelser og udbudsmateriale — alt entreprenøren skal bruge for at bygge projektet godt.">Detailed drawings, material specifications and tender documents — everything the contractor needs to build the project well.</p>
+        <div class="process-time" data-en="6–10 weeks" data-da="6–10 uger">6–10 weeks</div>
+      </div>
+      <div class="process-row reveal">
+        <div class="process-step">06</div>
+        <div><h4><span data-en="On-site" data-da="Tilsyn">On-site</span> <span class="italic" data-en="supervision" data-da="på pladsen">supervision</span></h4></div>
+        <p data-en="Regular site visits during construction to ensure the project is built as drawn — and to solve the small surprises that always appear." data-da="Regelmæssige besøg på pladsen under byggeriet for at sikre at projektet bygges som tegnet — og løse de små overraskelser der altid dukker op.">Regular site visits during construction to ensure the project is built as drawn — and to solve the small surprises that always appear.</p>
+        <div class="process-time" data-en="Through build" data-da="Hele byggeriet">Through build</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="06 · What clients say" data-da="06 · Hvad kunder siger">06 · What clients say</span>
+    </div>
+    <h2 class="section-title reveal d1">
+      <span data-en="Words from" data-da="Ord fra">Words from</span>
+      <span class="italic" data-en="our clients." data-da="vores kunder.">our clients.</span>
+    </h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial reveal d1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote" data-en="They understood our family before they understood our house. The result is a home that fits us perfectly — and that we still love three winters later." data-da="De forstod vores familie før de forstod vores hus. Resultatet er et hjem der passer os perfekt — og som vi stadig elsker tre vintre senere.">They understood our family before they understood our house. The result is a home that fits us perfectly — and that we still love three winters later.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Mette &amp; Anders L.</div>
+          <div class="testimonial-role" data-en="Family home · Klampenborg" data-da="Familiebolig · Klampenborg">Family home · Klampenborg</div>
+        </div>
+      </div>
+      <div class="testimonial reveal d2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote" data-en="Calm, precise and very Danish in the best sense. The structural calculations were delivered ahead of time and the contractor had not a single question for them." data-da="Rolige, præcise og meget danske i den bedste betydning. De statiske beregninger blev leveret før tid og entreprenøren havde ikke et eneste spørgsmål.">Calm, precise and very Danish in the best sense. The structural calculations were delivered ahead of time and the contractor had not a single question for them.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Søren K.</div>
+          <div class="testimonial-role" data-en="Developer · Nordhavn" data-da="Bygherre · Nordhavn">Developer · Nordhavn</div>
+        </div>
+      </div>
+      <div class="testimonial reveal d3">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote" data-en="Honest budgets and honest timelines. Two things you rarely find together. We will work with And Again again — clearly the right name for them." data-da="Ærlige budgetter og ærlige tidsplaner. To ting man sjældent finder samlet. Vi vil arbejde med And Again igen — tydeligvis det rette navn for dem.">Honest budgets and honest timelines. Two things you rarely find together. We will work with And Again again — clearly the right name for them.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Karen H.</div>
+          <div class="testimonial-role" data-en="Refurbishment · Vesterbro" data-da="Ombygning · Vesterbro">Refurbishment · Vesterbro</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment -->
+<section class="appointment" id="appointment">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="07 · Book a meeting" data-da="07 · Book et møde">07 · Book a meeting</span>
+    </div>
+
+    <div class="appointment-grid">
+      <div class="appointment-info">
+        <div class="meet-badge reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="6" width="13" height="12" rx="2"/>
+            <path d="M15 10l6-3v10l-6-3z"/>
+          </svg>
+          <span>Google Meet</span>
+        </div>
+        <h2 class="reveal d1">
+          <span data-en="Let's talk" data-da="Lad os tale">Let's talk</span><br>
+          <span class="italic" data-en="about your project." data-da="om dit projekt.">about your project.</span>
+        </h2>
+        <p class="reveal d2" data-en="Book a free 30-minute video call. We'll discuss your site, your idea and the kind of building you'd like to make. After the call we'll send you a written brief and an indicative timeline — no commitment, no pressure." data-da="Book et gratis 30-minutters videokald. Vi taler om din grund, din idé og den slags bygning du gerne vil skabe. Efter samtalen sender vi et skriftligt brief og en indikativ tidsplan — uden forpligtelse, uden pres.">Book a free 30-minute video call. We'll discuss your site, your idea and the kind of building you'd like to make. After the call we'll send you a written brief and an indicative timeline — no commitment, no pressure.</p>
+
+        <div class="reveal d3">
+          <div class="info-block">
+            <svg class="info-icon" viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><path d="M18 10v8l5 3"/></svg>
+            <div class="info-block-text">
+              <small data-en="Duration" data-da="Varighed">Duration</small>
+              <strong data-en="30 minutes · Free of charge" data-da="30 minutter · Gratis">30 minutes · Free of charge</strong>
+            </div>
+          </div>
+          <div class="info-block">
+            <svg class="info-icon" viewBox="0 0 36 36"><rect x="4" y="9" width="18" height="18" rx="2"/><path d="M22 15l9-4.5v15L22 21z"/></svg>
+            <div class="info-block-text">
+              <small data-en="Platform" data-da="Platform">Platform</small>
+              <strong data-en="Google Meet · Link sent by email" data-da="Google Meet · Link sendes på email">Google Meet · Link sent by email</strong>
+            </div>
+          </div>
+          <div class="info-block">
+            <svg class="info-icon" viewBox="0 0 36 36"><path d="M6 28V12l12-6 12 6v16M14 28v-9h8v9M6 28h24"/></svg>
+            <div class="info-block-text">
+              <small data-en="What we'll cover" data-da="Hvad vi taler om">What we'll cover</small>
+              <strong data-en="Project scope, budget, timeline, next steps" data-da="Projektomfang, budget, tidsplan, næste skridt">Project scope, budget, timeline, next steps</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card form-card-dark reveal d2">
+        <form id="appointmentForm">
+          <div class="form-row">
+            <div class="field">
+              <label><span data-en="First name" data-da="Fornavn">First name</span> <span class="req">*</span></label>
+              <input type="text" name="firstName" required>
+            </div>
+            <div class="field">
+              <label><span data-en="Last name" data-da="Efternavn">Last name</span> <span class="req">*</span></label>
+              <input type="text" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label><span data-en="Email" data-da="Email">Email</span> <span class="req">*</span></label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="field">
+              <label><span data-en="Phone" data-da="Telefon">Phone</span> <span class="req">*</span></label>
+              <input type="tel" name="phone" required placeholder="+45">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label><span data-en="Preferred date" data-da="Foretrukket dato">Preferred date</span></label>
+              <input type="date" name="date">
+            </div>
+            <div class="field">
+              <label><span data-en="Preferred time" data-da="Foretrukket tidspunkt">Preferred time</span></label>
+              <select name="time">
+                <option value="">—</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field">
+              <label><span data-en="Project type" data-da="Projekttype">Project type</span></label>
+              <select name="projectType">
+                <option value="" data-en="— Select —" data-da="— Vælg —">— Select —</option>
+                <option value="new" data-en="New house" data-da="Nybyggeri">New house</option>
+                <option value="refurbishment" data-en="Refurbishment / extension" data-da="Ombygning / tilbygning">Refurbishment / extension</option>
+                <option value="structural" data-en="Structural calculation only" data-da="Kun statisk beregning">Structural calculation only</option>
+                <option value="commercial" data-en="Commercial / public" data-da="Erhverv / offentlig">Commercial / public</option>
+                <option value="other" data-en="Other" data-da="Andet">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field">
+              <label><span data-en="Tell us briefly about the project" data-da="Fortæl kort om projektet">Tell us briefly about the project</span></label>
+              <textarea name="message" rows="3" placeholder="..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary" data-hover>
+            <span>
+              <span data-en="Confirm booking" data-da="Bekræft booking">Confirm booking</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+            </span>
+          </button>
+        </form>
+        <div class="form-success" id="appointmentSuccess">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>
+          <h3 data-en="Booking received" data-da="Booking modtaget">Booking received</h3>
+          <p data-en="We'll confirm the date and send you the Google Meet link by email within a few hours." data-da="Vi bekræfter datoen og sender dig Google Meet-linket på email inden for få timer.">We'll confirm the date and send you the Google Meet link by email within a few hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-num reveal">
+      <span data-en="08 · Contact" data-da="08 · Kontakt">08 · Contact</span>
+    </div>
+    <h2 class="section-title reveal d1">
+      <span data-en="Or just" data-da="Eller bare">Or just</span>
+      <span class="italic" data-en="write to us." data-da="skriv til os.">write to us.</span>
+    </h2>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="reveal" data-en="If a video call feels like too much for now, drop us a line. We read every message and answer within one working day." data-da="Hvis et videokald føles som for meget lige nu, så skriv til os. Vi læser hver besked og svarer inden for én arbejdsdag.">If a video call feels like too much for now, drop us a line. We read every message and answer within one working day.</p>
+
+        <ul class="contact-list reveal d1">
+          <li><small data-en="Studio" data-da="Studio">Studio</small><span>Refsnæsgade 14, 2200 København N</span></li>
+          <li><small>Email</small><a href="mailto:hello@andagain.dk">hello@andagain.dk</a></li>
+          <li><small data-en="Phone" data-da="Telefon">Phone</small><a href="tel:+4520000000">+45 20 00 00 00</a></li>
+          <li><small>CVR</small><span>DK 44 55 66 77</span></li>
+          <li><small data-en="Hours" data-da="Åbningstider">Hours</small><span data-en="Mon–Fri · 09:00–17:00" data-da="Man–Fre · 09:00–17:00">Mon–Fri · 09:00–17:00</span></li>
+        </ul>
+      </div>
+
+      <div class="form-card form-card-light reveal d2">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="field">
+              <label><span data-en="Name" data-da="Navn">Name</span> <span class="req">*</span></label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="field">
+              <label><span data-en="Email" data-da="Email">Email</span> <span class="req">*</span></label>
+              <input type="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field">
+              <label><span data-en="Subject" data-da="Emne">Subject</span></label>
+              <input type="text" name="subject">
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field">
+              <label><span data-en="Message" data-da="Besked">Message</span> <span class="req">*</span></label>
+              <textarea name="message" required rows="5"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary" data-hover>
+            <span>
+              <span data-en="Send message" data-da="Send besked">Send message</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+            </span>
+          </button>
+        </form>
+        <div class="form-success" id="contactSuccess">
+          <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>
+          <h3 data-en="Message sent" data-da="Besked sendt">Message sent</h3>
+          <p data-en="Thank you. We'll get back to you within one working day." data-da="Tak. Vi vender tilbage inden for én arbejdsdag.">Thank you. We'll get back to you within one working day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-marquee">
+      <div class="marquee-track">
+        <span>And Again</span><span class="italic">Konstruktion</span><span class="dot">●</span>
+        <span data-en="Architecture" data-da="Arkitektur">Architecture</span><span class="italic" data-en="&amp; Engineering" data-da="&amp; Ingeniør">&amp; Engineering</span><span class="dot">●</span>
+        <span>København</span><span class="italic">2026</span><span class="dot">●</span>
+        <span>And Again</span><span class="italic">Konstruktion</span><span class="dot">●</span>
+        <span data-en="Architecture" data-da="Arkitektur">Architecture</span><span class="italic" data-en="&amp; Engineering" data-da="&amp; Ingeniør">&amp; Engineering</span><span class="dot">●</span>
+        <span>København</span><span class="italic">2026</span><span class="dot">●</span>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div style="color:var(--on-dark);margin-bottom:24px">
+          <svg width="180" height="55" viewBox="0 0 320 90" class="logo-svg">
+            <polygon points="20,75 50,12 80,75 70,75 50,30 30,75" class="peak"/>
+            <text x="86" y="75" class="text" font-size="36">nd</text>
+            <polygon points="148,75 178,12 208,75 198,75 178,30 158,75" class="peak"/>
+            <text x="214" y="75" class="text" font-size="36">gain</text>
+            <text x="20" y="92" class="sub" font-size="9">KONSTRUKTION</text>
+          </svg>
+        </div>
+        <p data-en="Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode." data-da="Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.">Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Navigate" data-da="Navigation">Navigate</h5>
+        <a href="#about" data-en="About" data-da="Om os">About</a>
+        <a href="#services" data-en="Services" data-da="Ydelser">Services</a>
+        <a href="#portfolio" data-en="Projects" data-da="Projekter">Projects</a>
+        <a href="#process" data-en="Process" data-da="Proces">Process</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Connect" data-da="Forbind">Connect</h5>
+        <a href="#appointment" data-en="Book a meeting" data-da="Book et møde">Book a meeting</a>
+        <a href="#contact" data-en="Contact" data-da="Kontakt">Contact</a>
+        <a href="mailto:hello@andagain.dk">hello@andagain.dk</a>
+        <a href="tel:+4520000000">+45 20 00 00 00</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Social" data-da="Social">Social</h5>
+        <a href="#" data-hover>Instagram</a>
+        <a href="#" data-hover>LinkedIn</a>
+        <a href="#" data-hover>Behance</a>
+        <a href="#" data-hover>Pinterest</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 And Again Konstruktion ApS · CVR DK 44 55 66 77</span>
+      <span data-en="Made in Copenhagen" data-da="Lavet i København">Made in Copenhagen</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('done'), 700);
+  });
+
+  const langButtons = document.querySelectorAll('[data-lang-btn]');
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'da' ? 'da' : 'en');
+    document.querySelectorAll('[data-en], [data-da]').forEach(el => {
+      const txt = el.getAttribute('data-' + lang);
+      if (txt) el.innerHTML = txt;
+    });
+    langButtons.forEach(b => b.classList.toggle('active', b.dataset.langBtn === lang));
+  }
+  langButtons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langBtn)));
+
+  const navEl = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const target = parseInt(el.dataset.target, 10);
+        const duration = 1800;
+        const start = performance.now();
+        function tick(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(ease * target);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.counter').forEach(el => counterIO.observe(el));
+
+  document.getElementById('appointmentForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('appointmentSuccess').classList.add('show');
+  });
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('contactSuccess').classList.add('show');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
