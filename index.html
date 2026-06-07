@@ -381,10 +381,29 @@ body {
   letter-spacing: -0.02em;
   line-height: 1.2;
   transform: translateY(110%);
-  transition: transform 0.6s var(--ease-quart), color 0.3s;
+  transition: transform 0.6s var(--ease-quart), color 0.5s ease, opacity 0.5s ease;
   color: rgba(255,255,255,0.85);
+  overflow: hidden;
+  position: relative;
 }
-.menu-nav a:hover { color: #fff; }
+/* Dim all cuando hay hover en el nav */
+.menu-nav:hover a { opacity: 0.3; color: rgba(255,255,255,0.3); }
+.menu-nav:hover a:hover { opacity: 1; color: #fff; }
+
+/* Texto deslizante al hover — dos copias */
+.menu-nav a .text-default,
+.menu-nav a .text-hover {
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.menu-nav a .text-hover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.menu-nav a:hover .text-default { transform: translateY(-100%); }
+.menu-nav a:hover .text-hover   { transform: translateY(-100%); }
+
 .menu-overlay.open .menu-nav a { transform: translateY(0); }
 .menu-nav-item:nth-child(1) a { transition-delay: 0.04s; }
 .menu-nav-item:nth-child(2) a { transition-delay: 0.08s; }
@@ -1948,11 +1967,11 @@ footer {
   <div class="menu-overlay-label">Menu</div>
   <nav>
     <ul class="menu-nav">
-      <li class="menu-nav-item"><a href="#about" id="menuClose-about" data-en="About" data-da="Om os">About</a></li>
-      <li class="menu-nav-item"><a href="#services" id="menuClose-services" data-en="Services" data-da="Ydelser">Services</a></li>
-      <li class="menu-nav-item"><a href="#portfolio" data-en="Projects" data-da="Projekter">Projects</a></li>
-      <li class="menu-nav-item"><a href="#process" data-en="Process" data-da="Proces">Process</a></li>
-      <li class="menu-nav-item"><a href="#contact" data-en="Contact" data-da="Kontakt">Contact</a></li>
+      <li class="menu-nav-item"><a href="#about"><span class="text-default">About</span><span class="text-hover">About</span></a></li>
+      <li class="menu-nav-item"><a href="#services"><span class="text-default">Services</span><span class="text-hover">Services</span></a></li>
+      <li class="menu-nav-item"><a href="#portfolio"><span class="text-default">Projects</span><span class="text-hover">Projects</span></a></li>
+      <li class="menu-nav-item"><a href="#process"><span class="text-default">Process</span><span class="text-hover">Process</span></a></li>
+      <li class="menu-nav-item"><a href="#contact"><span class="text-default">Contact</span><span class="text-hover">Contact</span></a></li>
     </ul>
   </nav>
   <div class="menu-footer">
