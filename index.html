@@ -166,6 +166,89 @@ body {
   top: auto;
   bottom: 24px;
   transform: translate3d(-50%, 0, 0);
+  width: 420px;
+  max-width: 92vw;
+  padding: 0 8px 0 20px;
+  background: rgba(32,34,36,0.97);
+  justify-content: space-between;
+  gap: 0;
+  height: 52px;
+}
+/* Ocultar todo excepto logo, section name y burger */
+.header.is-bottom nav,
+.header.is-bottom .header-cta,
+.header.is-bottom .theme-toggle,
+.header.is-bottom .lang-btn,
+.header.is-bottom .btn-icon:not(.burger),
+.header.is-bottom .header-actions > div {
+  display: none !important;
+}
+.header.is-bottom .header-actions {
+  padding: 0;
+  gap: 0;
+  flex-shrink: 0;
+}
+.header.is-bottom .header-logo {
+  padding: 0;
+  margin-right: 0;
+  flex-shrink: 0;
+}
+/* Mostrar logo completo pero más pequeño */
+.header.is-bottom .logo-full {
+  display: block !important;
+  height: 18px !important;
+  width: auto;
+  filter: invert(1);
+  opacity: 0.9;
+}
+.header.is-bottom .logo-icon { display: none !important; }
+
+/* Nombre sección centrado */
+.header-section-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--light);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.header.is-bottom .header-section-name { opacity: 0.6; font-size: 11px; }
+
+/* Botón hamburger en bottom bar — solo las líneas, sin fondo */
+.header.is-bottom .burger {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+.header.is-bottom .burger:hover { opacity: 1; }
+.header.is-bottom .burger span {
+  width: 18px;
+  height: 1.5px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 2px;
+}
+.header.is-bottom .burger span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--light);
+  border-radius: 2px;
 }
 
 .header-logo {
@@ -253,88 +336,98 @@ body {
 .burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ══════════════════════════════════════════
-   MENU OVERLAY (fluid.glass style)
+   MENU PANEL (fluid.glass style — compact floating)
 ══════════════════════════════════════════ */
 .menu-overlay {
-  position: fixed; inset: 0;
-  background: var(--dark);
+  position: fixed;
+  bottom: 6rem;
+  left: 50%;
+  transform: translate3d(-50%, 20px, 0);
+  width: 38rem;
+  max-width: calc(100vw - 3rem);
+  background: #0d1a2e;
   color: var(--light);
   z-index: 200;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 6rem 10vw;
+  padding: 3rem 3rem 0;
   pointer-events: none;
-  transform: translateY(-100%);
-  transition: transform 0.8s var(--ease-quart), visibility 0.8s;
+  opacity: 0;
   visibility: hidden;
+  border-radius: 16px;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1), visibility 0.4s;
 }
 .menu-overlay.open {
   pointer-events: all;
-  transform: translateY(0);
+  opacity: 1;
   visibility: visible;
+  transform: translate3d(-50%, 0, 0);
 }
-.menu-overlay .close-btn {
-  position: absolute; top: 2rem; right: 2rem;
-  width: 48px; height: 48px;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0.6; transition: opacity 0.3s;
+.menu-overlay-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: 1.5rem;
 }
-.menu-overlay .close-btn:hover { opacity: 1; }
-.menu-overlay .close-btn svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 1; fill: none; }
-
 .menu-nav { list-style: none; }
-.menu-nav-item {
-  overflow: hidden;
-  border-top: 1px solid var(--line-dark);
-  padding: 12px 0;
-}
-.menu-nav-item:last-child { border-bottom: 1px solid var(--line-dark); }
+.menu-nav-item { overflow: hidden; }
 .menu-nav a {
   display: block;
   font-family: var(--sans);
-  font-size: clamp(36px, 6vw, 80px);
-  font-weight: 300;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 1.1;
-  transform: translateY(100%);
-  transition: transform 0.7s var(--ease-quart), color 0.3s;
-  color: var(--light-soft);
+  line-height: 1.2;
+  transform: translateY(110%);
+  transition: transform 0.6s var(--ease-quart), color 0.3s;
+  color: rgba(255,255,255,0.85);
 }
-.menu-nav a:hover { color: var(--light); }
-.menu-overlay.open .menu-nav a {
-  transform: translateY(0);
-}
-.menu-nav-item:nth-child(1) a { transition-delay: 0.05s; }
-.menu-nav-item:nth-child(2) a { transition-delay: 0.1s; }
-.menu-nav-item:nth-child(3) a { transition-delay: 0.15s; }
-.menu-nav-item:nth-child(4) a { transition-delay: 0.2s; }
-.menu-nav-item:nth-child(5) a { transition-delay: 0.25s; }
+.menu-nav a:hover { color: #fff; }
+.menu-overlay.open .menu-nav a { transform: translateY(0); }
+.menu-nav-item:nth-child(1) a { transition-delay: 0.04s; }
+.menu-nav-item:nth-child(2) a { transition-delay: 0.08s; }
+.menu-nav-item:nth-child(3) a { transition-delay: 0.12s; }
+.menu-nav-item:nth-child(4) a { transition-delay: 0.16s; }
+.menu-nav-item:nth-child(5) a { transition-delay: 0.20s; }
 
 .menu-footer {
-  position: absolute;
-  bottom: 3rem; left: 10vw; right: 10vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 1.5rem 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.4);
+}
+.menu-footer a { color: inherit; transition: color 0.3s; }
+.menu-footer a:hover { color: rgba(255,255,255,0.8); }
+.menu-footer-col { display: flex; flex-direction: column; gap: 5px; }
+
+.menu-cta {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  background: #081220;
+  color: #fff;
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--light-faded);
-}
-.menu-cta {
-  background: var(--blue);
-  color: #fff;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border-radius: 100px;
+  padding: 18px;
+  margin-top: 1.5rem;
   transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0 0 16px 16px;
 }
-.menu-cta:hover { background: var(--blue-bright); }
+.menu-cta:hover { background: #1a1a1a; }
 
 /* ══════════════════════════════════════════
    MAIN SCROLL WRAPPER
@@ -528,13 +621,12 @@ body {
 }
 .photo-break-img {
   position: absolute;
-  top: -40%;
-  left: 0; right: 0;
-  height: 180%;
+  inset: 0;
+  height: 100%;
   background-size: cover;
   background-position: center;
   will-change: transform;
-  transform: translate3d(0, 0, 0);
+  transform: scale(1.0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -1692,6 +1784,7 @@ footer {
 .reveal.d5 { transition-delay: 0.5s; }
 
 
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1814,8 +1907,13 @@ footer {
 <!-- Header — fluid.glass style -->
 <header class="header" id="header">
   <a href="#hero" class="header-logo">
-    <img src="last.png" alt="And Again Konstruktion" class="logo-img">
+    <img src="last.png" alt="And Again Konstruktion" class="logo-img logo-full">
+    <svg class="logo-icon" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;height:22px;width:auto;">
+      <path d="M20 1L38 11.5V34.5L20 45L2 34.5V11.5L20 1Z" stroke="currentColor" stroke-width="2" fill="none"/>
+      <path d="M20 10L30 15.5V26.5L20 32L10 26.5V15.5L20 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    </svg>
   </a>
+  <span class="header-section-name" id="headerSectionName">Home</span>
   <nav>
     <ul class="header-nav">
       <li><a href="#about" data-en="About" data-da="Om os">About</a></li>
@@ -1847,23 +1945,30 @@ footer {
 
 <!-- Menu overlay -->
 <div class="menu-overlay" id="menuOverlay">
-  <button class="close-btn" id="menuClose" aria-label="Close">
-    <svg viewBox="0 0 13 13"><path d="M0.35 11.67L11.67 0.35" stroke="currentColor" stroke-width="1"/><path d="M0.35 0.35L11.67 11.67" stroke="currentColor" stroke-width="1"/></svg>
-  </button>
+  <div class="menu-overlay-label">Menu</div>
   <nav>
     <ul class="menu-nav">
-      <li class="menu-nav-item"><a href="#about" data-en="About" data-da="Om os">About</a></li>
-      <li class="menu-nav-item"><a href="#services" data-en="Services" data-da="Ydelser">Services</a></li>
+      <li class="menu-nav-item"><a href="#about" id="menuClose-about" data-en="About" data-da="Om os">About</a></li>
+      <li class="menu-nav-item"><a href="#services" id="menuClose-services" data-en="Services" data-da="Ydelser">Services</a></li>
       <li class="menu-nav-item"><a href="#portfolio" data-en="Projects" data-da="Projekter">Projects</a></li>
       <li class="menu-nav-item"><a href="#process" data-en="Process" data-da="Proces">Process</a></li>
       <li class="menu-nav-item"><a href="#contact" data-en="Contact" data-da="Kontakt">Contact</a></li>
     </ul>
   </nav>
   <div class="menu-footer">
-    <span>© 2026 And Again Konstruktion</span>
-    <span>Copenhagen · Denmark</span>
-    <a href="#" class="menu-cta open-modal" data-en="Create a project" data-da="Start et projekt">Create a project</a>
+    <div class="menu-footer-col">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="menu-footer-col" style="text-align:right">
+      <a href="tel:+4500000000">+45 00 00 00 00</a>
+      <a href="mailto:info@andagain.dk">info@andagain.dk</a>
+    </div>
   </div>
+  <a href="#contact" class="menu-cta" id="menuClose" onclick="document.getElementById('menuOverlay').classList.remove('open');document.getElementById('burger').classList.remove('open');document.body.style.overflow='';">
+    <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+    Book a free consultation
+  </a>
 </div>
 
 <!-- ════════════════════════════════════════
@@ -1943,7 +2048,7 @@ footer {
 <!-- ════════════════════════════════════════
      TEAM
 ════════════════════════════════════════ -->
-<section class="team-section section" id="team">
+<section class="team-section section" id="team" style="display:none">
   <div class="wrap">
     <div class="team-intro">
       <div class="section-label reveal">
@@ -2836,7 +2941,27 @@ footer {
     }
 
     lastScrollY = window.scrollY;
+
+    // Actualizar nombre de sección activa
+    const sectionName = document.getElementById('headerSectionName');
+    if (sectionName) {
+      const sections = [
+        { id: 'hero',      name: 'Home' },
+        { id: 'about',     name: 'About' },
+        { id: 'services',  name: 'Services' },
+        { id: 'portfolio', name: 'Projects' },
+        { id: 'process',   name: 'Process' },
+        { id: 'contact',   name: 'Contact' },
+      ];
+      let active = 'Home';
+      sections.forEach(s => {
+        const el = document.getElementById(s.id);
+        if (el && el.getBoundingClientRect().top <= window.innerHeight / 2) active = s.name;
+      });
+      sectionName.textContent = active;
+    }
   }, { passive: true });
+
 
   // ── Reveal on scroll ──
   const io = new IntersectionObserver(entries => {
@@ -2889,8 +3014,10 @@ footer {
     document.body.style.overflow = '';
     burger.classList.remove('open');
   }
-  burger.addEventListener('click', openMenu);
-  menuClose.addEventListener('click', closeMenu);
+  burger.addEventListener('click', () => {
+    menuOverlay.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
   document.querySelectorAll('.menu-nav a, .menu-cta').forEach(a => a.addEventListener('click', closeMenu));
 
   // ── Modal ──
@@ -2941,6 +3068,7 @@ footer {
   // ── Parallax — imagen se mueve a velocidad distinta al scroll ──
   const photoBreaks = document.querySelectorAll('[data-parallax]');
 
+  // Zoom al entrar en pantalla
   // Label fade-in con IntersectionObserver
   const labelIO = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -2950,24 +3078,24 @@ footer {
   }, { threshold: 0.3 });
   photoBreaks.forEach(s => labelIO.observe(s));
 
-  function updateParallax() {
+  // Zoom continuo ligado al scroll
+  function updatePhotoZoom() {
     const vh = window.innerHeight;
     photoBreaks.forEach(section => {
       const img = section.querySelector('.photo-break-img');
       if (!img) return;
       const rect = section.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > vh) return;
-      const sectionCenter = rect.top + rect.height / 2;
-      const viewportCenter = vh / 2;
-      const offset = sectionCenter - viewportCenter;
-      const translateY = offset * 0.3;
-      img.style.transform = `translateY(${translateY}px)`;
+      // progress: 0 cuando entra por abajo, 1 cuando sale por arriba
+      const progress = Math.min(1, Math.max(0, (vh - rect.top) / (vh + rect.height)));
+      // scale: empieza en 1.0 y va creciendo hasta 1.15 mientras scrolleas
+      const scale = 1.0 + (progress * 0.15);
+      img.style.transform = `scale(${scale})`;
     });
   }
 
-  window.addEventListener('scroll', updateParallax, { passive: true });
-  window.addEventListener('resize', updateParallax);
-  updateParallax();
+  window.addEventListener('scroll', updatePhotoZoom, { passive: true });
+  window.addEventListener('resize', updatePhotoZoom);
+  updatePhotoZoom();
 
   // ── Workflow — activar pasos al hacer scroll ──
   const workflowSteps = document.querySelectorAll('[data-workflow-step]');
@@ -3040,32 +3168,6 @@ footer {
     });
   });
 
-  // ── Team modal ──
-  const teamBackdrop = document.getElementById('teamModalBackdrop');
-  const teamModalClose = document.getElementById('teamModalClose');
-  
-  function openTeamModal() {
-    if (!teamBackdrop) return;
-    teamBackdrop.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeTeamModal() {
-    if (!teamBackdrop) return;
-    teamBackdrop.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  
-  // Trigger: clicking ".open-team" elements
-  document.querySelectorAll('.open-team').forEach(el => {
-    el.addEventListener('click', openTeamModal);
-  });
-  if (teamModalClose) teamModalClose.addEventListener('click', closeTeamModal);
-  if (teamBackdrop) teamBackdrop.addEventListener('click', e => {
-    if (e.target === teamBackdrop) closeTeamModal();
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && teamBackdrop && teamBackdrop.classList.contains('open')) closeTeamModal();
-  });
 </script>
 
 <!-- ════════════════════════════════════════
@@ -3079,6 +3181,7 @@ footer {
         <span data-en="The team" data-da="Teamet">The team</span>
       </div>
       <h2>The people <em>behind And Again.</em></h2>
+      <p style="margin-top:1.2rem;max-width:600px;font-size:1.05rem;line-height:1.7;opacity:0.7;">We are a small, dedicated team of architects, engineers and builders who believe that good design and solid construction are inseparable. Every project we take on is handled with care, precision and a long-term perspective.</p>
     </div>
     <div class="team-grid">
       <div class="team-card">
@@ -3089,6 +3192,7 @@ footer {
         <div class="team-info">
           <h3 class="team-name">Filali Mohamed</h3>
           <p class="team-role">CEO &amp; Owner<br>Architect and Architectural Engineer</p>
+          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;">Mohamed leads the studio with a dual focus on architecture and structural engineering. With over a decade of experience across residential, mixed-use and public projects, he ensures that every design is both visually considered and technically sound.</p>
           <span class="team-tag">Architecture</span>
         </div>
       </div>
@@ -3100,6 +3204,7 @@ footer {
         <div class="team-info">
           <h3 class="team-name">Daniel Pedersen</h3>
           <p class="team-role">Builder Contractor<br>&amp; Sales</p>
+          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;">Daniel bridges the gap between design and execution. With deep roots in the construction industry, he oversees project delivery, contractor coordination and client relations — making sure every build runs on time and to specification.</p>
           <span class="team-tag">Construction</span>
         </div>
       </div>
@@ -3110,13 +3215,43 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Nicklas Pedersen</h3>
-          <p class="team-role" data-en="Marketing" data-da="Marketing">Marketing</p>
+          <p class="team-role">Marketing &amp; Brand Strategy</p>
+          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;">Nicklas shapes how And Again is perceived — from digital presence to client communications. He ensures the studio's values and visual identity come through clearly at every touchpoint, attracting clients who share our commitment to enduring work.</p>
           <span class="team-tag">Brand &amp; Growth</span>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    const teamBackdrop = document.getElementById('teamModalBackdrop');
+    const teamModalClose = document.getElementById('teamModalClose');
+
+    function openTeamModal() {
+      if (!teamBackdrop) return;
+      teamBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeTeamModal() {
+      if (!teamBackdrop) return;
+      teamBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.open-team').forEach(el => {
+      el.addEventListener('click', openTeamModal);
+    });
+    if (teamModalClose) teamModalClose.addEventListener('click', closeTeamModal);
+    if (teamBackdrop) teamBackdrop.addEventListener('click', e => {
+      if (e.target === teamBackdrop) closeTeamModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && teamBackdrop && teamBackdrop.classList.contains('open')) closeTeamModal();
+    });
+  })();
+</script>
 
 </body>
 </html>
