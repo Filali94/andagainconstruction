@@ -1,0 +1,2185 @@
+================================================================================
+  GRATISBYGGETILBUD.DK — EXTRACCIÓN COMPLETA DE CONTENIDO WEB
+  Fecha de extracción: junio 2026
+  URL principal: https://gratisbyggetilbud.dk/
+  Páginas procesadas: 35+
+================================================================================
+
+
+================================================================================
+ÍNDICE DE SECCIONES
+================================================================================
+
+  1.  INFORMACIÓN CORPORATIVA GENERAL
+  2.  PÁGINA DE INICIO (LANDING PAGE)
+  3.  SOBRE NOSOTROS (OM OS)
+  4.  EQUIPO HUMANO
+  5.  CONTACTO
+  6.  PÁGINA GENERAL DE PROYECTOS (BYGGEPROJEKTER)
+  7.  PROYECTOS DE INTERIOR — PÁGINA ÍNDICE
+  8.  PROYECTOS DE EXTERIOR — PÁGINA ÍNDICE
+  9.  PROYECTOS CON AUTORIDADES — PÁGINA ÍNDICE
+
+  ── PROYECTOS INDIVIDUALES DE INTERIOR ──
+  10. Totalrenovering (Reforma total)
+  11. Renovering af lejlighed (Reforma de piso)
+  12. Tilbygning (Ampliación)
+  13. Kælderrenovering (Renovación de sótano)
+  14. Ombygning (Reforma estructural)
+  15. Køkkenrenovering (Reforma de cocina)
+  16. Nyt badeværelse (Baño nuevo)
+  17. Gulvafslibning (Lijado de suelo)
+  18. Nedrivning af væg (Demolición de pared)
+  19. Maling af lejligheder og huse (Pintura)
+  20. Trapperenovering (Renovación de escalera)
+  21. Nyt gulv (Suelo nuevo)
+  22. Find en maler (Encuentra un pintor)
+  23. Vægisolering (Aislamiento de pared)
+  24. Gulvvarme (Calefacción suelo radiante)
+  25. Loftisolering (Aislamiento de techo)
+  26. Energirenovering (Renovación energética)
+  27. Nye vinduer (Ventanas nuevas)
+  28. Varmepumpe (Bomba de calor)
+  29. Udskiftning af døre (Sustitución de puertas)
+  30. El-arbejde (Trabajo eléctrico)
+  31. Fjernelse af skimmelsvamp (Eliminación de moho)
+
+  ── PROYECTOS INDIVIDUALES DE EXTERIOR ──
+  32. Nyt tag (Tejado nuevo)
+  33. Terrassen (Terraza)
+  34. Asbest / Reglamento 2025
+
+  ── PROYECTOS DE AUTORIDADES — SUBPÁGINAS ──
+  35. Arkitekttegninger (Planos de arquitectura)
+  36. Byggeansøgning (Solicitud de licencia)
+  37. Statiske beregninger (Cálculos estáticos)
+  38. Digitalisering af arkivtegninger (Digitalización)
+  39. Rentabilitetsberegning (Rentabilidad)
+  40. Varmetabsberegning (Pérdida de calor)
+
+  ── SERVICIOS (YDELSER) ──
+  41. Projektbeskrivelse (Descripción de proyecto)
+  42. Tilbudsgennemgang (Revisión de presupuesto)
+  43. Teknisk køberrådgivning (Asesoría técnica)
+  44. Håndværkerlisten (Lista de artesanos)
+
+  ── ARTÍCULOS Y GUÍAS ──
+  45. Håndværkerfradrag 2026 (Deducción fiscal)
+  46. ¿Cuánto cuesta un artesano por hora?
+  47. Cómo obtener presupuestos de artesanos
+  48. Quiebras en el sector de construcción
+  49. 7 renovaciones que más frecuentemente salen mal
+
+  ── LEGAL Y CORPORATIVO ──
+  50. Política de privacidad y cookies
+  51. Reseñas de clientes
+  52. FAQ general recopilada
+  53. Horarios de atención
+  54. Navegación y footer
+
+
+================================================================================
+1. INFORMACIÓN CORPORATIVA GENERAL
+================================================================================
+
+Empresa:          GBT ApS
+Nombre web:       Gratisbyggetilbud.dk
+Dirección:        Theilgaards Allé 7, 4600 Køge
+                  (también: Theilgårds torv 9 1.th, 4600 Køge)
+Teléfono:         70 60 06 20  /  70 600 620
+Email:            kontakt@gbt.dk
+CVR (NIF):        28 29 80 64
+Web:              https://gratisbyggetilbud.dk
+Redes sociales:   Facebook | LinkedIn
+
+Fundación:
+  GBT ApS fundada originalmente en 2004.
+  En 2022 el actual director Michael Larsen tomó el control con visión de
+  modernizar los procesos de construcción.
+
+Descripción:
+  Plataforma danesa que conecta propietarios de viviendas con artesanos
+  cualificados en todo el país. El servicio es completamente gratuito para
+  el propietario. Los artesanos pagan por acceder a los proyectos.
+
+Cifras clave:
+  · Más de 60.000 tareas resueltas
+  · Red de más de 500 artesanos en toda Dinamarca
+  · 2 años de soporte de reclamaciones incluido en proyectos
+  · Presupuestos válidos durante 30 días naturales
+
+Horario de atención:
+  Lunes – Viernes:    09:00 – 16:30
+  Martes / Jueves:    hasta las 20:30
+
+
+================================================================================
+2. PÁGINA DE INICIO (LANDING PAGE)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/
+
+--- HERO ---
+Título:     "Få gratis byggetilbud"
+Subtítulo:  "Få 3 gratis og uforpligtende byggetilbud på dit byggeprojekt."
+CTA:        "Udfyld formularen"
+
+--- SECCIÓN CENTRAL ---
+Título:     "Indhent byggetilbud til alle typer byggeprojekter"
+Pregunta:   "Hvad drømmer du om at få bygget?"
+Texto:
+  "Uanset hvilken type byggeprojekt du søger byggetilbud på, om det er
+  indendørs, udendørs eller et myndighedsprojekt, tilbyder vi gratis
+  skræddersyet byggetilbud. Vi hjælper dig hele vejen fra idé til færdigt
+  projekt, så du får professionelle byggetilbud, der matcher dine behov
+  og budget."
+
+--- 3 CATEGORÍAS ---
+Indendørs projekter:
+  "Skal badeværelset moderniseres, køkkenet udskiftes eller væggene flyttes?
+  Vi hjælper med gulv, loft, og lydisolering."
+Udendørsprojekter:
+  "Terrasse, facadeisolering, tag, og asfaltering – vi gør det nemt og trygt."
+Myndighedsprojekter:
+  "Egen ingeniørafdeling til byggetilladelser, statiske beregninger og
+  arkitekttegninger."
+
+--- PROCESO EN 4 PASOS ---
+Título:  "Sådan kommer du i gang — Modtag byggetilbud"
+
+Paso 1: "Indsend projektet"
+  "Fortæl os, hvad du gerne vil have lavet. Udfyld formularen her."
+Paso 2: "Online videomøde"
+  "Vi gennemgår projektet sammen på et videomøde, så du trygt og nemt
+  kommer godt fra start."
+Paso 3: "Modtag og vælg tilbud"
+  "Du får 3 gode byggetilbud fra professionelle fagfolk. Du vælger selv
+  det, der passer til dine behov og budget."
+Paso 4: "Kom igang med projektet"
+  "Når du har accepteret et byggetilbud, går arbejdet i gang. Det er nemt,
+  og vi hjælper dig hele vejen."
+
+--- POR QUÉ VIDEOLLAMADA ---
+Título:  "Derfor starter vi med et videomøde"
+Texto:
+  "Når du har indsendt dit projekt, inviterer vi dig til et uforpligtende
+  videomøde med en af vores byggekonsulenter. Her gennemgår vi projektet
+  sammen, så vi sikrer, at alt er tydeligt. Det er både for dig og de
+  fagfolk, der skal give byggetilbud. Det er nemt, effektivt og giver dig
+  en meget bedre oplevelse med projektet fra start."
+
+--- BENEFICIOS CLAVE ---
+Título:  "Derfor får vores kunder en god oplevelse"
+  · Spar tid og penge: "Du slipper for selv at ringe rundt og indhente tilbud."
+  · Nemt og hurtigt: "Du får hurtigt tre byggetilbud fra relevante fagfolk."
+  · Tryghed i hele processen: "Du er aldrig alene. Vi hjælper dig hele vejen."
+  · Tryghed: "Vi huser erfarne byggekonsulenter."
+  · Personlig rådgivning: "Vi starter med et kort videomøde."
+  · Videomøde: "Du får personlig og faglig rådgivning fra start."
+
+--- MYNDIGHEDSPROJEKTER EN LANDING ---
+  "Byggetilladelse, arkitekttegninger, statiske beregninger? Erfarne
+  ingeniører og arkitekter klar til at hjælpe. Med alt samlet ét sted
+  får du en smidig byggeproces uden unødige mellemled."
+
+--- RECURSOS DESTACADOS ---
+  · Guide til nyt gulv
+  · Professionel projektbeskrivelse
+  · Guide til energirenovering
+  · Håndværkerfradrag i 2026
+  · Nye regler for asbest
+  · Hvad koster en håndværker?
+  · Tryghed i byggeprojektet
+  · Undgå dyre fejl
+
+--- FAQ LANDING ---
+P: Koster det noget at bruge Gratisbyggetilbud?
+R: "Nej. Det er helt gratis at modtage byggetilbud for dig som boligejer.
+   Vi tager os betalt af de håndværkere, der ønsker at give tilbud."
+
+P: Hvor mange byggetilbud får jeg?
+R: "Du får op til 3 byggetilbud på dit projekt."
+
+P: Hvordan sikrer I kvaliteten af håndværkerne?
+R: "Alle håndværkere er godkendt manuelt af vores team, før de får adgang
+   til platformen. Vi tjekker at håndværkeren har dansk CVR og har
+   dokumenteret kvalitet og erfaring."
+
+P: Er jeg forpligtet til at vælge et af tilbuddene?
+R: "Nej. Vores platform giver dig mulighed for at sammenligne priser."
+
+P: Hvordan indsender jeg en opgave?
+R: "Du opretter dit projekt her. Du vil blive kontaktet af en mødebooker,
+   og vi tager et kort videomøde om projektet."
+
+P: Kan jeg få statiske beregninger eller arkitekttegninger?
+R: "Ja, hos Gratisbyggetilbud huser vi egen ingeniør- og arkitektafdeling."
+
+Última actualización indicada: april 2026 / januar 2026
+
+
+================================================================================
+3. SOBRE NOSOTROS (OM OS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/om-os/
+
+Titular:    "Om os"
+Subtítulo:  "Tryghed, faglighed og moderne byggeprocesser"
+
+Historia:
+  "GBT ApS blev oprindeligt grundlagt i 2004, og i 2022 overtog vores
+  direktør, Michael Larsen, virksomheden med en vision om at modernisere
+  byggeprocesserne."
+  Enfoque clave: "menneskelighed i byggeprocessen"
+
+Titulares de sección:
+  "Et stærkt fagligt team bag skærmen"
+  "Vi er med dig hele vejen"
+  "Mød menneskene bag"
+
+Valores / Pilares:
+  · Tryghed (Confianza)
+  · Transparens (Transparencia)
+  · Struktur (Estructura)
+  · Vision (Visión)
+  · Mission (Misión)
+
+
+================================================================================
+4. EQUIPO HUMANO
+================================================================================
+
+  · Michael Larsen        — Direktør (Director/CEO)
+  · Filali Mohammed       — Ingeniør / Arkitekt (Ingeniero / Arquitecto)
+  · Rebaz Amin            — Afdelingsleder ingeniør- og arkitektafdeling
+                            (Director del departamento de ingeniería y arquitectura)
+  · Noah Strudal          — Mødebooker (Gestor de reuniones)
+  · Natassia Ivanova      — HR
+  · Daniel Petersen       — Key Account Manager
+  · Theo                  — Security Officer
+  · Jesper                — Bygningskonstruktør (experto en Projektbeskrivelse)
+                            +25 años de experiencia en sector construcción.
+                            Proyectos destacados: Kurhotel Skodsborg,
+                            Vallensbæk Svømmehal, Baltorpsplænen.
+
+
+================================================================================
+5. CONTACTO
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/kontakt/
+
+Título:     "Dialog er vejen til succes"
+Subtítulo:  "Vælg en sparringspartner der er til for dig"
+
+Texto:
+  "Tag kontakt - Det er en fornøjelse at arbejde tæt sammen med vores
+  kunder og jeg vil garantere at mit team står klar til at hjælpe alle
+  vores besøgende trygt frem til det tilbud du mangler."
+
+Datos fiscales:
+  GBT ApS | CVR Nr. 28298064
+  Theilgårds torv 9 1.th, 4600 Køge
+
+FAQ en página de contacto:
+  P: Hvornår påbegyndes og afsluttes et projekt?
+  P: Hvad koster det at benytte gratisbyggetilbud?
+  P: Hvem fakturerer hvem?
+  P: Hvad forventes der af en kunde ved Gratisbyggetilbud.dk?
+  P: Hvordan indsender jeg en opgave?
+  P: Er der noget galt? Jeg kan ikke se, hvem håndværkeren er på et tilbud?
+
+Sección: "Vidste du det?" — Información sobre beneficios de sostenibilidad.
+
+
+================================================================================
+6. PÁGINA GENERAL DE PROYECTOS (BYGGEPROJEKTER)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/byggeprojekter/
+
+Título:     "Byggeprojekter"
+Subtítulo:  "Vi hjælper dig trygt igennem dine byggeprojekter"
+
+INTERIOR:
+  "Vores store netværk af håndværkere hjælper dig med alle typer
+  indendørsprojekter, som badeværelsesrenovering, nyt køkken, tilbygning
+  og malerarbejde."
+  Listados: Totalrenovering, Badeværelsesrenovering, Køkkenrenovering,
+  Kælderrenovering, Tilbygning, Gulvafslibning, Nye vinduer, Gulvvarme.
+
+EXTERIOR:
+  "Modtag byggetilbud på alt fra udskiftning af asbesttag, nedrivning,
+  skalmuring, asfaltering, udgravning af fundament til energirenovering
+  og meget mere."
+  Listados: Nyt tag, Udskiftning af asbesttag, Nedrivning af hus,
+  Skalmuring, Fundament, Asfaltering, Maling af hus udvendigt, Fugerenovering.
+
+AUTORIDADES:
+  "Vi huser egne erfarne ingeniører og arkitekter hos Gratisbyggetilbud.
+  Vi kan hjælpe dig med alt fra arkitekttegninger og statiske beregninger
+  til en komplet byggeansøgning."
+  Listados: Arkitekttegninger, Statiske beregninger, Byggeansøgning,
+  Varmetabsberegning.
+
+Propuesta de valor central:
+  · Personlig byggekonsulent
+  · Gennemsigtighed og kvalitet
+  · Uforpligtende byggetilbud
+  · Spar tid
+  · Hele byggeprocessen samlet
+
+Proceso (4 pasos): Udfyld formularen → Mød din byggekonsulent →
+  Få dine tilbud → Vælg og kom igang.
+
+
+================================================================================
+7. PROYECTOS DE INTERIOR — PÁGINA ÍNDICE
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/indendoers-byggeprojekter/
+
+Título:     "Indendørs byggeprojekter - Modtag gratis byggetilbud"
+Subtítulo:  "Få hjælp til alle typer indendørs renovering"
+
+Texto:
+  "Indendørs renovering kan forbedre hjemmet markant. Det er både når det
+  handler om funktion, komfort og udtryk."
+
+Puntos clave:
+  · "Kvalitetssikrede håndværkere: Vi samarbejder kun med håndværkere,
+    du kan stole på."
+  · "Gratis personlig byggekonsulent: Erfaren byggekonsulent følger dit
+    projekt fra start til slut."
+  · "Budget, der holder: Vi hjælper med at afstemme ønsker, pris og
+    projektomfang, så du undgår overraskelser undervejs."
+
+Categorías:
+  TOTALRENOVERING & OMBYGNING: Totalrenovering, Lejlighedsrenovering,
+    Tilbygning, Kælderrenovering, Ombygning af hus.
+  RUMRENOVERING & INDRETNING: Køkkenrenovering, Gulvafslibning,
+    Nedrivning af væg, Nyt badeværelse, Maling indendørs,
+    Trapperenovering, Nyt gulv, Find en maler.
+  ENERGIRENOVERING & INDEKLIMA: Energirenovering, Vægisolering,
+    Gulvvarme, Loftisolering, Nye vinduer, Varmepumpe, Udskiftning af døre.
+  INSTALLATIONER: El-arbejde, Fjernelse af skimmelsvamp.
+
+FAQ:
+  P: Hvad koster et indendørs byggeprojekt?
+  R: "Prisen afhænger af materialer, kompleksitet og omfang."
+  P: Kan jeg få hjælp, selvom jeg kun har en idé?
+  R: "Ja. Konsulenten hjælper dig med at konkretisere behov."
+  P: Hvilke typer projekter kan give håndværkerfradrag?
+  R: "I 2026: Isolering og energiforbedringer, varme og installationer,
+     klima og ventilation, radonsikring."
+
+
+================================================================================
+8. PROYECTOS DE EXTERIOR — PÁGINA ÍNDICE
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/udendoers-byggeprojekter/
+
+Título:     "Udendørs byggeprojekter"
+Subtítulo:  "Skab mere værdi, funktion og æstetik i din bolig med
+             udendørs renovering"
+
+Categorías y frases clave:
+  TAG & KLIMASKÆRM:
+  · "Nyt tag giver boligen markant forbedret holdbarhed, energiydelse og æstetik"
+  · "Eternit er et prisstærkt og holdbart materialevalg"
+  · "Skifertag giver et eksklusivt udtryk og meget lang holdbarhed"
+  · "En carport beskytter bilen mod vind, vejr og slitage"
+  · "Nye energivinduer reducerer varmetab og forbedrer komfort"
+
+  ANLÆGSPROJEKTER & FACADE: Facadeprojekter, aislamiento exterior.
+  BELÆGNING & TERRASSER: Terrasse, Belægning (pavimentación).
+  ENERGIRENOVERING: Aislamiento fachada, mejoras climáticas.
+
+
+================================================================================
+9. PROYECTOS CON AUTORIDADES — PÁGINA ÍNDICE
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekter/myndighedsprojekter/
+
+Título:
+  "Myndighedsprojekter – Din Vej til godkendelse og tegninger"
+Texto:
+  "At navigere gennem myndighedsprocesserne kan ofte føles som at kaste
+  sig ud i et kompliceret farvand af regler og krav."
+
+Nota importante:
+  La empresa dispone de departamento propio de ingeniería. Ofrecen
+  "skræddersyet tilbud direkte" en lugar de múltiples presupuestos.
+
+4 Beneficios:
+  1. "Du sparer tid – og penge"
+  2. "Du får kyndig vejledning af os"
+  3. "Du får den skarpest pris"
+  4. "Bæredygtigt byggeri..."
+
+Servicios disponibles:
+  · Arkitekttegninger (Planos de arquitectura)
+  · Byggeansøgning (Solicitud de licencia de obra)
+  · Statiske beregninger (Cálculos estáticos)
+  · Digitalisering af arkivtegninger (Digitalización de planos)
+  · Rentabilitetsberegning (Cálculo de rentabilidad)
+  · Varmetabsberegning (Cálculo de pérdida de calor)
+
+Áreas de especialización:
+  · Byggetilladelser (Licencias de obra)
+  · Zonestatusændringer (Cambios de clasificación de zona)
+  · Miljøvurderinger (Evaluaciones medioambientales)
+  · Tekniske tegninger (Planos técnicos)
+  · Myndigheds kommunikation (Comunicación con autoridades)
+
+
+================================================================================
+10. TOTALRENOVERING (REFORMA TOTAL)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/totalrenovering/
+
+Título:   "Totalrenovering? Fra ide til virkelighed – Få dit tilbud nu!"
+Pregunta: "Hvad betyder det for dig personligt, at have en samarbejdspartner
+           du kan stole på?"
+
+Puntos clave:
+  · Faglig sparringspartner – Vi hjælper dig hele vejen
+  · Få 3 gratis og uforpligtende byggetilbud
+  · Mere end 60.000 løste opgaver i bagagen
+
+PROCESO DETALLADO (4 pasos):
+  1. "Indsend dit projekt til os"
+     "Er jagten gået ind efter en håndværker til din opgave? Så læn dig
+     tilbage og Indsend dit projekt til gratisbyggetilbud."
+  2. "Vi mødes online"
+     "Vi indsamler de nødvendige oplysninger, laver projektbeskrivelse og
+     skriver det tilbud du mangler, så er det tid til at aktivere vores
+     netværk af håndværkere."
+  3. "Vi hjælper dig til det bedste tilbud"
+     "Priserne skal gerne ligge indenfor 15% af hinanden. Lykkes det ikke
+     forsætter vi indtil vi står med en række tilbud der passer til dig."
+  4. "Din accept – vi får dig i mål!"
+     "Håndværkeren har 7 hverdage til at kontakte og besøge dig."
+
+¿QUÉ INCLUYE UNA REFORMA TOTAL DE CASA?
+  Tejado nuevo, actualización ventanas, trabajos eléctricos, renovación baño,
+  reforma cocina, pintura, tipos de suelo, aislamiento de pared, aislamiento
+  de techo, terraza de madera o piedra, bomba de calor.
+
+  Beneficios:
+  · Mejora funcionalidad y consumo energético
+  · Mayor confort y vivienda económica
+  · Facturas de electricidad más bajas
+  · Mejor confort, beneficios medioambientales, mayor valor inmobiliario
+  · Materiales sostenibles atraen compradores concienciados
+
+REFORMA TOTAL DE PISO (LEJLIGHED):
+  Incluye: trabajos de suelo, cocinas nuevas, renovación baño, pintura,
+  sustitución ventanas, aislamiento pared.
+  · Crea hogares con diseño moderno y funcional
+  · Instalaciones energoeficientes
+  · Inversión a largo plazo con mayor valor de mercado
+
+DURACIÓN:
+  Casa: típicamente 3-12 meses.
+  Piso: generalmente más corto.
+  Factores: tamaño propiedad, número de habitaciones, alcance de cambios,
+  permisos y aprobaciones.
+
+FASES TÍPICAS:
+  1. Planlægning og design: desarrollo concepto, planos arquitecto, permiso.
+  2. Forberedelse og nedrivning: vaciado habitaciones, demolición estructura.
+  3. Grovbygning: nuevas paredes, tejados, ventanas, suelos.
+  4. Installation af systemer: actualización eléctrica y fontanería.
+  5. Interiørarbejde: pintura, suelos, baño, cocina.
+  6. Afslutning og oprydning: toques finales, limpieza, inspección.
+  Duración total estimada: ~12 meses para reforma completa.
+
+PRESUPUESTO:
+  "Fastlæg de nødvendige finansielle ressourcer. Inkluder materialeomkostninger,
+  arbejdskraft og uventede udgifter som skimmel eller opgradering af el/vvs.
+  Bevar 10-20% buffer."
+
+VENTAJAS GRATISBYGGETILBUD:
+  · Asesor personal negocia precio en red de 400+ artesanos
+  · 3 presupuestos comparables con misma base de proyecto
+  · 2 años de soporte de reclamaciones
+
+
+================================================================================
+11. RENOVERING AF LEJLIGHED (REFORMA DE PISO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/renovering-af-lejlighed/
+
+Proceso 4 pasos (igual estructura).
+Puntos clave:
+  · Punto de contacto único para todo el proyecto
+  · Control de calidad incluido
+  · Gestión de presupuesto
+  · Reducción de estrés
+  · Más de 60.000 proyectos completados
+
+Horario atención:
+  "Vi har tider mellem 09.00-16.30 alle dage og tirsdag/torsdag helt
+  til 20.30."
+
+Garantía:
+  Los presupuestos deben estar dentro del 15% entre sí.
+  Artesano tiene 7 días hábiles para contactar al cliente tras aceptación.
+
+
+================================================================================
+12. TILBYGNING (AMPLIACIÓN)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/tilbygning/
+
+Título:   "Tilbygning – Udvid dit hjem og skab nye muligheder"
+Subtítulo: "Modtag gratis tilbud på tilbygning"
+
+Introducción:
+  "En tilbygning er en fantastisk måde at forvandle dit hjem på. Uanset
+  om du har brug for ekstra plads til en voksende familie, en hobby, et
+  kontor eller ønsker at forbedre din boligs funktionalitet, kan en
+  tilbygning give dig fleksibiliteten til at tilpasse din bolig til dine
+  specifikke behov."
+
+BENEFICIOS DE UNA AMPLIACIÓN:
+  · Mere plads (Más espacio)
+  · Forbedret funktionalitet (Funcionalidad mejorada)
+  · Øget værdi i boligen (Mayor valor en la vivienda)
+  · Tilpasset livsstil (Estilo de vida adaptado)
+
+  "Med en tilbygning kan du få præcis det ekstra rum du har brug for.
+  Potentielle købere vil ofte også værdsætte ekstra plads og forbedret
+  funktionalitet, hvilket kan betyde at din bolig bliver mere attraktiv
+  på markedet."
+
+POR QUÉ NECESITAS PLANOS DE ARQUITECTO:
+  "Når det kommer til at omsætte dine idéer til konkrete planer, så er det
+  en god ide at få professionelle arkitekttegninger fra en arkitekt. Det
+  sikrer, at tilbygningen ikke blot opfylder dine behov, men også passer
+  perfekt til bygningens eksisterende struktur, æstetik og funktionalitet."
+
+  Beneficios con arquitecto:
+  · Skræddersyet design:
+    "Arkitekten kan skabe 3D visuelle tegninger, der giver et detaljeret
+    overblik over tilbygningen. Tegningerne sikrer at der bliver taget
+    højde for både dine ønsker og husets arkitektoniske stil, så tilbygningen
+    smelter naturligt sammen med det eksisterende byggeri."
+  · Optimal udnyttelse af pladsen:
+    "Arkitekten tænker kreativt og praktisk, så hver kvadratmeter bliver
+    udnyttet bedst muligt."
+  · Æstetik og funktionalitet i balance:
+    "En arkitekt har øje for detaljer og kan skabe et design, der både er
+    smukt og funktionelt, samtidig med at det tilføjer værdi til din ejendom."
+  · Hensyn til lokalplan og byggetilladelse:
+    "For at få en byggetilladelse, er det nødvendigt med arkitekttegninger.
+    Arkitekten kan hjælpe med at navigere i komplekse regler og krav, så
+    tilbygningen opfylder alle nødvendige love og regler, som bekendtgjort
+    i bygningsreglementet."
+
+TIPOS DE AMPLIACIONES:
+
+  Tilbygning til hus (Ampliación directa de la casa):
+    "Esta ampliación es una extensión directa y puede diseñarse para encajar
+    perfectamente con la arquitectura existente."
+    · Ekstra værelser: "Ideelt for familier, der har brug for mere plads,
+      gæsteværelse eller måske et hjemmekontor."
+    · Udvidelse af stuen: "Mange vælger at gøre stuen større for at få et
+      mere åbent og indbydende opholdsrum."
+    · Køkken-alrum: "En populær løsning, hvor køkkenet integreres med
+      spisestuen for at skabe et socialt og moderne samlingspunkt."
+    "Med en tilbygning til huset kan du udnytte din grunds fulde potentiale."
+
+  Udestue som tilbygning (Jardín de invierno / Galería):
+    "En udestue er en fantastisk måde at bringe naturen tættere på hjemmet,
+    mens du får et funktionelt og hyggeligt rum."
+    · Funktionalitet hele året rundt: "Moderne udestuer er isoleret og kan
+      bruges hele året som en lys stue, en spisestue eller et afslapningsområde."
+    · Maksimal udnyttelse af dagslys: "Store glaspartier og panoramavinduer
+      giver masser af lys og en fantastisk udsigt til haven."
+    · Integration med haven: "Udestuen kan fungere som en naturlig overgang
+      mellem hjemmet og haven."
+    "Udestuer kan tilpasses med forskellige materialer som glas, træ og
+    aluminium for at matche dit hjems stil."
+
+  Garage eller carport som tilbygning:
+    "En garage eller carport er en populær type tilbygning, der ikke blot
+    beskytter dine køretøjer mod vejr og vind, men også øger din boligs
+    funktionalitet og værdi."
+    "Det kan være en fordel at få arkitekttegninger udarbejdet. Arkitekten
+    sørger for, at garagen eller carporten harmonerer med husets eksisterende
+    design, samtidig med at det udnytter arealet bedst muligt."
+    NOTA SOBRE ESTÁTICA:
+    "Selvom en carport er en relativt enkel konstruktion, og en garage kan
+    virke som en overskuelig opgave, så kan der også være situationer hvor
+    en statiker kan være nødvendig at inddrage. Hvis carporten eksempelvist
+    er integreret med huset, eller hvis garagen har en tung konstruktion
+    som kan belaste fundamentet og den omkringliggende jord, så er det
+    nødvendigt med statiske beregninger."
+
+  Overetage som tilbygning (Añadir un piso superior):
+    "En overetage som tilbygning er en af de mest transformative måder at
+    udvide din bolig på. I stedet for at bruge mere af din grunds plads,
+    udnytter du husets eksisterende fundament og bygger opad."
+    Ventajas:
+    · Øget boligareal uden at miste udendørs plads:
+      "En overetage giver dig mulighed for at øge dit boligareal markant
+      uden at gå på kompromis med haven, terrassen eller parkeringsarealet."
+    · Forhøjelse af ejendomsværdien:
+      "At tilføje en overetage kan betydeligt øge din ejendoms værdi,
+      især i områder med høje kvadratmeterpriser."
+    · Bedre udsigt og lysindfald:
+      "En overetage giver ofte mulighed for bedre udsigt og mere naturligt
+      lys, især hvis du investerer i store vinduespartier eller altaner."
+    · Skræddersyede løsninger: "Overetagen kan designes præcis efter dine
+      behov, uanset om du ønsker en ekstra stue, et walk-in closet, et
+      hjemmekontor eller en separat afdeling til børnene."
+    Consideraciones importantes:
+    · Byggetekniske krav og statik:
+      "At tilføje en overetage stiller store krav til bygningens eksisterende
+      konstruktion. Det er essentielt at få en statiker til at vurdere, om
+      fundamentet og de bærende vægge kan klare den ekstra belastning."
+    · Arkitektonisk sammenhæng:
+      "En overetage skal integreres harmonisk med husets eksisterende stil.
+      Her kan en arkitekt hjælpe med at skabe en løsning, der både æstetisk
+      og funktionelt passer til bygningens oprindelige design."
+    · Byggetilladelse og lokalplaner:
+      "At bygge en overetage kræver en byggetilladelse. Derudover kan der
+      være restriktioner i lokalplanen, som begrænser husets maksimale
+      højde eller taghældning."
+    Conclusión:
+    "En overetage som tilbygning er en stor investering, men den kan
+    forvandle din bolig både funktionelt og æstetisk."
+
+  Udendørs tilbygning:
+    "En udendørs tilbygning er designet til at skabe rum, der binder huset
+    og haven sammen. Det kan give dig mere plads til afslapning, opbevaring
+    eller praktisk brug. Udendørs tilbygninger omfatter alt fra overdækkede
+    terrasser, pergolaer og udestuer til redskabsskure, drivhuse og pavilloner."
+
+CÁLCULOS ESTÁTICOS Y PLANOS — AMPLIACIÓN:
+  "Du kan få et komplet byggetilbud på din tilbygning der dækker både
+  statiske beregninger og arkitekttegninger."
+
+RESUMEN SERVICIO:
+  "Hos Gratisbyggetilbud slipper du for selv at kontakte adskillige
+  håndværkere og indhente priser. Vi forbinder dig med erfarne og pålidelige
+  fagfolk, fra arkitekter og statikere til murere og tømrere."
+  "Det er gratis og uforpligtende at indhente tilbud via Gratisbyggetilbud."
+
+
+================================================================================
+13. KÆLDERRENOVERING (RENOVACIÓN DE SÓTANO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/kaelderrenovering/
+
+Título:   "Kælderrenovering: Øg værdien af din bolig – Få dit tilbud nu!"
+
+Texto:
+  "En kælderrenovering kan vise sig at være en værdifuld investering."
+  La renovación del sótano puede aumentar significativamente el valor
+  inmobiliario en el mercado danés.
+
+Beneficios:
+  · Øget boligareal (Mayor superficie habitable)
+  · Forbedret funktionalitet (Funcionalidad mejorada)
+  · Øget ejendomsværdi (Mayor valor inmobiliario)
+  · Energieffektivitet og klimavenlighed (Eficiencia energética)
+  · Forbedret ventilation (Ventilación mejorada)
+  · Fugt- og skimmelkontrol (Control de humedad y moho)
+
+Titulares:
+  "Har du brug for kælderrenovering?"
+  "Hvilke regler er der for kældre i Danmark?"
+  "Bygningsreglementet (BR18)"
+  "Vigtige overvejelser før en kælderrenovering"
+  "Fastlæg de økonomiske rammer"
+  "Sikring af byggetilladelser"
+  "Vurdering af kælderens tilstand"
+  "Integration af design og funktionalitet"
+  "Opsætning af faskine"
+  "Fordele ved faskiner"
+  "Skal du bruge statiske beregninger eller arkitekttegninger?"
+
+Puntos clave:
+  · Faglig sparringspartner – Vi hjælper dig hele vejen
+  · Få 3 gratis og uforpligtende byggetilbud
+  · Mere end 60.000 løste opgaver i bagagen
+
+
+================================================================================
+14. OMBYGNING (REFORMA ESTRUCTURAL)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/ombygning/
+
+Título:    "Har du et ombygningsprojekt? – Modtag tilbud på ombygning her."
+Subtítulo: "Det er dit hjem, der er i fokus når du ønsker forandring.
+            Skab drømmehjemmet med Gratisbyggetilbud"
+
+Sección: "Skab plads med åben planløsning"
+  Tendencias de diseño 2024: espacios sociales donde cocina, comedor y
+  salón se conectan. Conversión de áticos o sótanos infrautilizados en
+  espacios habitables para añadir metros cuadrados y aumentar el valor.
+
+Sección: "Forøg værdien af dit hjem"
+  Las reformas de calidad aumentan el valor, especialmente cocinas y baños
+  modernos. Espacio optimizado y habitaciones adicionales atraen compradores.
+
+Sección: "Tilføjelse af ekstra værelser eller boligkvadratmeter"
+  Añadir habitaciones o metros cuadrados aumenta el atractivo y valor.
+
+4 RAZONES PARA USAR EL SERVICIO:
+  1. "Du sparer tid – og penge"
+     "Vi kender processen og ved hvordan opgaver skal beskrives, så du
+     som kunde får det skarpeste tilbud."
+  2. "Du får kyndig vejledning af os"
+     "Erfaren kontaktperson guider projekter."
+  3. "Du får den skarpeste pris"
+     "Tres presupuestos comparables de la misma descripción de proyecto."
+  4. "Du kommer rigtigt i mål"
+     "Virksomheden håndterer fuldt projektansvar."
+
+Servicios adicionales:
+  "Hos GratisByggetilbud tilbyder vi støtte med plantegninger, statiske
+  beregninger, 3D-tegninger og forbindelse med håndværkere."
+
+Reunión online: "Vi har tid til dig – Book et online møde"
+  30 minutos de consulta online para discutir, planificar y recopilar
+  presupuestos gratuitos.
+
+
+================================================================================
+15. KØKKENRENOVERING (REFORMA DE COCINA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/koekkenrenovering/
+
+Título:  "Køkkenrenovering – Få 3 gratis tilbud fra lokale håndværkere"
+
+Descripción del servicio:
+  Abarca desde "en simpel opfriskning til en gennemgribende ombygning"
+  (simple renovación hasta reforma completa).
+
+COMPONENTES DE UNA REFORMA DE COCINA:
+  · Nedrivning og forberedelse:
+    "Demontering af skabe, bordplader, hvidevarer og ofte også gulve og
+    vægfliser."
+  · El- og vvs-arbejde:
+    "Justering af elinstallationer og vandrør for relocated fixtures;
+    modernización de servicios."
+  · Opsætning af køkkenelementer:
+    "Præcis montering af køkkenelementer."
+  · Tilpasning af gulv og vægge:
+    "Skifte af gulvet eller væggene spartlet, malet eller beklædt med fliser."
+  · Belysning og finish:
+    "Moderne køkkenløsning kræver god arbejdsbelysning og gennemtænkt
+    placering af kontakter og afbrydere."
+
+¿CUÁNDO SE NECESITA LICENCIA?
+  SIN licencia cuando:
+  · Udskifter skabe, bordplader og hvidevarer
+  · Opdaterer el og vvs uden væsentlig flytning
+  · Renoverer inden for eksisterende rammer
+
+  CON licencia cuando:
+  · Flytter væggen eller ændrer bærende konstruktioner
+  · Ændrer aftræk, ventilation eller afløb i etageejendom
+  · Ændringer påvirker boligens brand- eller konstruktionsforhold
+
+PRECIO:
+  "Det korte svar er, at det afhænger helt af dine behov og valg af
+  materialer."
+  Factores: alcance del trabajo, elección de materiales,
+  requerimientos de ingeniería, tipos de artesanos.
+
+FAQ:
+  P: Kan jeg få håndværkerfradrag?
+  R: "Ja, i nogle tilfælde kan du godt. Det afhænger af typen af arbejde."
+  P: Hvor lang tid tager en køkkenrenovering?
+  R: "Som tommelfingerregel varer en køkkenrenovering mellem 1-4 uger,
+     afhængigt af omfanget."
+  P: Kan jeg selv stå for dele af arbejdet?
+  R: "Ja, du kan vælge at gøre noget selv og få tilbud på resten."
+  P: Hvad hvis jeg bor i lejlighed?
+  R: "Der kan gælde særlige regler. Rådgivere kan hjælpe."
+  P: Hvilke typer håndværkere får jeg tilbud fra?
+  R: "Typisk tømrere, køkkenmontører, elektrikere, vvs-installatører."
+  P: Skal jeg søge byggetilladelse?
+  R: "Det afhænger af omfanget; ingeniørafdeling hjælper med vurdering."
+
+
+================================================================================
+16. NYT BADEVÆRELSE (BAÑO NUEVO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/nyt-badevaerelse/
+
+Título:     "Drømmer i om nyt badeværelse?"
+Subtítulo:  "Find den rette håndværker i dag!"
+
+Descripción:
+  La empresa ofrece soluciones personalizadas basadas en amplia experiencia
+  con cientos de proyectos de baño. Enfoque innovador incluyendo
+  inspecciones online para agilizar el proceso.
+
+Mini guía:
+  1. Hvad er din stil? (¿Cuál es tu estilo?)
+  2. Maksimering af badeværelsesrum (Maximizar espacio)
+  3. Materialevalg (Elección de materiales)
+
+Recursos adicionales:
+  · SBI 252 (normativa de construcción)
+  · Guía de elección de azulejos
+  · Información de precios
+  · Galería de inspiración
+  · Opción de renovación en 5 días
+
+
+================================================================================
+17. GULVAFSLIBNING (LIJADO DE SUELO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/gulvafslibning/
+
+Título:     "Gulvafslibning – få 3 gratis byggetilbud"
+Subtítulo:  "Modtag byggetilbud i dag!"
+
+Proceso (3 pasos):
+  1. Beskriv din opgave (Describe la tarea)
+  2. Vi finder firmaer til dig (Encontramos empresas para ti)
+  3. Du modtager op til 3 tilbud (Recibes hasta 3 presupuestos)
+
+Beneficios:
+  · Gratis og uforpligtende tilbud
+  · Tid til at vælge rigtigt
+  · Adgang til kvalitetssikrede gulvafslibningsfirmaer
+  · Mulighed for at spare penge
+  · Én nem formular – op til 3 tilbud
+
+Tipos de acabado (Efterbehandling):
+  · Oliebehandling (Tratamiento con aceite)
+  · Lakbehandling (Tratamiento con laca)
+  · Sæbebehandling (Tratamiento con jabón)
+
+Titulares adicionales:
+  "Afhøvling af gulv"
+  "Hvilke typer efterbehandling kan du vælge?"
+  "Gulvafslibning pris – find den bedste pris for dig"
+  "Ofte stillede spørgsmål"
+
+
+================================================================================
+18. NEDRIVNING AF VÆG (DEMOLICIÓN DE PARED)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/nedrivning-af-vaeg/
+
+Introducción:
+  "Skal du have åbnet op mellem køkken og stue, lavet et større rum eller
+  ændret planløsningen?"
+
+La demolición puede ser sencilla pero requiere evaluación si la pared es
+de carga (bærende), necesitando cálculos estáticos y documentación.
+
+Razones para usar el servicio:
+  · Hurtig proces (Proceso rápido)
+  · Sammenligning af tilbud (Comparación de presupuestos)
+  · Tryghed i projektet (Seguridad)
+  · Bedre beslutning (Mejor decisión)
+
+Proceso (4 pasos):
+  1. Beskriv opgaven — 2. Videomøde — 3. Modtag tilbud — 4. Kom igang
+
+Sección cálculos estáticos: evaluación, documentación y licencias de obra.
+
+FAQ temas: identificar paredes de carga, plazo presupuestos, cálculos
+estáticos obligatorios, duración proyecto, eliminación de residuos.
+
+
+================================================================================
+19. MALING AF LEJLIGHEDER OG HUSE (PINTURA DE PISOS Y CASAS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/maling-af-lejligheder-og-huse/
+
+Título:   "Har du brug for maling af din lejlighed eller dit hus?"
+
+PROCESO DETALLADO (4 pasos):
+  1. "Indsend dit projekt til os"
+     "Er jagten gået ind efter en håndværker til din opgave? Så læn dig
+     tilbage og Indsend dit projekt til gratisbyggetilbud. Vi står klar til
+     at hjælpe dig trygt frem til de tilbud du mangler."
+  2. "Vi mødes online"
+     "Vi indsamler de nødvendige oplysninger, laver projektbeskrivelse og
+     skriver det tilbud du mangler, så er det tid til at aktivere vores
+     netværk af håndværkere."
+  3. "Vi hjælper dig til det bedste tilbud"
+     "Priserne skal gerne ligge indenfor 15% af hinanden. Lykkes det ikke
+     forsætter vi indtil vi står med en række tilbud der passer til dig.
+     Gennem løbende dialog, og med vores erfaringer, vil vi sammen kunne
+     slå til på det rette tidspunkt."
+  4. "Din accept – vi får dig i mål!"
+     "De indkomne tilbud samles på din profil her på siden. En accept fra
+     dig betyder, at du nu er klar til at gå i endelig dialog. Håndværkeren
+     har 7 hverdage til at kontakte og besøge dig."
+
+BENEFICIOS DE PINTAR:
+  "Nymalet lejlighed? – et markant løft!"
+  "At få malet sin lejlighed eller sit hus er en forholdslig enkel, men
+  yderst effektiv måde at forbedre både udseendet og værdien af sin bolig.
+  En nymalet overflade bringer straks nyt liv til ethvert rum og kan
+  dramatisk forvandle atmosfæren i hele hjemmet."
+  "Farvevalg kan også have en stor indvirkning på rummets størrelse og
+  lysforhold. Lysere farver kan få små rum til at føles større, mens
+  mørkere toner kan tilføre dybde og varme til større rum."
+
+SALUD:
+  "Nymalet huse og lejligheder er positivt for helbredet"
+  "Ny maling, især den type maling, der er fri for skadelige kemikalier og
+  VOC'er (Volatile Organic Compounds), kan forbedre luftkvaliteten i hjemmet."
+  "Malingen forbedrer luftkvaliteten ved at fjerne ophobede allergener og
+  støv. Resultatet er et sundere indeklima. Maling fungerer også i visse
+  tilfælde, som en beskyttende barriere, der forhindrer fugt i at trænge
+  ind i væggene. Maling reducerer derfor risikoen for skimmelvækst."
+
+VALOR INMOBILIARIO:
+  "En nymalet bolig er ofte mere attraktiv for potentielle købere, hvilket
+  gør den lettere at sælge og kan føre til en højere salgspris."
+  "Maling af lejligheden eller huset er en relativt billig måde at opgradere
+  dit hjem på. Sammenlignet med andre typer af renoveringsprojekter, er
+  maling en omkostningseffektiv løsning."
+
+PINTORES PROFESIONALES:
+  "Professionelle malere arbejder også hurtigt og effektivt, hvilket reducerer
+  den tid, din bolig er under renovering."
+  "Professionelle malere har adgang til højkvalitetsmaling og udstyr, som
+  ikke altid er tilgængelige for den gennemsnitlige boligejer."
+  "En lejlighed eller et hus malet af professionelle malere kan desuden
+  hjælpe med farvevalg og designrådgivning."
+
+4 RAZONES:
+  1. "Du sparer tid – og penge": "Vi kender malerbranchen og ved hvordan
+     opgaver skal beskrives, så du som kunde får det skarpeste tilbud."
+  2. "Du får kyndig vejledning af os": "Fra drøm til realitet er til tider
+     også en opgave i det muliges kunst."
+  3. "Du får den skarpeste pris": "Den første pris er ikke nødvendigvis
+     den rigtige pris for dig."
+  4. "Du kommer rigtigt i mål": "Gør det du er god til – det gør vi,
+     på dine vegne."
+
+
+================================================================================
+20. TRAPPERENOVERING (RENOVACIÓN DE ESCALERA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/trapperenovering/
+
+Descripción: "opgradering og forbedring af din eksisterende trappe"
+
+Opciones:
+  · Afslibning og overfladebehandling (Lijado y tratamiento)
+  · Maling af trapper (Pintura)
+  · Trappebeklædning (Revestimiento)
+  · Delvis udskiftning (Sustitución parcial)
+
+Precio orientativo: "Mindre renoveringer starter ofte fra omkring 5.000 kr."
+Duración: 1-2 días simples, 3-5 días proyectos mayores.
+
+
+================================================================================
+21. NYT GULV (SUELO NUEVO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/nyt-gulv/
+
+Título: "Nyt gulv — Få 3 gratis tilbud på nyt gulv fra professionelle gulvlæggere"
+
+Tipos: Trægulv, Laminatgulv, Vinylgulv, Parketgulv,
+       Epoxy- og microcement gulv, Korkgulv.
+
+PRECIOS ORIENTATIVOS:
+  Rango general:    300 – 1.500 kr./m2 (incl. materiales y montaje)
+  · Laminat:          300 – 600 kr./m2
+  · Vinyl:            500 – 800+ kr./m2
+  · Trægulv:          750 – 1.200 kr./m2
+  · Sildebensparket:  1.200 – 1.500 kr./m2
+  · Epoxygulv:        500 – 950 kr./m2
+  · Microcementgulv:  600 – 1.500 kr./m2
+  · Korkgulv:         500 – 900 kr./m2
+
+
+================================================================================
+22. FIND EN MALER (ENCUENTRA UN PINTOR)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/find-en-maler/
+
+Servicios: Indvendig maling, Udvendig maling, Maling af lejlighed,
+           Maling af vinduer og døre, Facademaling, Maling før salg.
+
+
+================================================================================
+23. VÆGISOLERING (AISLAMIENTO DE PARED)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/vaegisolering/
+
+"Vægisolering spiller en afgørende rolle i at opretholde en behagelig
+indetemperatur."
+
+Beneficios:
+  · Reducere varme-/kølebehov (Reduce necesidad de calor/frío)
+  · Forbedrer lydisolering (Mejora aislamiento acústico)
+  · Sænker CO2-emissioner (Reduce emisiones CO2)
+  · Reducerer fugt og kondensering (Reduce humedad y condensación)
+  · Øger boligværdi og energimærke (Aumenta valor y etiqueta energética)
+
+
+================================================================================
+24. GULVVARME (CALEFACCIÓN POR SUELO RADIANTE)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/gulvvarme/
+
+Título: "Den ultimative guide til gulvvarme"
+
+Descripción:
+  "Gulvvarme er en moderne og effektiv opvarmningsløsning, der installeres
+  under gulvet og fordeler varmen jævnt i hele rummet."
+
+TIPOS DE SISTEMAS:
+  El gulvvarme (Suelo eléctrico):
+    "El gulvvarme er en opvarmningsløsning, der anvender elektriske
+    varmekabler eller varmemåtter, der installeres direkte under gulv-
+    belægningen."
+
+  Vandbaseret gulvvarme (Suelo con agua):
+    "Vandbaseret gulvvarme er en opvarmningsløsning, hvor varmt vand
+    cirkulerer gennem rør, der installeres under gulvbelægningen."
+
+  Lavenergi gulvvarme (Baja energía):
+    "Lavenergi gulvvarme er designet til at maksimere energieffektiviteten
+    ved at operere ved lavere temperaturer."
+
+NOTA TÉCNICA ALTURA:
+  "Gulvvarmesystemer kræver som regel en opbygning med rør indlejret i et
+  lag af cement eller flydespartel, hvilket kan hæve gulvet med 15-20 cm."
+
+FASES DE INSTALACIÓN (Vandbaseret):
+  1. Underlags forberedelse (Preparación del substrato)
+  2. Installation af varmerør (Instalación de tuberías de calor)
+  3. Dækning af rør (Cubrición de tuberías)
+  4. Tilslutning til varmekilde (Conexión a fuente de calor)
+
+INSTALACIÓN ELÉCTRICA:
+  Usa varmekabler o varmemåtter fijados al substrato, conectados a
+  controles de termostato.
+
+
+================================================================================
+25. LOFTISOLERING (AISLAMIENTO DE TECHO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/loftisolering/
+
+Beneficios:
+  · Better indoor climate through reduced heat loss/gain
+  · Energy savings via reduced heating and cooling needs
+  · Prevents condensation and mold damage
+  · Increases property value
+  · Low maintenance requirements
+  · Environmental sustainability
+
+Claims: "60.000+ gennemførte projekter" | "3 gratis, uforpligtende tilbud"
+
+
+================================================================================
+26. ENERGIRENOVERING (RENOVACIÓN ENERGÉTICA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/energirenovering/
+
+Título:    "Energirenovering"
+Subtítulo: "Spar på varmen og få 3 gratis tilbud på energirenovering"
+
+Texto:
+  "Vil du sænke din varmeregning, forbedre indeklimaet og samtidig øge
+  værdien af din bolig? Så er energirenovering en af de bedste
+  investeringer, du kan lave."
+
+Definición:
+  "Energirenovering handler om at reducere boligens energiforbrug ved at
+  forbedre de dele af huset, hvor varmen typisk slipper ud."
+
+Por dónde escapa el calor:
+  · Loft og tag | · Ydervægge | · Vinduer og døre | · Utætte samlinger og fuger
+
+Renovaciones efectivas:
+  Isolering af loft og tag, Isolering af ydervægge, Tætning af boligen,
+  Solceller, Udskiftning af vinduer og døre, Varmepumpe, Gulvvarme,
+  Varmegenvinding.
+
+Errores típicos:
+  · Instalar ventanas nuevas sin aislar primero
+  · Ignorar problemas de humedad
+  · Elegir soluciones solo por precio
+  · No tener un plan global
+
+FAQ: Ahorro 20-50% | Amortización 5-15 años | Deducción fiscal disponible.
+
+
+================================================================================
+27. NYE VINDUER (VENTANAS NUEVAS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/nye-vinduer/
+
+Título:  "New windows – An investment in your home"
+
+Beneficios de ventanas nuevas:
+  · Reduce energy loss hasta un 30%
+  · Mejora aislamiento acústico
+  · Aumenta seguridad
+  · Protege contra daños UV
+  · Aumenta valor inmobiliario
+  · Materiales sostenibles y bajo mantenimiento
+
+Tipos de ventanas: Dannebrogsvindue, top-hung (abatible superior),
+                   side-hung (abatible lateral)
+
+Sección: "Hvad do nye vinduer koste?" (Precios de ventanas nuevas)
+Sección: "Få håndværkerfradrag på nye vinduer" (Deducción fiscal)
+
+
+================================================================================
+28. VARMEPUMPE (BOMBA DE CALOR)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/varmepumpe/
+
+Título: "Get an energy-efficient heat pump installed in your home"
+
+Secciones:
+  "Do you need a heat pump?"
+  "A new heat pump – an energy-conscious solution"
+  "Heat pumps are effective year-round"
+  "An environmentally friendly and maintenance-free solution"
+  "Heat pump provides quiet operation"
+  "Increase your home's value"
+
+La empresa ofrece 3 presupuestos comparables gratuitos y sin compromiso.
+Proceso incluye revisión online del proyecto, recopilación de presupuestos
+y comparación de precios para asegurar diferencia máxima del 15%.
+
+
+================================================================================
+29. UDSKIFTNING AF DØRE (SUSTITUCIÓN DE PUERTAS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/udskiftning-af-doere/
+
+Título:   "Få gratis byggetilbud på udskiftning af døre"
+Subtítulo: "Udskiftning af døre – energirigtig forbedring af dit hjem"
+
+Introducción:
+  "Skal dine gamle døre skiftes ud? Udskiftning af døre er en effektiv måde
+  at forbedre energiforbrug, komfort og boligens udseende på."
+
+Razones para cambiar puertas:
+  · "Udskiftning af døre handler ikke kun om æstetik. Det er en praktisk
+    og økonomisk forbedring af dit hjem."
+  · Spar penge på varmeregningen
+  · Få et mere behageligt indeklima
+  · Øg sikkerheden
+  · Giv dit hjem et visuelt løft
+  · Forbedring boligens værdi og energimærke
+
+TIPOS DE PUERTAS:
+  Hoveddør (Puerta principal):
+    "Hoveddøren er hjemmets ansigt udadtil. Den skal være både indbydende,
+    sikker og tæt."
+  Terrassedør (Puerta de terraza):
+    "Den rigtige terrassedør kan virkelig give terrassen det sidste prik
+    over i'et."
+  Kælderdør (Puerta de sótano):
+    "Døre til kælder, bryggers eller baggang skal være ekstra robuste og
+    modstandsdygtige overfor slid, fugt og temperaturforskelle."
+  Altandør (Puerta de balcón):
+    "Skal du have udskiftet en altandør eller fransk altandør?"
+  Indvendige døre (Puertas interiores):
+    "Du kan naturligvis også få byggetilbud på indvendige døre."
+
+PUERTAS Y EFICIENCIA ENERGÉTICA:
+  "I mange boliger slipper varme ud gennem utætte fuger, dårligt isolerede
+  karme og enkeltlagsglas."
+  "I 2025 er det ekstra fordelagtigt at investere i nye døre til din bolig."
+
+  Características puertas modernas (baja U-valor):
+  · Flere tætningslister (Múltiples juntas de sellado)
+  · Isolerende kerner (Núcleos aislantes)
+  · Energiglas (Vidrio energético)
+  · Tætsluttende karm og dørblad (Marco y hoja bien ajustados)
+
+VENTAJAS ECONÓMICAS:
+  · Håndværkerfradrag (Deducción fiscal artesanos)
+  · Energiselskabernes tilskudsordninger (Subvenciones energéticas)
+  · Mulighed for bedre energimærkning (Mejor etiqueta energética)
+
+  "Overvejer du at få både dine døre og vinduer udskiftet? Så kan det
+  ofte betale sig at samle projekterne i én samlet løsning."
+
+SEGURIDAD:
+  "Udover energiforbedringer og æstetik forbedre nye døre også sikkerheden
+  i din bolig."
+
+PLANOS DE ARQUITECTURA PARA PUERTAS:
+  "Modtag gratis tilbud på arkitekttegninger til dit byggeprojekt hos os."
+
+Cliente testimonial: Tine t. Stryhn.
+
+CTA:
+  "Udskiftning af døre er en enkel og effektiv måde at forbedre både
+  komfort, energiforbrug, sikkerhed og udseende i dit hjem.
+  Udfyld blot formularen, så klarer vi resten."
+
+
+================================================================================
+30. EL-ARBEJDE (TRABAJO ELÉCTRICO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/el-arbejde/
+
+Título:      "Har du brug for el-arbejde?"
+Descripción: "Professionelt el-arbejde til atmosfærisk belysning"
+
+El servicio promueve trabajo eléctrico profesional para crear entornos
+funcionales y estéticamente agradables en hogar/oficina mediante
+instalación profesional de iluminación.
+
+Servicios incluidos: planos, cálculos estáticos, solicitudes de licencia
+y materiales en 3D.
+
+
+================================================================================
+31. FJERNELSE AF SKIMMELSVAMP (ELIMINACIÓN DE MOHO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/fjernelse-af-skimmelsvamp/
+
+Descripción:
+  "Mikroskopiske organismer, der kan trives både indendørs og udendørs."
+
+Tipos de moho comunes en Dinamarca:
+  · Aspergillus
+  · Penicillium
+  · Cladosporium
+  · Stachybotrys chartarum (moho negro)
+
+Riesgos para la salud:
+  · Reacciones alérgicas
+  · Ataques de asma
+  · Enfermedades respiratorias
+  · Reacciones tóxicas por micotoxinas
+
+Signos de detección:
+  · Manchas visibles (negras, verdes, marrones, blancas)
+  · Olores a humedad
+  · Zonas húmedas
+  · Decoloración y manchas
+  · Síntomas de salud (tos, estornudos, dolores de cabeza)
+
+Servicio: kits de prueba de moho y saneamiento profesional incluyendo
+inspección, eliminación, desinfección y tratamiento de la causa de humedad.
+
+
+================================================================================
+32. NYT TAG (TEJADO NUEVO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/nyt-tag/
+
+Título:     "Modtag byggetilbud på nyt tag"
+Subtítulo:  "Forny dit hjem med et nyt tag"
+
+BENEFICIOS DE UN TEJADO NUEVO:
+  "Et nyt tag repræsenterer en væsentlig forbedring for enhver ejendom,
+  idet det ikke alene styrker bygningens strukturelle integritet, men
+  også bidrager til øget energieffektivitet og æstetisk appel."
+
+  "Et af de primære fordele ved et nyt tag er den forbedrede beskyttelse
+  mod vejrets elementer."
+
+  "Moderne tagmaterialer er designet til at modstå alt fra kraftig regn og
+  hagl til ekstreme temperaturændringer og UV-stråling."
+
+  "Ydermere tilbyder et nyt tag forbedret energieffektivitet, som kan føre
+  til betydelige besparelser på varme- og køleomkostninger."
+
+  "Med installation af ny tagisolation og brug af reflekterende eller
+  termisk effektive materialer, som ler, skifer eller moderne syntetiske
+  produkter, kan et nyt tag bidrage til at opretholde en mere konstant
+  indendørstemperatur."
+
+VALOR ESTÉTICO E INMOBILIARIO:
+  "Med et bredt udvalg af materialer, farver og stilarter kan du som
+  husejer vælge et tag, der både passer til bygningens arkitektoniske
+  stil og dine personlige præferencer."
+  "Et nyt, veludført tag kan forbedre en ejendoms værdi betydeligt, hvilket
+  er særligt vigtigt, hvis ejendommen skal sælges."
+  "Markedsværdien kan stige, da potentielle købere ofte ser et nyt tag som
+  en større investering, de potentielt skal bekymre sig om."
+
+MEDIOAMBIENTE:
+  "På miljøfronten kan valget af bæredygtige materialer og installations-
+  teknikker også gøre et nyt tag til en miljøvenlig opgradering."
+  "Mange moderne tagmaterialer er lavet af genbrugelige ressourcer eller
+  designet til at være mere energieffektive."
+  "Desuden kan installation af solpaneler eller grønne tage, hvor vegetation
+  dyrkes på tagfladen, yderligere forbedre en bygnings bæredygtighed."
+
+SEGURIDAD:
+  "Et ældre eller beskadiget tag kan udgøre en sikkerhedsrisiko, med
+  potentielle lækager, skimmelsvamp og strukturel svaghed som følge heraf."
+
+TIPOS DE TEJADO:
+  · Skifertag (Pizarra) | · Tegltag (Teja) | · Eternit tag | · Tagpaptag
+
+CÁLCULOS ESTÁTICOS PARA TEJADOS:
+  "Statiske beregninger er en afgørende del af ethvert tagprojekt. Tagets
+  form, materialevalg og eksterne påvirkninger som vind, sne og vand skal
+  alle tages i betragtning for at sikre et sikkert og holdbart tag."
+  "Tagmaterialer varierer meget i både vægt og strukturelle krav, hvilket
+  påvirker tagets bæreevne. Det er derfor vigtigt med statiske beregninger
+  for tagprojekter."
+
+AHORRO:
+  "Ved at udskifte til et nyt tag kan du som boligejer også opleve
+  forbedringer i hjemmets energieffektivitet. Moderne tagmaterialer og
+  -teknologier tilbyder bedre isolering og bedre reflektion af solens
+  stråler, hvilket bidrager til at holde hjemmet køligere om sommeren
+  og varmere om vinteren. Dette kan føre til betydelige besparelser på
+  energiregningen."
+
+4 RAZONES:
+  1. "Du sparer tid – og penge": "Vi kender branchen og ved hvordan opgaver
+     skal beskrives, så du som kunde får det skarpeste tilbud."
+  2. "Du får kyndig vejledning af os": "Fra drøm til realitet er til tider
+     også en opgave i det muliges kunst."
+  3. "Du får den skarpeste pris": "Den første pris er ikke nødvendigvis
+     den rigtige pris for dig."
+  4. "Du kommer rigtigt i mål": "Gør det du er god til – det gør vi,
+     på dine vegne."
+
+CTA: "Lad os hjælpe dig med at realisere din drøm om et nyt tag. Mød os
+     i øjenhøjde online, eller giv os et kald på 70 600 620."
+
+
+================================================================================
+33. TERRASSEN (TERRAZA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/terrassen/
+
+Título:   "Har du et terrasseprojekt?"
+
+TIPOS DE MATERIALES:
+  · Træterrasse: "Træterrasser tilføjer varme og naturlig skønhed til
+    ethvert udendørs område."
+  · Komposit: "Kompositmaterialer kombinerer træets æstetik med minimal
+    vedligeholdelse."
+  · Sten og fliser: "Natursten som skifer, granit og sandsten er populære."
+  · Beton: "Beton er et alsidigt og økonomisk valg til terrassebelægning."
+  · Brosten: "Brosten tilføjer en charmerende og rustik følelse til terrassen."
+
+Consideraciones clave:
+  · Materialvalg | · Placering og design | · Budget | · Lovgivning og tilladelser
+
+
+================================================================================
+34. ASBEST / REGLAMENTO 2025
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/skift-asbesttag-sikkert-og-ansvarligt-fra-2025-hvad-du-skal-vide/
+
+Título: "Skift asbesttag – Sikkert og ansvarligt fra 2025: Hvad du skal vide"
+
+CAMBIOS DESDE ENERO 2025:
+  · Risikovurdering: "Obligatorisk materialeprøve og risikovurdering"
+  · Zona de trabajo: "Lukket arbejdszone med ventilationssystem og
+    adgangsbegrænsning"
+  · EPI: "P3-filter, støvtætte dragter, handsker og sluser til omklædning"
+  · Control de polvo: "Vandsprøjtning og værktøj, der minimerer støv"
+  · Gestión de residuos: "Lufttæt pakning, korrekt mærkning og dokumenteret
+    deponering"
+  · Documentación: "Rapportering til Arbejdstilsynet og kommunen før og
+    efter arbejdet"
+
+
+================================================================================
+35. ARKITEKTTEGNINGER — DETALLADO (PLANOS DE ARQUITECTURA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/arkitekttegninger/
+URL alternativa: https://gratisbyggetilbud.dk/projekter/myndighedsprojekter/arkitekttegninger/
+
+Título:    "Modtag arkitekttegninger til dit byggeprojekt"
+Subtítulo: "Arkitekttegninger med øje for både design og detalje"
+
+Frase central:
+  "Fra første streg til færdigt byggeri, vi hjælper dig trygt i gang med
+  alt fra skitser til visualiseringer til myndighedstegninger og
+  byggetilladelser."
+
+PUNTOS DIFERENCIADORES:
+  · "Helhedstænking fra start til slut"
+  · "Effektiv kommunikation"
+  · "Æstetiske løsninger, der er teknisk mulige og bygbare"
+
+RESPONSABLE DEL DEPARTAMENTO:
+  Rebaz Amin — Director del departamento de arquitectura e ingeniería.
+
+SERVICIOS OFRECIDOS:
+  · Arkitekttegninger (Planos de arquitectura)
+  · Statiske beregninger (Cálculos estáticos)
+  · Myndighedstegninger og byggetilladelser (Planos oficiales y licencias)
+  · 3D-visualisering (Visualización 3D)
+  · Energioptimering (Optimización energética)
+
+TITULARES DE LA PÁGINA:
+  "Det unikke ved os?"
+  "Myndighedsprojekt og byggetilladelser"
+  "Energioptimering og bæredygtige løsninger"
+  "Hvad vi tilbyder"
+  "Moderne arkitektur - Hvad indeholder arkitekttegningerne?"
+  "3D visualisering af dine arkitekttegninger"
+  "Arkitektur handler om mennesker"
+
+TIPOS DE PLANOS:
+  · Grundplan (Planta)
+  · Situationsplan (Plano de situación)
+  · Facadetegning (Alzado de fachada)
+  · Tagplan (Plano de cubierta)
+  · Snittegninger (Secciones)
+
+RELACIÓN CON OTRAS PÁGINAS:
+  En la página de tilbygning (ampliación) se detalla extensamente el valor
+  del arquitecto:
+  · "Skræddersyet design: Arkitekten kan skabe 3D visuelle tegninger, der
+    giver et detaljeret overblik over tilbygningen."
+  · "Optimal udnyttelse af pladsen: Arkitekten tænker kreativt og praktisk,
+    så hver kvadratmeter bliver udnyttet bedst muligt."
+  · "Hensyn til lokalplan og byggetilladelse: For at få en byggetilladelse,
+    er det nødvendigt med arkitekttegninger. Arkitekten kan hjælpe med at
+    navigere i komplekse regler og krav, så tilbygningen opfylder alle
+    nødvendige love og regler."
+
+
+================================================================================
+36. BYGGEANSØGNING (SOLICITUD DE LICENCIA DE OBRA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/byggeansoegning/
+
+Títulos:
+  "Har du brug for en byggetilladelse?"
+  "Få hjælp til din byggeansøgning"
+  "Byggeansøgning – Modtag tilbud på ansøgning til byggetilladelse"
+  "Hvorfor vælge os til din byggeansøgning?"
+  "Stærk samarbejdspartner under hele byggeprocessen"
+  "Modtag gratis tilbud på din byggeansøgning"
+  "Hvad er en byggeansøgning?"
+  "Hvorfor er det vigtigt med en byggeansøgning?"
+  "Hvad indeholder en byggeansøgning?"
+
+BENEFICIOS CLAVE:
+  · Faglig sparringspartner – Vi hjælper dig hele vejen
+  · 2 års reklamationssupport (2 años soporte reclamaciones)
+  · Mere end 60.000 løste opgaver i bagagen
+  · Ekspertise i byggeansøgninger
+  · Arkitekttegninger i høj kvalitet
+  · Statiske beregninger
+
+
+================================================================================
+37. STATISKE BEREGNINGER — DETALLADO (CÁLCULOS ESTÁTICOS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/statiske-beregninger/
+
+Títulos:
+  "Har du brug for statiske beregninger?"
+  "Statiske beregninger – Kernen i konstruktionens styrke"
+
+Texto central:
+  "Statiske beregninger udgør fundamentet for enhver konstruktionsstyrke
+  og stabilitet."
+  "En statisk beregning analyserer kræfter påvirkende strukturer såsom
+  tryk, træk, bøjning og moment, sikrende håndtering af permanente og
+  variable belastninger."
+
+Definición técnica:
+  "Detaljeret analyse af kræfter virkende på bygninger eller strukturer,
+  evaluering af materialestyrke og komponenters egnethed."
+
+ROL DEL INGENIERO:
+  "For ingeniører udgør beregninger hjørnestenen i bygnings- og
+  konstruktionsprocesser, krævende certificering for sikring af højeste
+  sikkerhed- og kvalitetsstandarder."
+
+CLASIFICACIONES DE COMPLEJIDAD:
+  KK1: Edificios pequeños — casas, garajes, cobertizos, pequeños almacenes.
+  KK2: Edificios comunes — bloques de viviendas, oficinas, colegios.
+       Fallo estructural provoca daño moderado.
+  KK3: Grandes construcciones — estadios, puentes, hospitales, rascacielos.
+       Fallo provoca alto riesgo de seguridad.
+
+4 RAZONES DECISIVAS:
+  · Prisgaranti (Garantía de precio)
+  · Bygningsregulativer (Normativa de construcción)
+  · Overholdelse af Bygningsregulativer (Cumplimiento normativo)
+  · Langsigtet Levetid (Larga vida útil)
+
+PROYECTOS TÍPICOS QUE REQUIEREN CÁLCULOS ESTÁTICOS:
+  · Statiske beregninger for tagprojekter (Tejados)
+  · Bærende væg beregning (Pared de carga)
+  · Udskiftning af overligger (Sustitución de dintel)
+  · Dimensionering af spær (Dimensionado de cerchas)
+
+PRECIO Y ENTREGA:
+  "Prisen for statiske beregninger afhænger af projektets størrelse og
+  kompleksitet."
+  Entrega: dentro de 14 días.
+
+NOTA TEJADOS (de página nyt tag):
+  "Statiske beregninger er en afgørende del af ethvert tagprojekt. Tagets
+  form, materialevalg og eksterne påvirkninger som vind, sne og vand skal
+  alle tages i betragtning for at sikre et sikkert og holdbart tag."
+
+NOTA AMPLIACIONES (de página tilbygning):
+  "Selvom en carport er en relativt enkel konstruktion, kan der være
+  situationer hvor en statiker kan være nødvendig at inddrage. Hvis
+  garagen har en tung konstruktion som kan belaste fundamentet og den
+  omkringliggende jord, så er det nødvendigt med statiske beregninger."
+
+  PISO SUPERIOR (overetage):
+  "At tilføje en overetage stiller store krav til bygningens eksisterende
+  konstruktion. Det er essentielt at få en statiker til at vurdere, om
+  fundamentet og de bærende vægge kan klare den ekstra belastning."
+
+
+================================================================================
+38. DIGITALISERING AF ARKIVTEGNINGER (DIGITALIZACIÓN DE PLANOS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/digitalisering-af-arkivtegninger/
+
+Título:   "Digitalisering af arkivtegninger – nemt, effektivt og fremtidssikret"
+
+Descripción:
+  "Nem adgang til dem, så I slipper for besværet ved at rode rundt i
+  fysiske arkiver." Protege documentos de daños y pérdidas mediante
+  almacenamiento digital seguro.
+
+TIPOS DE DOCUMENTOS QUE SE DIGITALIZAN:
+  · Situationsplaner — Resumen de propiedades con edificios y accesos.
+  · Plantegninger — Distribución de planta y división de habitaciones.
+  · Facadetegninger — Detalles exteriores del edificio.
+  · Snittegninger — Detalles internos de construcción y estructura.
+  · Detaljetegninger — Elementos específicos como ventanas y puertas.
+  · Ejendomsoversigter — Resúmenes completos de propiedades.
+  · Ændringstegninger — Documentación de modificaciones del edificio.
+
+Puntos clave:
+  · Faglig sparringspartner – Vi hjælper dig hele vejen
+  · 2 års reklamationssupport
+  · Mere end 60.000 løste opgaver i bagagen
+
+
+================================================================================
+39. RENTABILITETSBEREGNING (CÁLCULO DE RENTABILIDAD ENERGÉTICA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/rentabilitetsberegning-spar-paa-energiregningen/
+
+Título:
+  "Rentabilitetsberegning: Sådan træffer du de rigtige valg for din
+  energirenovering"
+
+Texto:
+  "Energirenovering er en vigtig investering. Uanset om du overvejer at
+  isolere din bolig, efterisolere taget, skifte til nye vinduer eller
+  installere en varmepumpe, så kan vi udarbejde en præcis rentabilitets-
+  beregning for din energirenovering."
+
+DEFINICIÓN:
+  "En rentabilitetsberegning er en økonomisk analyse, der hjælper dig med
+  at vurdere, hvor det bedst kan betale sig at investere i energirenovering."
+
+COMPONENTES DEL CÁLCULO:
+  Omkostninger ved renoveringen:
+    · Materialer | · Arbejdet | · Eventuelle tillægsomkostninger
+  Potentielle energibesparelser:
+    · Nuværende energiforbrug | · Forbedringer ved renovering
+    · Langsigtede besparelser
+  Tilbagebetalingstid (Período de amortización):
+    · Omkostninger ved projektet | · Årlige besparelser
+
+RENOVACIÓN DE TEJADO:
+  "En tagrenovering er en af de mest betydningsfulde energirenoveringer,
+  du kan foretage på din bolig."
+  "Med en rentabilitetsberegning får du svarene sort på hvidt."
+
+DEDUCCIÓN FISCAL:
+  "Vidste du, at staten har frigivet 300.000.000 kr. til energirenoveringer
+  gennem håndværkerfradraget i 2025?"
+  "Håndværkerfradraget i 2025 har fokus på grøn omstilling, så en lang
+  række energiforbedrende tiltag er dækket under det."
+
+CTAs:
+  "KLIK HER UDFYLD FORMULAREN"
+  "Tag det næste skridt mod en smartere energirenovering"
+
+
+================================================================================
+40. VARMETABSBEREGNING (CÁLCULO DE PÉRDIDA DE CALOR)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/varmetabsberegning/
+
+Descripción:
+  Análisis técnico detallado que mide las pérdidas de calor a través de
+  la envolvente exterior del edificio (muros, techos, ventanas, puertas,
+  suelos y cimientos).
+
+BENEFICIOS:
+  · Identifica puntos de pérdida de calor y aislamiento ineficiente
+  · Optimiza inversiones en renovación energética
+  · Predice ahorros potenciales de mejoras
+  · Apoya solicitudes de subvenciones
+  · Mejora la calificación energética del inmueble
+
+PROYECTOS TÍPICOS QUE REQUIEREN ESTE SERVICIO:
+  Obra nueva, reformas, certificación energética, solicitudes de subvenciones,
+  modificaciones de edificios, ampliaciones, sustitución de sistemas de
+  calefacción, instalación de energías renovables, aislamiento de fachada
+  y cubierta, mejora del clima interior, y tasaciones inmobiliarias.
+
+PROCESO DE CÁLCULO:
+  · Recopilación de datos sobre detalles constructivos
+  · Cálculos de valor U para materiales de construcción
+  · Identificación de puentes térmicos
+  · Evaluación de pérdidas por ventilación
+  · Análisis de ganancias solares
+  · Informe final completo
+
+
+================================================================================
+41. PROJEKTBESKRIVELSE (DESCRIPCIÓN PROFESIONAL DE PROYECTO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projektbeskrivelse/
+
+Título:     "Professionel projektbeskrivelse"
+Subtítulo:  "Budgetvenlig projekt- og dokumentationspakke"
+
+Texto:
+  "Med vores projekt- og dokumentationspakke får du en komplet
+  projektbeskrivelse med alt nødvendig dokumentation udarbejdet efter
+  gældende DS-normer, SBI-anvisninger og BR18."
+
+PRECIO: kr 795,-
+
+CONTENIDO DEL PAQUETE:
+  · Komplet projektbeskrivelse
+  · Foto- og evt. videodokumentation
+  · Klare materialevalg og entydige mål
+  · Ensartet grundlag for håndværkere
+  · Mere præcise og konkurrencedygtige tilbud
+  · Reduceret risiko for fejl og misforståelser
+  · Højere kvalitet i udførelsen
+
+EXPERTO JESPER (constructor, +25 años):
+  Proyectos: Kurhotel Skodsborg, Vallensbæk Svømmehal, Baltorpsplænen.
+
+FAQ:
+  P: Cómo funciona?
+  R: Envía proyecto → videollamada → recibes la descripción completa.
+  P: Por qué es necesario?
+  R: "En projektbeskrivelse sikrer, at håndværkerne forstår dine ønsker
+     og krav på samme måde."
+  P: ¿Para proyectos pequeños?
+  R: Sí, precio fijo 795 kr.
+
+
+================================================================================
+42. TILBUDSGENNEMGANG (REVISIÓN DE PRESUPUESTO)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/tilbudsgennemgang/
+
+Título: "Få jeres håndværkertilbud gennemgået"
+Subtítulo: "Professionel vurdering af håndværkertilbud"
+Texto: "At indhente tilbud fra håndværkere kan være forvirrende."
+
+PRECIO: kr 795,- (Komplet pakke)
+
+SERVICIO INCLUYE:
+  · Vurdering af om prisen er fair
+  · Gennemgang af materialer og løsninger
+  · Identifikation af uklare formuleringer
+  · Gennemgang af vilkår, forbehold og betalingsbetingelser
+  · Vurdering af tidsplan og udførelse
+  · Identifikation af potentielle ekstraomkostninger
+  · Konkrete anbefalinger til, hvad der bør ændres eller præciseres
+
+Subtítulo: "Træf beslutningen med ro i maven"
+
+
+================================================================================
+43. TEKNISK KØBERRÅDGIVNING (ASESORÍA TÉCNICA DE COMPRA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/teknisk-koeberraadgivning/
+
+Título:   "Teknisk køberrådgivning – Alt i én service til din drømmebolig"
+Pregunta: "Hvad betyder det for dig, at have en samarbejdspartner du kan
+           stole på?"
+
+Puntos clave:
+  · "Faglig sparringspartner – Vi hjælper dig hele vejen"
+  · "Få 3 gratis og uforpligtende byggetilbud"
+  · "Mere end 60.000 løste opgaver i bagagen"
+
+KÖBERRÅDGIVNING (Asesoría de compra):
+  "At købe en bolig er en af livets store investeringer, og det kan
+  være en kompleks proces."
+  "Med vores ekspertise som byggetekniske køberrådgivere hjælper vi dig
+  med at sikre at der ikke er nogen uforudsete fejl og mangler ved boligen."
+
+PERÍODO DE DESISTIMIENTO — 6 DÍAS:
+  "Når du har skrevet under på en købsaftale, giver loven dig 6 dage til
+  at fortryde dit køb."
+  Servicios: cobertura seguro, errores y defectos, aspectos jurídicos.
+
+INSPECCIÓN DE VIVIENDA:
+  · Vurdering af tilstandsrapport og elinstallationsrapport
+  · Analyse af byggematerialer og vedligeholdelseshistorik
+  · Fysisk inspektion af boligen (si pertinente)
+
+DOCUMENTACIÓN LEGAL:
+  · Gennemgang af købsaftale
+  · Servitutter og tinglysning
+  · Hurtig handling ved fortrydelsesret
+
+SEGURO DE TRANSFERENCIA:
+  "Ejerskifteforsikringen dækker typisk skjulte fejl og mangler, som ikke
+  var synlige ved handlen eller nævnt i de lovpligtige rapporter."
+  Cubre: daños en cimiento/tejado/paredes, fallos en instalaciones,
+  problemas de construcción que requieren grandes reparaciones.
+
+PLANOS Y LICENCIAS:
+  "Hvis du ønsker at renovere, så har du brug for en byggetilladelse."
+  "Vi har desuden et omfattende netværk af over 500 håndværkere over
+  hele Danmark."
+
+CÁLCULOS ESTÁTICOS:
+  "Boligens stabilitet og sikkerhed er altafgørende, især hvis du
+  planlægger at renovere, bygge til eller ændre boligens konstruktion."
+  · Analyse af bygningens bæreevne
+  · Optimerede løsninger
+  · Myndighedsgodkendelse
+
+PLANOS DE ARQUITECTURA:
+  · Personlig rådgivning og design
+  · 3D arkitekttegninger
+  · Komplet pakke: grundplan, snittegninger, facadetegninger, tagplan,
+    situationsplan.
+
+RENTABILIDAD:
+  "At investere i en bolig handler om mere end bare at købe den."
+  "Langsigtede besparelsesberegninger der viser hvor lang tid det tager
+  før du har tjent din investering ind igen."
+
+POR QUÉ ELEGIRNOS:
+  "Når du vælger os, som din samarbejdspartner får du meget mere end
+  traditionel køberrådgivning."
+  "Vi tilbyder en unik og allround løsning."
+  "Det der gør os unikke, er vores evne til at levere en
+  helhedsorienteret løsning."
+
+CTA:
+  "Lad os være din faste partner så du kan fokusere på det, der betyder
+  mest, at skabe trygge rammer og gode minder i dit nye hjem."
+
+
+================================================================================
+44. HÅNDVÆRKERLISTEN (LISTA DE ARTESANOS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekter/haandvaerkerlisten/
+
+Título: "Typer af håndværkere og deres kompetencer"
+
+TIPOS DE ARTESANOS DISPONIBLES:
+  · Tømrer (Carpintero)
+  · Murer (Albañil)
+  · VVS (Fontanero/Instalador)
+  · Elektrikeren (Electricista)
+  · Maler (Pintor)
+  · Glarmester (Cristalero)
+  · Gulvarbejde (Especialista en suelos)
+  · Brolægger (Pavimentador)
+  · Kloakmester (Especialista en alcantarillado)
+  · Anlægsgartneren (Paisajista)
+  · Asfalt arbejde (Asfaltado)
+  · Arkitekten (Arquitecto)
+  · Statiker (Ingeniero de estructuras)
+  · Ingeniør (Ingeniero)
+
+4 RAZONES:
+  1. "Du sparer tid – og penge"
+  2. "Du får kyndig vejledning af os"
+  3. "Du får den skarpeste pris"
+  4. "Du kommer rigtigt i mål"
+
+
+================================================================================
+45. HÅNDVÆRKERFRADRAG 2026 (DEDUCCIÓN FISCAL ARTESANOS)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/haandvaerkerfradrag-2026/
+
+Título:    "Håndværkerfradrag 2026 - Se hvad du får fradrag for"
+Subtítulo: "Sådan fungerer reglerne, og sådan får du mest muligt ud af dem"
+
+LÍMITES:
+  · Hasta 9.000 kr. por adulto en el hogar
+  · Valor del fradrag: ~26% de la mano de obra
+  · Dos adultos: hasta 18.000 kr. en costes de mano de obra
+
+TRABAJOS ELEGIBLES (4 categorías):
+  1. Isolering og energiforbedringer: aislamiento, ventanas, puertas, sellado.
+  2. Varme og installationer: bombas de calor, calefacción, suelo radiante.
+  3. Klima og ventilation: paneles solares, ventilación mecánica.
+  4. Radonsikring og sikkerhedsforbedringer: protección radón, chimeneas.
+
+TRABAJOS NO ELEGIBLES:
+  · "Udvendigt malerarbejde af fx vinduesrammer, døre og ydervægge"
+  · Reparación de caldera de gas
+  · Conexión de banda ancha
+
+DOCUMENTACIÓN NECESARIA:
+  · Factura con mano de obra separada de materiales
+  · Justificante de pago digital (transferencia, MobilePay, tarjeta)
+  · Número CVR del artesano
+  · Fecha de pago
+
+
+================================================================================
+46. HVAD KOSTER EN HÅNDVÆRKER I TIMEN? (TARIFAS POR HORA)
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/projekt/hvad-koster-en-haandvaerker-i-timen/
+
+Factores que afectan al precio:
+  · Tipo de artesano | · Complejidad | · Materiales | · Ubicación geográfica
+
+TARIFAS POR PROFESIÓN:
+  · Tømrer (Carpintero):       425 – 800 kr./hora
+  · Murer (Albañil):           550 – 800 kr./hora
+  · VVS (Fontanero):           600 – 3.500 kr./hora
+  · Brolægger (Pavimentador):  600 – 800 kr./hora
+  · Tagdækker (Tejador):       650 – 900 kr./hora
+  · Elektriker (Electricista): 650 – 950 kr./hora
+
+
+================================================================================
+47. CÓMO OBTENER PRESUPUESTOS DE ARTESANOS
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/indhente-tilbud-fra-haandvaerkere/
+
+Respuesta corta:
+  "Den bedste måde at indhente tilbud fra håndværkere i Danmark er at
+  bruge en neutral tilbudsplatform, hvor du beskriver dit projekt én gang
+  og modtager flere uforpligtende tilbud fra relevante fagfolk."
+
+Regla de oro: "Mindst 2-3 tilbud på større bygge- og renoveringsopgaver."
+
+TRES MÉTODOS:
+  1. Contacto directo: rápido para tareas pequeñas, pero costoso en tiempo.
+  2. Red de contactos: confianza personal, pero sin garantía de precio.
+  3. Plataforma de licitación: ahorra tiempo, mejor comparación, más
+     competencia. "Para la mayoría de propietarios, el más efectivo."
+
+GRATISBYGGETILBUD SE DIFERENCIA:
+  "Platformen er ikke drevet som et traditionelt marketingbureau med fokus
+  på volumen, men som en byggefaglig formidlingsløsning."
+  "Hos Gratisbyggetilbud.dk er det ikke kunden alene, der udfylder opgaven.
+  Når du har udfyldt formularen, afholdes der et videomøde, hvor projektet
+  gennemgås i detaljer."
+
+FAQ:
+  P: Cuántos presupuestos pedir? R: 2-3 para proyectos importantes.
+  P: ¿Es gratis? R: Sí, completamente gratuito y sin compromiso.
+  P: ¿Cómo comparar? R: Misma base; comparar precio, materiales,
+     plazo, condiciones.
+  P: ¿Son vinculantes? R: No.
+
+
+================================================================================
+48. QUIEBRAS EN EL SECTOR DE CONSTRUCCIÓN
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/konkurser-i-byggebranchen/
+
+Título:
+  "Konkurser i byggebranchen: Hvad kan du gøre for at sikre at dit
+  byggeprojekt bliver en succes?"
+
+Texto:
+  "Byggebranchen har i mange år været en af de mest dynamiske og
+  økonomisk vigtige sektorer i Danmark."
+  "Konkurser i byggebranchen er desværre ikke et sjældent fænomen."
+  "Faktorer som: Stramme marginer hvor en forsinkelse eller en prisstigning
+  på materialer hurtigt kan forårsage økonomiske problemer."
+
+Titulares:
+  "Konkursernes indvirkning på kunder"
+  "Ufuldstændige projekter"
+  "Øgede omkostninger"
+  "Hvad kan du gøre for at sikre at dit byggeprojekt bliver en succes?"
+
+
+================================================================================
+49. 7 RENOVACIONES QUE MÁS FRECUENTEMENTE SALEN MAL
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/7-renoveringer-der-oftest-gaar-galt/
+
+Introducción:
+  "At renovere sin bolig er en stor beslutning. Fejl, der koster ekstra
+  penge, forsinkelser, dårlig kvalitet og i værste fald gør, at arbejdet
+  skal laves om."
+  "Artiklen er baseret på erfaring fra tusindvis af renoveringsprojekter."
+
+1. Nyt tag - uden at tænke isolering med
+   Fallo: Tejado cambiado sin mejorar el aislamiento → puentes térmicos,
+   factura no baja.
+   Solución: "Vurdér isoleringsniveauet, tage stilling til efterisolering
+   samtidig, og sikre at konstruktionen lever op til nutidens energikrav."
+   Frase: "Det er ofte her, du får mest værdi for pengene."
+
+2. Nye vinduer før resten af huset er klar
+   Fallo: Ventanas antes de aislar → corrientes de aire persistentes.
+   Solución: Ver la casa como un todo. Aislamiento antes o junto a ventanas.
+   Frase: "Vinduer er kun så gode som resten af klimaskærmen."
+
+3. Vægisolering uden ordentlig forundersøgelse
+   Fallo: Aislamiento sin análisis de humedad → riesgo moho.
+   Solución: Evaluar tipo de pared y nivel de humedad.
+   Frase: "Forkert vægisolering kan gøre mere skade end gavn."
+
+4. Fugerenovering, der kun løser symptomet
+   Fallo: Cambiar juntas sin encontrar la causa → vuelven a romperse.
+   Solución: Encontrar el porqué (movimientos, humedad, puentes térmicos).
+   Frase: "Fugerenovering virker bedst, når årsagen løses."
+
+5. Renovering uden klar projektbeskrivelse
+   Fallo: Presupuestos poco claros, malentendidos sobre lo incluido.
+   Solución: Descripción detallada, presupuestos comparables, especificar
+   mano de obra y materiales.
+   Frase: "En god projektbeskrivelse sparer tid, penge og konflikter."
+
+6. For mange håndværkere uden overblik
+   Fallo: Orden incorrecto entre oficios, tiempo muerto, nadie asume
+   responsabilidad.
+   Solución: Proyecto como tarea única, overblik de orden y dependencias.
+   Frase: "Det er ofte billigere at gøre det rigtigt første gang."
+
+7. Fokus på pris - i stedet for værdi
+   Fallo: Baja calidad, cargos ocultos, mala comunicación, sin documentación.
+   Solución: Comparar contenido, verificar experiencia y CVR, acuerdos por
+   escrito.
+   Frase: "Den billigste løsning er sjældent den billigste i længden."
+
+Conclusión:
+  "De fleste dyre fejl ved renovering opstår ikke, fordi boligejere vælger
+  forkert håndværker. Det er fordi projektet starter uden det fulde overblik."
+  "Hos Gratisbyggetilbud hjælper vi boligejere med at skabe det overblik,
+  der gør renoveringen tryg hele vejen igennem."
+
+
+================================================================================
+50. POLÍTICA DE PRIVACIDAD Y COOKIES
+================================================================================
+
+URL: https://gratisbyggetilbud.dk/persondatapolitik/
+
+GBT ApS | CVR: 28298064 | Theilgaards Torv 9, 1.th, 4600 Køge
+
+DERECHOS:
+  · Acceso a datos personales (solicitud escrita)
+  · Derecho de eliminación (en ciertas circunstancias)
+  · Derecho a oponerse al procesamiento
+  · Retirada de consentimiento
+  · Queja ante Datatilsynet
+
+TÉRMINOS DE PLATAFORMA:
+  · Creación de perfil gratuita
+  · Artesanos ven datos de contacto del propietario al enviar consulta
+  · Presupuestos disponibles 30 días naturales
+  · Acuerdo legalmente vinculante requiere confirmación escrita del artesano
+
+EXENCIÓN:
+  "GBT fraskriver sig ethvert erstatningsansvar over for Bygherren i
+  videst muligt omfang."
+
+COOKIES:
+  · Funktionsdygtig: Para servicios solicitados explícitamente.
+  · Præferencer: Para almacenar preferencias del usuario.
+  · Statistikker: Solo para estadísticas anónimas.
+  · Marketing: Para crear perfiles publicitarios.
+
+Textos legales completos de cookies:
+  Funktionsdygtig:
+  "Den tekniske lagring eller adgang er strengt nødvendig med det legitime
+  formål at muliggøre brugen af en specifik tjeneste, som abonnenten eller
+  brugeren udtrykkeligt har anmodet om, eller udelukkende med det formål
+  at overføre en kommunikation via et elektronisk kommunikationsnet."
+
+  Præferencer:
+  "Den tekniske lagring eller adgang er nødvendig for det legitime formål
+  at lagre præferencer, som abonnenten eller brugeren ikke har anmodet om."
+
+  Statistikker:
+  "Den tekniske lagring eller adgang, der udelukkende anvendes til
+  statistiske formål. Uden en stævning, frivillig overholdelse fra din
+  internetudbyders side eller yderligere optegnelser fra en tredjepart kan
+  oplysninger, der er gemt eller hentet til dette formål alene, normalt
+  ikke bruges til at identificere dig."
+
+  Marketing:
+  "Den tekniske lagring eller adgang er nødvendig for at oprette bruger-
+  profiler med henblik på at sende reklamer eller for at spore brugeren
+  på et websted eller på tværs af flere websteder med henblik på lignende
+  markedsføringsformål."
+
+
+================================================================================
+51. RESEÑAS DE CLIENTES (todas 5 estrellas)
+================================================================================
+
+  · Tove Larsen:          "Et firma med sjæl! God oplevelse"
+  · Carina:               "Hel vild god service og meget kompetent…"
+  · Sara Mujinovic:       "God råvgivning"
+  · Hamid Rohi-Bilverdy:  "Bedste behaglige og kvalitets arbejde"
+  · Anders B Bøgh:        "Seriøs og tryghedsskabende"
+  · Mikkel:               "Virkelig god service"
+  · Lisbeth:              "Super god rådgivning"
+  · Leander:              "Kvalificeret rådgivning"
+  · Dorthe Ebbesen:       "Super god service"
+  · Rune Brinck:          "Super god oplevelse"
+  · Tom Bech Fredriksen:  "Et godt råd"
+  · Steen:                "Perfekt"
+  · Sven-Erik Lauridsen:  "Nemt og overskueligt"
+  · Chris Bjerknæs:       "Kan man give 5 stjerner uden at gøre…"
+  · Lene Laursen:         "Gratisbyggetilbud.dk gjorde meget for…"
+  · Niels:                "Nemt og hurtigt"
+  · Siavash:              "Mega god service"
+  · Marna Thymann:        "Den hurtige og effektive reaktion"
+  · Camilla B. Nielsen:   "Helt utrolig god og professionel…"
+  · Pernille:             "Professionel og kompetent vejledning"
+
+Cliente destacada en múltiples páginas: Tine t. Stryhn (Fredensborg)
+  "renovando su vivienda" — mencionada en páginas de tejado y puertas.
+
+
+================================================================================
+52. FAQ GENERAL RECOPILADA
+================================================================================
+
+SOBRE EL SERVICIO:
+  P: ¿Cuesta algo? R: No, gratis para el propietario.
+  P: ¿Cuántos presupuestos? R: Hasta 3.
+  P: ¿Calidad garantizada? R: Aprobación manual, verificación CVR danés.
+  P: ¿Hay compromiso? R: No, sin compromiso.
+  P: ¿Cómo envío una tarea? R: Online + videomøde posterior.
+  P: ¿Planos y cálculos estáticos? R: Sí, departamento propio.
+
+SOBRE PROYECTOS:
+  P: ¿Cuánto cuesta una reforma total? R: Varía; 10-20% de margen extra.
+  P: ¿Cuánto tarda una reforma total? R: 3-12 meses (casa), menos para piso.
+  P: ¿Necesito licencia para cocina? R: Depende del alcance.
+  P: ¿Cuánto cuesta un suelo nuevo? R: 300-1.500 kr./m2 según material.
+  P: ¿Escalera desde cuánto? R: Desde ~5.000 kr.
+  P: ¿Cuánto tarda cocina? R: 1-4 semanas.
+
+SOBRE DEDUCCIÓN FISCAL:
+  P: ¿Qué da deducción en 2026? R: Aislamiento, calefacción, ventilación, radón.
+  P: ¿Cuánto se puede deducir? R: 9.000 kr./adulto, ~26% de la mano de obra.
+
+SOBRE PLANOS Y INGENIERÍA:
+  P: ¿Para qué necesito planos? R: Para licencias de obra, grandes reformas.
+  P: ¿Para qué cálculos estáticos? R: Paredes de carga, tejados, pisos
+     superiores, galerías adosadas con estructura pesada.
+  P: ¿Cuándo entregáis cálculos estáticos? R: En 14 días.
+  P: ¿Qué son KK1, KK2, KK3? R: Niveles de complejidad constructiva.
+
+
+================================================================================
+53. HORARIOS DE ATENCIÓN
+================================================================================
+
+  Lunes – Viernes:  09:00 – 16:30
+  Martes / Jueves:  hasta las 20:30
+
+  Teléfono: 70 60 06 20  /  70 600 620
+  Email: kontakt@gbt.dk
+
+
+================================================================================
+54. NAVEGACIÓN COMPLETA Y FOOTER
+================================================================================
+
+MENÚ PRINCIPAL:
+  PROJEKTER:
+    · Indendørsprojekter | · Udendørsprojekter
+    · Myndighedsprojekter | · Håndværkerlisten
+  YDELSER:
+    · Projektbeskrivelse | · Tilbudsgennemgang
+    · Teknisk køberrådgivning
+  Om os | Kontakt | Log ind | Opret projekt [CTA]
+
+FOOTER:
+  Kontakt os:
+    Theilgaards Allé 7, 4600 Køge
+    kontakt@gbt.dk | 70 60 06 20
+  Byggeprojekter:
+    Indendørsprojekter | Udendørsprojekter | Myndighedsprojekter
+  CTA: "Få byggetilbud her" / "Klar til at få byggetilbud?"
+  Legal: Privatlivs- og cookiepolitik | CVR: 28 29 80 64
+  Redes: Facebook | LinkedIn
+
+PLATAFORMA CLIENTE (subdominio):
+  https://mit.gratisbyggetilbud.dk/da           — Área cliente
+  https://mit.gratisbyggetilbud.dk/da/nyt-projekt — Nuevo proyecto
+
+GESTIÓN COOKIES:
+  Botones: Godkend | Afvis | Se præferencer | Gem præferencer
+
+
+================================================================================
+FIN DEL DOCUMENTO
+Extraído de: https://gratisbyggetilbud.dk/ y todas sus subpáginas
+Total de páginas procesadas: 35+
+================================================================================
