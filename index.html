@@ -3091,24 +3091,24 @@ footer {
         </div>
       </div>
     </div>
-    <form id="modalForm" class="modal-form">
+    <form id="modalForm" class="modal-form" novalidate>
       <div class="form-row">
-        <div class="field"><label><span data-en="First name" data-da="Fornavn">First name</span> <span class="req">*</span></label><input type="text" required></div>
-        <div class="field"><label><span data-en="Last name" data-da="Efternavn">Last name</span> <span class="req">*</span></label><input type="text" required></div>
+        <div class="field"><label><span data-en="First name" data-da="Fornavn">First name</span> <span class="req">*</span></label><input type="text" name="firstName" required></div>
+        <div class="field"><label><span data-en="Last name" data-da="Efternavn">Last name</span> <span class="req">*</span></label><input type="text" name="lastName" required></div>
       </div>
       <div class="form-row">
-        <div class="field"><label><span data-en="Email" data-da="Email">Email</span> <span class="req">*</span></label><input type="email" required></div>
-        <div class="field"><label><span data-en="Phone" data-da="Telefon">Phone</span> <span class="req">*</span></label><input type="tel" placeholder="+45"></div>
+        <div class="field"><label><span data-en="Email" data-da="Email">Email</span> <span class="req">*</span></label><input type="email" name="email" required></div>
+        <div class="field"><label><span data-en="Phone" data-da="Telefon">Phone</span> <span class="req">*</span></label><input type="tel" name="phone" placeholder="+45"></div>
       </div>
       <div class="form-row">
-        <div class="field"><label><span data-en="Preferred date" data-da="Foretrukket dato">Preferred date</span></label><input type="date"></div>
+        <div class="field"><label><span data-en="Preferred date" data-da="Foretrukket dato">Preferred date</span></label><input type="date" name="date"></div>
         <div class="field"><label><span data-en="Preferred time" data-da="Foretrukket tidspunkt">Preferred time</span></label>
-          <select><option value="">—</option><option>09:00</option><option>10:00</option><option>11:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option></select>
+          <select name="time"><option value="">—</option><option>09:00</option><option>10:00</option><option>11:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option></select>
         </div>
       </div>
       <div class="form-row single">
         <div class="field"><label><span data-en="Project type" data-da="Projekttype">Project type</span></label>
-          <select>
+          <select name="projectType">
             <option value="">— Select —</option>
             <option>New house</option><option>Refurbishment / extension</option>
             <option>Structural calculation only</option><option>Commercial / public</option><option>Other</option>
@@ -3116,7 +3116,7 @@ footer {
         </div>
       </div>
       <div class="form-row single">
-        <div class="field"><label><span data-en="Tell us briefly about the project" data-da="Fortæl kort om projektet">Tell us briefly about the project</span></label><textarea rows="3" placeholder="..."></textarea></div>
+        <div class="field"><label><span data-en="Tell us briefly about the project" data-da="Fortæl kort om projektet">Tell us briefly about the project</span></label><textarea name="message" rows="3" placeholder="..."></textarea></div>
       </div>
       <button type="submit" class="btn-submit">
         <span>
@@ -3573,63 +3573,59 @@ footer {
     });
   })();
 
-  /* ── Formulario → Google Calendar ── */
+  /* ── Formularios → Google Calendar ── */
   (function() {
-    const SCRIPT_URL  = 'https://script.google.com/macros/s/AKfycbz6trHWg3bxN3UoTD_2ocZ_2KEEPc9sxt6sAAv6tZFcevwBhJ3SkhDS_JNKFvnniTBO/exec';
-    const form = document.getElementById('appointmentForm');
-    if (!form) return;
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz6trHWg3bxN3UoTD_2ocZ_2KEEPc9sxt6sAAv6tZFcevwBhJ3SkhDS_JNKFvnniTBO/exec';
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
+    function wireForm(formId, successId) {
+      const form = document.getElementById(formId);
+      if (!form) return;
 
-      const d   = new FormData(form);
-      const btn = form.querySelector('.btn-submit');
-      if (btn) { btn.disabled = true; btn.querySelector('span').textContent = 'Sending…'; }
-
-      const params = new URLSearchParams({
-        firstName:   d.get('firstName')   || '',
-        lastName:    d.get('lastName')    || '',
-        email:       d.get('email')       || '',
-        phone:       d.get('phone')       || '',
-        projectType: d.get('projectType') || '',
-        message:     d.get('message')     || '',
-        date:        d.get('date')        || '',
-        time:        d.get('time')        || ''
-      });
-
-      function showSuccess() {
-        form.style.display = 'none';
-        const ok = document.createElement('div');
-        ok.className = 'form-success';
-        ok.innerHTML =
-          '<svg viewBox="0 0 56 56" style="stroke:var(--blue-bright)"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>' +
-          '<h3>Booking received</h3>' +
-          '<p>We\'ll confirm the date and send you a Google Meet link by email within a few hours.</p>';
-        form.parentNode.appendChild(ok);
-      }
-
-      // Dispara el GET con varios métodos en paralelo para máxima fiabilidad
-      const url = SCRIPT_URL + '?' + params.toString();
-
-      // 1) fetch no-cors
-      try { fetch(url, { method: 'GET', mode: 'no-cors' }); } catch (e) {}
-
-      // 2) image beacon (funciona en file:// y sin CORS)
-      const img = new Image();
-      img.src = url;
-
-      // Mostrar confirmación tras un breve margen
-      setTimeout(showSuccess, 1500);
-    });
-
-    // "Create a project" → scroll al formulario
-    document.querySelectorAll('.open-tidycal-btn').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
+      form.addEventListener('submit', function(e) {
         e.preventDefault();
-        document.getElementById('booking') && document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        const d   = new FormData(form);
+        const btn = form.querySelector('.btn-submit');
+        if (btn) { btn.disabled = true; btn.querySelector('span').textContent = 'Sending…'; }
+
+        const url = SCRIPT_URL + '?' + new URLSearchParams({
+          firstName:   d.get('firstName')   || '',
+          lastName:    d.get('lastName')    || '',
+          email:       d.get('email')       || '',
+          phone:       d.get('phone')       || '',
+          projectType: d.get('projectType') || '',
+          message:     d.get('message')     || '',
+          date:        d.get('date')        || '',
+          time:        d.get('time')        || ''
+        }).toString();
+
+        // Dispara el GET (fetch + image beacon por fiabilidad)
+        try { fetch(url, { method: 'GET', mode: 'no-cors' }); } catch (err) {}
+        new Image().src = url;
+
+        // Mostrar confirmación
+        setTimeout(function() {
+          const success = successId && document.getElementById(successId);
+          if (success) {
+            form.style.display = 'none';
+            success.classList.add('show');
+          } else {
+            form.style.display = 'none';
+            const ok = document.createElement('div');
+            ok.className = 'form-success';
+            ok.innerHTML =
+              '<svg viewBox="0 0 56 56" style="stroke:var(--blue-bright)"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>' +
+              '<h3>Booking received</h3>' +
+              '<p>We\'ll confirm the date and send you a Google Meet link by email within a few hours.</p>';
+            form.parentNode.appendChild(ok);
+          }
+        }, 1200);
       });
-    });
+    }
+
+    wireForm('appointmentForm', null);       // formulario de la sección
+    wireForm('modalForm', 'modalSuccess');   // formulario del popup "Create a project"
   })();
 </script>
 
