@@ -1911,6 +1911,83 @@ footer {
 }
 
 /* ══════════════════════════════════════════
+   CAPABILITIES / AUTHORITY PROJECTS
+══════════════════════════════════════════ */
+.capabilities-section {
+  padding: 8rem 0;
+  background: var(--cream-light);
+  border-top: 1px solid var(--line-soft);
+}
+.cap-intro {
+  max-width: 420px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--dark-soft);
+  align-self: flex-end;
+}
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 3rem;
+}
+.cap-card {
+  background: var(--cream);
+  padding: 2.8rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.5s var(--ease-quart), transform 0.5s var(--ease-quart);
+}
+.cap-card:hover { background: var(--cream-warm); }
+.cap-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+}
+.cap-card h3 {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+.cap-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--dark-soft);
+  margin-bottom: 1.5rem;
+}
+.cap-list {
+  list-style: none;
+  margin-top: auto;
+  padding: 0;
+  border-top: 1px solid var(--line-soft);
+}
+.cap-list li {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dark-faded);
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.cap-list li:last-child { border-bottom: none; }
+[data-theme="dark"] .capabilities-section { background: var(--cream-light); }
+[data-theme="dark"] .cap-card { background: var(--cream); }
+[data-theme="dark"] .cap-card:hover { background: var(--cream-warm); }
+[data-theme="dark"] .cap-card h3 { color: var(--dark); }
+@media (max-width: 900px) { .cap-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .cap-grid { grid-template-columns: 1fr; }
+  .capabilities-section { padding: 5rem 0; }
+}
+
+/* ══════════════════════════════════════════
    REVEAL ANIMATIONS — Chrome + Safari compatible
 ══════════════════════════════════════════ */
 .reveal {
@@ -2435,6 +2512,76 @@ footer {
           <li><span data-en="Certified structural engineer" data-da="Certificeret statiker">Certified structural engineer</span><span class="num">05</span></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     AUTHORITY PROJECTS / SPECIALIST SERVICES
+════════════════════════════════════════ -->
+<section class="capabilities-section section" id="capabilities">
+  <div class="wrap">
+    <div class="services-header">
+      <div>
+        <div class="section-label reveal" data-en="03 · Authority projects" data-da="03 · Myndighedsprojekter">03 · Authority projects</div>
+        <h2 class="section-title reveal d1">Everything for<br><em>approval & build.</em></h2>
+      </div>
+      <p class="reveal d2 cap-intro" data-en="From the first line to a finished build — sketches, visualisations, authority drawings and building permits, all under one roof." data-da="Fra første streg til færdigt byggeri — skitser, visualiseringer, myndighedstegninger og byggetilladelser, alt under ét tag.">From the first line to a finished build — sketches, visualisations, authority drawings and building permits, all under one roof.</p>
+    </div>
+
+    <div class="cap-grid">
+
+      <div class="cap-card reveal d1">
+        <div class="cap-num">01</div>
+        <h3 data-en="Architectural drawings" data-da="Arkitekttegninger">Architectural drawings</h3>
+        <p data-en="Drawings with an eye for both design and detail. Plans, elevations, sections, roof plans and 3D visualisations — aesthetic solutions that are technically buildable." data-da="Tegninger med øje for både design og detalje. Plan, facade, snit, tagplan og 3D-visualiseringer — æstetiske løsninger der er teknisk bygbare.">Drawings with an eye for both design and detail. Plans, elevations, sections, roof plans and 3D visualisations — aesthetic solutions that are technically buildable.</p>
+        <ul class="cap-list">
+          <li data-en="Floor & site plans" data-da="Grund- & situationsplan">Floor &amp; site plans</li>
+          <li data-en="Facades & sections" data-da="Facade- & snittegninger">Facades &amp; sections</li>
+          <li data-en="3D visualisation" data-da="3D-visualisering">3D visualisation</li>
+        </ul>
+      </div>
+
+      <div class="cap-card reveal d2">
+        <div class="cap-num">02</div>
+        <h3 data-en="Structural calculations" data-da="Statiske beregninger">Structural calculations</h3>
+        <p data-en="The core of a structure's strength and stability. We analyse the forces acting on a building — compression, tension, bending and moment — across complexity classes KK1 to KK3." data-da="Kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — i konsekvensklasse KK1 til KK3.">The core of a structure's strength and stability. We analyse the forces acting on a building — compression, tension, bending and moment — across complexity classes KK1 to KK3.</p>
+        <ul class="cap-list">
+          <li data-en="Load-bearing walls" data-da="Bærende vægge">Load-bearing walls</li>
+          <li data-en="Lintels & rafters" data-da="Overliggere & spær">Lintels &amp; rafters</li>
+          <li data-en="Signed by a certified engineer" data-da="Underskrevet af certificeret statiker">Signed by a certified engineer</li>
+        </ul>
+      </div>
+
+      <div class="cap-card reveal d3">
+        <div class="cap-num">03</div>
+        <h3 data-en="Building permit applications" data-da="Byggeansøgning">Building permit applications</h3>
+        <p data-en="We handle the building permit from start to finish, navigating the municipal process so your project meets every regulation and approval — with no unnecessary middlemen." data-da="Vi håndterer byggetilladelsen fra start til slut og navigerer myndighedsprocessen, så dit projekt opfylder alle regler og godkendelser — uden unødige mellemled.">We handle the building permit from start to finish, navigating the municipal process so your project meets every regulation and approval — with no unnecessary middlemen.</p>
+        <ul class="cap-list">
+          <li data-en="Authority drawings" data-da="Myndighedstegninger">Authority drawings</li>
+          <li data-en="Local plan compliance" data-da="Lokalplan-overholdelse">Local plan compliance</li>
+          <li data-en="Municipal liaison" data-da="Myndighedskommunikation">Municipal liaison</li>
+        </ul>
+      </div>
+
+      <div class="cap-card reveal d1">
+        <div class="cap-num">04</div>
+        <h3 data-en="Digitisation of archive drawings" data-da="Digitalisering af arkivtegninger">Digitisation of archive drawings</h3>
+        <p data-en="We convert old physical plans into secure, future-proof digital files — site plans, floor plans, facades, sections and change drawings — so they're never lost again." data-da="Vi konverterer gamle fysiske tegninger til sikre, fremtidssikrede digitale filer — situationsplaner, plantegninger, facader, snit og ændringstegninger.">We convert old physical plans into secure, future-proof digital files — site plans, floor plans, facades, sections and change drawings — so they're never lost again.</p>
+      </div>
+
+      <div class="cap-card reveal d2">
+        <div class="cap-num">05</div>
+        <h3 data-en="Profitability calculation" data-da="Rentabilitetsberegning">Profitability calculation</h3>
+        <p data-en="A clear economic analysis of where an energy renovation pays off best — renovation costs, potential savings and the payback period, in black and white." data-da="En klar økonomisk analyse af, hvor en energirenovering bedst betaler sig — omkostninger, besparelser og tilbagebetalingstid, sort på hvidt.">A clear economic analysis of where an energy renovation pays off best — renovation costs, potential savings and the payback period, in black and white.</p>
+      </div>
+
+      <div class="cap-card reveal d3">
+        <div class="cap-num">06</div>
+        <h3 data-en="Heat loss calculation" data-da="Varmetabsberegning">Heat loss calculation</h3>
+        <p data-en="A detailed analysis of heat lost through the building envelope — walls, roof, windows and floors — identifying thermal bridges and guiding smart renovation investment." data-da="En detaljeret analyse af varmetab gennem klimaskærmen — vægge, tag, vinduer og gulve — der identificerer kuldebroer og guider investeringen.">A detailed analysis of heat lost through the building envelope — walls, roof, windows and floors — identifying thermal bridges and guiding smart renovation investment.</p>
+      </div>
+
     </div>
   </div>
 </section>
