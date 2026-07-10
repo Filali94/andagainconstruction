@@ -2153,7 +2153,7 @@ footer {
   top: 0;
   height: 100vh;
   overflow: hidden;
-  background: #060e1a url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80') center/cover no-repeat;
+  background: #060e1a;
 }
 .scroll-video-el {
   position: absolute;
@@ -2171,37 +2171,26 @@ footer {
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%);
 }
-.scroll-video-texts {
+.scroll-video-logo-wrap {
   position: absolute; inset: 0; z-index: 3;
   display: flex; align-items: center; justify-content: center;
-}
-.scroll-video-slide {
-  position: absolute;
-  text-align: center;
-  color: #fff;
-  padding: 0 2rem;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(0.25,1,0.5,1), transform 0.7s cubic-bezier(0.25,1,0.5,1);
   pointer-events: none;
-  max-width: 800px;
 }
-.scroll-video-slide.active {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+.scroll-video-logo {
+  width: clamp(180px, 26vw, 420px);
+  filter: invert(1);
+  opacity: 0;
+  will-change: transform, opacity, filter;
 }
-.scroll-video-slide h2 {
-  font-size: clamp(36px, 6vw, 80px);
-  font-weight: 300;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  color: #fff;
-  margin-bottom: 0;
+@keyframes logoBloom {
+  0%   { opacity: 0; filter: invert(1) blur(80px) brightness(10); transform: scale(1.4); }
+  20%  { opacity: 1; filter: invert(1) blur(20px) brightness(5);  transform: scale(1.15); }
+  55%  { opacity: 1; filter: invert(1) blur(4px)  brightness(2);  transform: scale(1.04); }
+  80%  { opacity: 1; filter: invert(1) blur(1px)  brightness(1.3);transform: scale(1.01); }
+  100% { opacity: 1; filter: invert(1) blur(0px)  brightness(1.05);transform: scale(1); }
 }
-.scroll-video-slide h2 em {
-  font-style: italic;
-  color: var(--blue-bright);
+.scroll-video-logo.logo-visible {
+  animation: logoBloom 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .scroll-video-bar {
   position: absolute; bottom: 2.5rem; left: 50%;
@@ -2234,7 +2223,7 @@ footer {
 
 <!-- Header — fluid.glass style -->
 <header class="header" id="header">
-  <a href="#hero" class="header-logo">
+  <a href="#" class="header-logo">
     <img src="last.png" alt="And Again Konstruktion" class="logo-img logo-full">
     <svg class="logo-icon" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;height:22px;width:auto;">
       <path d="M20 1L38 11.5V34.5L20 45L2 34.5V11.5L20 1Z" stroke="currentColor" stroke-width="2" fill="none"/>
@@ -2300,56 +2289,22 @@ footer {
 </div>
 
 <!-- ════════════════════════════════════════
-     HERO
+     SCROLL VIDEO (top)
 ════════════════════════════════════════ -->
-<section class="home-header" id="hero">
-  <div class="home-header-bg">
-    <video autoplay muted loop playsinline preload="none">
-      <source src="https://videos.pexels.com/video-files/8639227/8639227-hd_1920_1080_30fps.mp4" type="video/mp4">
-      <source src="https://videos.pexels.com/video-files/1739011/1739011-hd_1920_1080_30fps.mp4" type="video/mp4">
+<section class="scroll-video-section">
+  <div class="scroll-video-sticky">
+    <video class="scroll-video-el" muted playsinline preload="auto">
+      <source src="Haz_un_tour_architectonico_flu_Kling_30__04068.mp4" type="video/mp4">
     </video>
-  </div>
-  <!-- Hero centrado -->
-  <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:100px 2rem 6rem;">
-
-    <!-- Meta top -->
-    <div style="opacity:0;animation:heroLogoIn 0.7s 0.3s var(--ease-out) forwards;">
-      <div class="home-header-meta" style="justify-content:center;">
-        <span class="dot"></span>
-        <span data-en="Copenhagen · Denmark · EST. MMXXVI" data-da="København · Danmark · EST. MMXXVI">Copenhagen · Denmark · EST. MMXXVI</span>
-      </div>
+    <div class="scroll-video-grain"></div>
+    <div class="scroll-video-vignette"></div>
+    <div class="scroll-video-logo-wrap">
+      <img src="last.png" alt="And Again Konstruktion" class="scroll-video-logo">
     </div>
-
-    <!-- Logo grande -->
-    <div style="margin:2rem 0;opacity:0;animation:heroLogoIn 0.9s 1.4s var(--ease-out) forwards;">
-      <img src="last.png" alt="And Again Konstruktion"
-           style="height:clamp(64px,11vw,150px);filter:invert(1);opacity:0.95;display:block;margin:0 auto;">
-    </div>
-
-    <!-- Tagline -->
-    <div style="opacity:0;animation:heroLogoIn 0.8s 0.8s var(--ease-out) forwards;">
-      <p style="font-size:clamp(14px,1.6vw,20px);font-weight:300;letter-spacing:0.04em;color:rgba(237,241,248,0.6);max-width:520px;line-height:1.6;" data-en="A Copenhagen studio for architectural design and structural calculation." data-da="Et Københavnsk studie for arkitektonisk design og strukturberegning.">A Copenhagen studio for architectural design and structural calculation.</p>
-    </div>
-
-    <!-- Divider -->
-    <div style="width:1px;height:40px;background:linear-gradient(180deg,rgba(74,143,224,0.6),transparent);margin:2rem auto;opacity:0;animation:heroLogoIn 0.6s 1s var(--ease-out) forwards;"></div>
-
-    <!-- Button -->
-    <div style="opacity:0;animation:heroLogoIn 0.7s 1.1s var(--ease-out) forwards;">
-      <a href="#" class="btn btn-blue open-modal open-tidycal-btn" style="display:inline-flex;border-radius:100px;padding:14px 28px;">
-        <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-        <span data-en="Create a project" data-da="Start et projekt">Create a project</span>
-      </a>
-    </div>
-
-    <!-- Scroll cue -->
-    <div style="position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:heroLogoIn 0.6s 1.4s var(--ease-out) forwards;">
-      <span style="font-family:var(--mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(237,241,248,0.35);" data-en="Scroll" data-da="Rul ned">Scroll</span>
-      <div class="home-header-scroll-line"></div>
-    </div>
-
+    <div class="scroll-video-bar"><div class="scroll-video-bar-fill"></div></div>
   </div>
 </section>
+
 
 <!-- ════════════════════════════════════════
      ABOUT
@@ -2432,37 +2387,6 @@ footer {
   </div>
 </section>
 
-<!-- ════════════════════════════════════════
-     SCROLL VIDEO
-════════════════════════════════════════ -->
-<section class="scroll-video-section">
-  <div class="scroll-video-sticky">
-    <video class="scroll-video-el" muted playsinline preload="auto"
-      poster="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80">
-      <source src="https://videos.pexels.com/video-files/8639227/8639227-hd_1920_1080_30fps.mp4" type="video/mp4">
-      <source src="https://videos.pexels.com/video-files/1739011/1739011-hd_1920_1080_30fps.mp4" type="video/mp4">
-    </video>
-    <div class="scroll-video-grain"></div>
-    <div class="scroll-video-vignette"></div>
-    <div class="scroll-video-texts">
-      <div class="scroll-video-slide active" data-from="0" data-to="0.28">
-        <div class="section-label" style="color:rgba(237,241,248,0.5);">And Again Konstruktion</div>
-        <h2>Architecture<br><em>meets engineering.</em></h2>
-      </div>
-      <div class="scroll-video-slide" data-from="0.32" data-to="0.62">
-        <h2>Built to last.<br><em>Designed to belong.</em></h2>
-      </div>
-      <div class="scroll-video-slide" data-from="0.66" data-to="1">
-        <h2>One studio.<br><em>Every detail.</em></h2>
-        <a href="#contact" class="btn btn-blue" style="margin-top:2rem;">
-          <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-          <span data-en="Start a project" data-da="Start et projekt">Start a project</span>
-        </a>
-      </div>
-    </div>
-    <div class="scroll-video-bar"><div class="scroll-video-bar-fill"></div></div>
-  </div>
-</section>
 
 <!-- PHOTO BREAK 1 -->
 <div class="photo-break" data-parallax>
@@ -3598,12 +3522,20 @@ footer {
   (function() {
     const section = document.querySelector('.scroll-video-section');
     const video   = document.querySelector('.scroll-video-el');
-    const slides  = document.querySelectorAll('.scroll-video-slide');
+    const logo    = document.querySelector('.scroll-video-logo');
     const barFill = document.querySelector('.scroll-video-bar-fill');
     if (!section || !video) return;
 
     video.pause();
     video.currentTime = 0;
+
+    let animDone = false;
+    if (logo) {
+      setTimeout(() => {
+        logo.classList.add('logo-visible');
+        logo.addEventListener('animationend', () => { animDone = true; }, { once: true });
+      }, 200);
+    }
 
     function updateScrollVideo() {
       const rect     = section.getBoundingClientRect();
@@ -3611,24 +3543,19 @@ footer {
       const scrolled = -rect.top;
       const progress = Math.min(1, Math.max(0, scrolled / total));
 
-      // Scrub video
       if (video.duration) {
         video.currentTime = progress * video.duration;
       }
 
-      // Progress bar
       if (barFill) barFill.style.width = (progress * 100) + '%';
 
-      // Show/hide text slides
-      slides.forEach(slide => {
-        const from = parseFloat(slide.dataset.from);
-        const to   = parseFloat(slide.dataset.to);
-        if (progress >= from && progress <= to) {
-          slide.classList.add('active');
-        } else {
-          slide.classList.remove('active');
-        }
-      });
+      // After bloom animation ends, JS controls fade-out + slow zoom
+      if (logo && animDone) {
+        const fadeOut = progress > 0.7 ? 1 - ((progress - 0.7) / 0.3) : 1;
+        const scale   = 1 + progress * 0.05;
+        logo.style.opacity   = Math.max(0, fadeOut);
+        logo.style.transform = `scale(${scale})`;
+      }
     }
 
     window.addEventListener('scroll', updateScrollVideo, { passive: true });
