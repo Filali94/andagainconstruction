@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="da" data-lang="da">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2351,7 +2351,7 @@ footer {
       <path d="M20 10L30 15.5V26.5L20 32L10 26.5V15.5L20 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
     </svg>
   </a>
-  <span class="header-section-name" id="headerSectionName">Home</span>
+  <span class="header-section-name" id="headerSectionName" data-en="Home" data-da="Hjem">Hjem</span>
   <nav>
     <ul class="header-nav">
       <li><a href="#about" data-en="About" data-da="Om os">About</a></li>
@@ -2363,17 +2363,17 @@ footer {
   </nav>
   <div class="header-actions">
     <div style="display:flex;gap:4px;align-items:center">
-      <button class="lang-btn btn-icon active" data-lang-btn="en" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:0.6;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">EN</button>
+      <button class="lang-btn btn-icon" data-lang-btn="en" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:0.6;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">EN</button>
       <span style="opacity:0.2;font-size:11px;">/</span>
-      <button class="lang-btn btn-icon" data-lang-btn="da" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:0.6;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">DA</button>
+      <button class="lang-btn btn-icon active" data-lang-btn="da" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:1;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">DA</button>
     </div>
     <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
       <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
-    <a href="#" class="header-cta open-modal open-tidycal-btn" data-en="Create a project" data-da="Start et projekt">
+    <a href="#" class="header-cta open-modal open-tidycal-btn">
       <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-      Create a project
+      <span data-en="Create a project" data-da="Start et projekt">Start et projekt</span>
     </a>
     <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -2383,20 +2383,20 @@ footer {
 
 <!-- Menu overlay -->
 <div class="menu-overlay" id="menuOverlay">
-  <div class="menu-overlay-label">Menu</div>
+  <div class="menu-overlay-label" data-en="Menu" data-da="Menu">Menu</div>
   <nav>
     <ul class="menu-nav">
-      <li class="menu-nav-item"><a href="#about"><span class="text-default">About</span><span class="text-hover">About</span></a></li>
-      <li class="menu-nav-item"><a href="#services"><span class="text-default">Services</span><span class="text-hover">Services</span></a></li>
-      <li class="menu-nav-item"><a href="#portfolio"><span class="text-default">Projects</span><span class="text-hover">Projects</span></a></li>
-      <li class="menu-nav-item"><a href="#process"><span class="text-default">Process</span><span class="text-hover">Process</span></a></li>
-      <li class="menu-nav-item"><a href="#contact"><span class="text-default">Contact</span><span class="text-hover">Contact</span></a></li>
+      <li class="menu-nav-item"><a href="#about"><span class="text-default" data-en="About" data-da="Om os">Om os</span><span class="text-hover" data-en="About" data-da="Om os">Om os</span></a></li>
+      <li class="menu-nav-item"><a href="#services"><span class="text-default" data-en="Services" data-da="Ydelser">Ydelser</span><span class="text-hover" data-en="Services" data-da="Ydelser">Ydelser</span></a></li>
+      <li class="menu-nav-item"><a href="#portfolio"><span class="text-default" data-en="Projects" data-da="Projekter">Projekter</span><span class="text-hover" data-en="Projects" data-da="Projekter">Projekter</span></a></li>
+      <li class="menu-nav-item"><a href="#process"><span class="text-default" data-en="Process" data-da="Proces">Proces</span><span class="text-hover" data-en="Process" data-da="Proces">Proces</span></a></li>
+      <li class="menu-nav-item"><a href="#contact"><span class="text-default" data-en="Contact" data-da="Kontakt">Kontakt</span><span class="text-hover" data-en="Contact" data-da="Kontakt">Kontakt</span></a></li>
     </ul>
   </nav>
   <div class="menu-footer">
     <div class="menu-footer-col">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+      <a href="#portfolio" data-en="Portfolio" data-da="Projekter">Projekter</a>
+      <a href="#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
     </div>
     <div class="menu-footer-col" style="text-align:right">
       <a href="tel:+4500000000">+45 00 00 00 00</a>
@@ -2405,7 +2405,7 @@ footer {
   </div>
   <a href="#contact" class="menu-cta" id="menuClose" onclick="document.getElementById('menuOverlay').classList.remove('open');document.getElementById('burger').classList.remove('open');document.body.style.overflow='';">
     <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-    Book a free consultation
+    <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
   </a>
 </div>
 
@@ -2474,8 +2474,8 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Filali Mohamed</h3>
-          <p class="team-role">CEO & Owner<br>Architect and Architectural Engineer</p>
-          <span class="team-tag">Architecture</span>
+          <p class="team-role" data-en="CEO & Owner<br>Architect and Architectural Engineer" data-da="CEO & Ejer<br>Arkitekt og bygningsingeniør">CEO &amp; Ejer<br>Arkitekt og bygningsingeniør</p>
+          <span class="team-tag" data-en="Architecture" data-da="Arkitektur">Arkitektur</span>
         </div>
       </div>
 
@@ -2487,8 +2487,8 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Daniel Pedersen</h3>
-          <p class="team-role">Builder Contractor<br>& Sales</p>
-          <span class="team-tag">Construction</span>
+          <p class="team-role" data-en="Builder Contractor<br>& Sales" data-da="Byggeentreprenør<br>& Salg">Byggeentreprenør<br>&amp; Salg</p>
+          <span class="team-tag" data-en="Construction" data-da="Byggeri">Byggeri</span>
         </div>
       </div>
 
@@ -2500,8 +2500,8 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Nicklas Pedersen</h3>
-          <p class="team-role">Marketing</p>
-          <span class="team-tag">Brand & Growth</span>
+          <p class="team-role" data-en="Marketing" data-da="Marketing">Marketing</p>
+          <span class="team-tag" data-en="Brand & Growth" data-da="Brand & Vækst">Brand &amp; Vækst</span>
         </div>
       </div>
 
@@ -2537,7 +2537,7 @@ footer {
       <div class="wrap bigword-inner">
         <span class="bigword-num">01</span>
         <p class="bigword-desc" data-en="From the first sketch to the keys handed over — architecture drawn with restraint and a deep care for how a building feels." data-da="Fra første skitse til nøglerne afleveres — arkitektur tegnet med omtanke.">From the first sketch to the keys handed over — architecture drawn with restraint and a deep care for how a building feels.</p>
-        <h3 class="bigword-word">Design</h3>
+        <h3 class="bigword-word" data-en="Design" data-da="Design">Design</h3>
         <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
       </div>
     </a>
@@ -2547,7 +2547,7 @@ footer {
       <div class="wrap bigword-inner">
         <span class="bigword-num">02</span>
         <p class="bigword-desc" data-en="Structural calculations to Eurocode and the Danish annexes — steel, concrete, timber and masonry, signed by a certified engineer." data-da="Statiske beregninger efter Eurocode — stål, beton, træ og murværk, underskrevet af en certificeret statiker.">Structural calculations to Eurocode and the Danish annexes — steel, concrete, timber and masonry, signed by a certified engineer.</p>
-        <h3 class="bigword-word">Calculate</h3>
+        <h3 class="bigword-word" data-en="Calculate" data-da="Beregn">Beregn</h3>
         <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
       </div>
     </a>
@@ -2557,7 +2557,7 @@ footer {
       <div class="wrap bigword-inner">
         <span class="bigword-num">03</span>
         <p class="bigword-desc" data-en="Authority drawings and building permits handled end to end, through the municipal process — no unnecessary middlemen." data-da="Myndighedstegninger og byggetilladelser håndteret fra start til slut — uden unødige mellemled.">Authority drawings and building permits handled end to end, through the municipal process — no unnecessary middlemen.</p>
-        <h3 class="bigword-word">Approve</h3>
+        <h3 class="bigword-word" data-en="Approve" data-da="Godkend">Godkend</h3>
         <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
       </div>
     </a>
@@ -2853,7 +2853,7 @@ footer {
         </div>
         <div class="workflow-content-right">
           <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;" viewBox="0 0 64 64"><rect x="8" y="16" width="34" height="32" rx="3"/><path d="M42 26l14-7v26l-14-7z"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Google Meet or in-person</p>
+          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;" data-en="Google Meet or in-person" data-da="Google Meet eller fysisk møde">Google Meet or in-person</p>
         </div>
       </div>
 
@@ -2861,7 +2861,7 @@ footer {
       <div class="workflow-step alt" data-workflow-step>
         <div class="workflow-content-left">
           <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;margin-left:auto;display:block;" viewBox="0 0 64 64"><rect x="8" y="8" width="48" height="48" rx="2"/><path d="M20 32h24M20 22h16M20 42h20"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;">Plans, sections & estimate</p>
+          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;" data-en="Plans, sections &amp; estimate" data-da="Planer, snit &amp; overslag">Plans, sections & estimate</p>
         </div>
         <div class="workflow-node">
           <div class="workflow-node-circle">02</div>
@@ -2893,7 +2893,7 @@ footer {
         </div>
         <div class="workflow-content-right">
           <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;" viewBox="0 0 64 64"><path d="M16 56V24L32 8 48 24v32"/><path d="M24 56V38h16v18"/><rect x="28" y="18" width="8" height="8" rx="1"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Municipality approved</p>
+          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;" data-en="Municipality approved" data-da="Godkendt af kommunen">Municipality approved</p>
         </div>
       </div>
 
@@ -2901,7 +2901,7 @@ footer {
       <div class="workflow-step alt" data-workflow-step>
         <div class="workflow-content-left">
           <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;margin-left:auto;display:block;" viewBox="0 0 64 64"><path d="M12 52V16l20-8 20 8v36"/><path d="M24 52V36h16v16"/><path d="M12 28h40M12 40h40"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;">Eurocode certified</p>
+          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;" data-en="Eurocode certified" data-da="Eurocode-certificeret">Eurocode certified</p>
         </div>
         <div class="workflow-node">
           <div class="workflow-node-circle">04</div>
@@ -2933,7 +2933,7 @@ footer {
         </div>
         <div class="workflow-content-right">
           <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;" viewBox="0 0 64 64"><path d="M16 8h32v48H16z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;">Ready to tender</p>
+          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;" data-en="Ready to tender" data-da="Klar til udbud">Ready to tender</p>
         </div>
       </div>
 
@@ -2941,7 +2941,7 @@ footer {
       <div class="workflow-step alt" data-workflow-step>
         <div class="workflow-content-left">
           <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;margin-left:auto;display:block;" viewBox="0 0 64 64"><path d="M32 12l4 8 9 1-6.5 6.5 1.5 9L32 32l-8 4.5 1.5-9L19 21l9-1z"/><circle cx="32" cy="32" r="20"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;">Keys handed over</p>
+          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;" data-en="Keys handed over" data-da="Nøgler afleveret">Keys handed over</p>
         </div>
         <div class="workflow-node">
           <div class="workflow-node-circle" style="border-color:var(--blue-bright);color:var(--blue-bright);">06</div>
@@ -2986,35 +2986,35 @@ footer {
         <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=85" alt="Søhus House">
         <div class="h-scroll-caption">
           <div class="h-scroll-caption-name"><em>Søhus</em> House</div>
-          <div class="h-scroll-caption-tag">Residential · 2025</div>
+          <div class="h-scroll-caption-tag" data-en="Residential · 2025" data-da="Bolig · 2025">Residential · 2025</div>
         </div>
       </div>
       <div class="h-scroll-slide">
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=85" alt="Egholm">
         <div class="h-scroll-caption">
           <div class="h-scroll-caption-name"><em>Egholm</em></div>
-          <div class="h-scroll-caption-tag">Refurbishment · 2024</div>
+          <div class="h-scroll-caption-tag" data-en="Refurbishment · 2024" data-da="Ombygning · 2024">Refurbishment · 2024</div>
         </div>
       </div>
       <div class="h-scroll-slide">
         <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1400&q=85" alt="Nordhavn Pavilion">
         <div class="h-scroll-caption">
           <div class="h-scroll-caption-name"><em>Nordhavn</em> Pavilion</div>
-          <div class="h-scroll-caption-tag">Public · 2025</div>
+          <div class="h-scroll-caption-tag" data-en="Public · 2025" data-da="Offentlig · 2025">Public · 2025</div>
         </div>
       </div>
       <div class="h-scroll-slide">
         <img src="https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=1400&q=85" alt="Klampenborg">
         <div class="h-scroll-caption">
           <div class="h-scroll-caption-name"><em>Klampenborg</em></div>
-          <div class="h-scroll-caption-tag">Villa · 2023</div>
+          <div class="h-scroll-caption-tag" data-en="Villa · 2023" data-da="Villa · 2023">Villa · 2023</div>
         </div>
       </div>
       <div class="h-scroll-slide">
         <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1400&q=85" alt="Frederiksberg">
         <div class="h-scroll-caption">
           <div class="h-scroll-caption-name"><em>Frederiksberg</em></div>
-          <div class="h-scroll-caption-tag">Interior · 2024</div>
+          <div class="h-scroll-caption-tag" data-en="Interior · 2024" data-da="Interiør · 2024">Interior · 2024</div>
         </div>
       </div>
     </div>
@@ -3215,15 +3215,15 @@ footer {
 <section class="contact-section section" id="contact">
   <div class="wrap">
     <div class="section-label reveal" data-en="08 · Contact" data-da="08 · Kontakt">08 · Contact</div>
-    <h2 class="section-title reveal d1">Or just <em>write to us.</em></h2>
+    <h2 class="section-title reveal d1" data-en="Or just write to us." data-da="Eller skriv bare til os.">Eller skriv bare <em>til os.</em></h2>
     <div class="contact-inner">
       <div class="contact-info">
-        <p class="reveal" data-en="If a video call feels like too much for now, drop us a line. We read every message and answer within one working day." data-da="Skriv til os. Vi læser hver besked og svarer inden for én arbejdsdag.">If a video call feels like too much for now, drop us a line. We read every message and answer within one working day.</p>
+        <p class="reveal" data-en="If a video call feels like too much for now, drop us a line. We read every message and answer within one working day." data-da="Skriv til os. Vi læser hver besked og svarer inden for én arbejdsdag.">Skriv til os. Vi læser hver besked og svarer inden for én arbejdsdag.</p>
         <ul class="contact-list reveal d1">
           <li><small data-en="Studio" data-da="Studio">Studio</small><span>Refsnæsgade 14, 2200 København N</span></li>
-          <li><small>Email</small><a href="mailto:hello@andagain.dk">hello@andagain.dk</a></li>
-          <li><small data-en="Phone" data-da="Telefon">Phone</small><a href="tel:+4550149558">+45 50 14 95 58</a></li>
-          <li><small>CVR</small><span>DK 44 55 66 77</span></li>
+          <li><small data-en="Email" data-da="Email">Email</small><a href="mailto:hello@andagain.dk">hello@andagain.dk</a></li>
+          <li><small data-en="Phone" data-da="Telefon">Telefon</small><a href="tel:+4550149558">+45 50 14 95 58</a></li>
+          <li><small data-en="CVR" data-da="CVR">CVR</small><span>DK 44 55 66 77</span></li>
           <li><small data-en="Hours" data-da="Åbningstider">Hours</small><span data-en="Mon–Fri · 09:00–17:00" data-da="Man–Fre · 09:00–17:00">Mon–Fri · 09:00–17:00</span></li>
         </ul>
       </div>
@@ -3248,8 +3248,8 @@ footer {
         </form>
         <div class="form-success" id="contactSuccess">
           <svg viewBox="0 0 56 56" style="stroke:var(--blue)"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>
-          <h3 data-en="Message sent" data-da="Besked sendt">Message sent</h3>
-          <p style="color:var(--dark-soft)" data-en="Thank you. We'll get back to you within one working day." data-da="Tak. Vi vender tilbage inden for én arbejdsdag.">Thank you. We'll get back to you within one working day.</p>
+          <h3 data-en="Message sent" data-da="Besked sendt">Besked sendt</h3>
+          <p style="color:var(--dark-soft)" data-en="Thank you. We'll get back to you within one working day." data-da="Tak. Vi vender tilbage inden for én arbejdsdag.">Tak. Vi vender tilbage inden for én arbejdsdag.</p>
         </div>
       </div>
     </div>
@@ -3264,17 +3264,17 @@ footer {
     <div class="footer-marquee">
       <div class="marquee-track">
         <span>And Again</span><em>Konstruktion</em><span class="dot">●</span>
-        <span>Architecture</span><em>& Engineering</em><span class="dot">●</span>
+        <span data-en="Architecture" data-da="Arkitektur">Arkitektur</span><em data-en="& Engineering" data-da="& Ingeniørarbejde">&amp; Ingeniørarbejde</em><span class="dot">●</span>
         <span>København</span><em>2026</em><span class="dot">●</span>
         <span>And Again</span><em>Konstruktion</em><span class="dot">●</span>
-        <span>Architecture</span><em>& Engineering</em><span class="dot">●</span>
+        <span data-en="Architecture" data-da="Arkitektur">Arkitektur</span><em data-en="& Engineering" data-da="& Ingeniørarbejde">&amp; Ingeniørarbejde</em><span class="dot">●</span>
         <span>København</span><em>2026</em><span class="dot">●</span>
       </div>
     </div>
     <div class="footer-grid">
       <div class="footer-col">
         <img src="last.png" alt="And Again Konstruktion" style="height:40px;margin-bottom:20px;filter:invert(1);">
-        <p data-en="Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode." data-da="Arkitektur og strukturberegning. Ét studie, ét sæt hænder.">Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode.</p>
+        <p data-en="Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode." data-da="Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.">Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.</p>
       </div>
       <div class="footer-col">
         <h5 data-en="Navigate" data-da="Navigation">Navigate</h5>
@@ -3299,7 +3299,7 @@ footer {
     </div>
     <div class="footer-bottom">
       <span>© 2026 And Again Konstruktion ApS · CVR DK 44 55 66 77</span>
-      <span data-en="Made in Copenhagen" data-da="Lavet i København">Made in Copenhagen</span>
+      <span data-en="Made in Copenhagen" data-da="Lavet i København">Lavet i København</span>
     </div>
   </div>
 </footer>
@@ -3316,16 +3316,16 @@ footer {
         <span>Google Meet</span>
       </div>
       <div class="section-label" data-en="Book a meeting" data-da="Book et møde">Book a meeting</div>
-      <h2>Let's talk<br><em>about your project.</em></h2>
-      <p data-en="Book a free 30-minute video call. No commitment, no pressure." data-da="Book et gratis 30-minutters videokald. Uden forpligtelse.">Book a free 30-minute video call. No commitment, no pressure.</p>
+      <h2 data-en="Let's talk about your project." data-da="Lad os tale om dit projekt.">Lad os tale<br><em>om dit projekt.</em></h2>
+      <p data-en="Book a free 30-minute video call. No commitment, no pressure." data-da="Book et gratis 30-minutters videokald. Uden forpligtelse.">Book et gratis 30-minutters videokald. Uden forpligtelse.</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;">
         <div class="info-block" style="border-top:none;padding:0;flex:1;min-width:140px;">
           <svg class="info-icon" viewBox="0 0 36 36" style="stroke:var(--blue)"><circle cx="18" cy="18" r="14"/><path d="M18 10v8l5 3"/></svg>
-          <div class="info-block-text"><small>Duration</small><strong>30 min · Free</strong></div>
+          <div class="info-block-text"><small data-en="Duration" data-da="Varighed">Varighed</small><strong data-en="30 min · Free" data-da="30 min · Gratis">30 min · Gratis</strong></div>
         </div>
         <div class="info-block" style="border-top:none;padding:0;flex:1;min-width:140px;">
           <svg class="info-icon" viewBox="0 0 36 36" style="stroke:var(--blue)"><rect x="4" y="9" width="18" height="18" rx="2"/><path d="M22 15l9-4.5v15L22 21z"/></svg>
-          <div class="info-block-text"><small>Platform</small><strong>Google Meet</strong></div>
+          <div class="info-block-text"><small data-en="Platform" data-da="Platform">Platform</small><strong>Google Meet</strong></div>
         </div>
       </div>
     </div>
@@ -3365,8 +3365,8 @@ footer {
     </form>
     <div class="form-success" id="modalSuccess">
       <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>
-      <h3 data-en="Booking received" data-da="Booking modtaget">Booking received</h3>
-      <p data-en="We'll confirm and send you the Google Meet link by email." data-da="Vi bekræfter og sender linket på email.">We'll confirm and send you the Google Meet link by email.</p>
+      <h3 data-en="Booking received" data-da="Booking modtaget">Booking modtaget</h3>
+      <p data-en="We'll confirm and send you the Google Meet link by email." data-da="Vi bekræfter og sender linket på email.">Vi bekræfter og sender linket på email.</p>
     </div>
   </div>
 </div>
@@ -3403,6 +3403,9 @@ footer {
     });
   }
   langBtns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langBtn)));
+
+  // Danish is the default language on first load
+  setLang('da');
 
   // ── Section title in header ──
   const headerPageTitle = document.getElementById('headerPageTitle');
@@ -3463,19 +3466,22 @@ footer {
     const sectionName = document.getElementById('headerSectionName');
     if (sectionName) {
       const sections = [
-        { id: 'hero',      name: 'Home' },
-        { id: 'about',     name: 'About' },
-        { id: 'services',  name: 'Services' },
-        { id: 'portfolio', name: 'Projects' },
-        { id: 'process',   name: 'Process' },
-        { id: 'contact',   name: 'Contact' },
+        { id: 'hero',      en: 'Home',     da: 'Hjem' },
+        { id: 'about',     en: 'About',    da: 'Om os' },
+        { id: 'services',  en: 'Services', da: 'Ydelser' },
+        { id: 'portfolio', en: 'Projects', da: 'Projekter' },
+        { id: 'process',   en: 'Process',  da: 'Proces' },
+        { id: 'contact',   en: 'Contact',  da: 'Kontakt' },
       ];
-      let active = 'Home';
+      const curLang = document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'da';
+      let active = sections[0];
       sections.forEach(s => {
         const el = document.getElementById(s.id);
-        if (el && el.getBoundingClientRect().top <= window.innerHeight / 2) active = s.name;
+        if (el && el.getBoundingClientRect().top <= window.innerHeight / 2) active = s;
       });
-      sectionName.textContent = active;
+      sectionName.setAttribute('data-en', active.en);
+      sectionName.setAttribute('data-da', active.da);
+      sectionName.textContent = active[curLang];
     }
   }, { passive: true });
 
@@ -3768,8 +3774,8 @@ footer {
       <div class="section-label">
         <span data-en="The team" data-da="Teamet">The team</span>
       </div>
-      <h2>The people <em>behind And Again.</em></h2>
-      <p style="margin-top:1.2rem;max-width:600px;font-size:1.05rem;line-height:1.7;opacity:0.7;">We are a small, dedicated team of architects, engineers and builders who believe that good design and solid construction are inseparable. Every project we take on is handled with care, precision and a long-term perspective.</p>
+      <h2 data-en="The people behind And Again." data-da="Menneskerne bag And Again.">Menneskerne <em>bag And Again.</em></h2>
+      <p style="margin-top:1.2rem;max-width:600px;font-size:1.05rem;line-height:1.7;opacity:0.7;" data-en="We are a small, dedicated team of architects, engineers and builders who believe that good design and solid construction are inseparable. Every project we take on is handled with care, precision and a long-term perspective." data-da="Vi er et lille, engageret team af arkitekter, ingeniører og håndværkere, der tror på, at godt design og solidt byggeri hører uløseligt sammen. Hvert projekt vi påtager os, håndteres med omhu, præcision og et langsigtet perspektiv.">Vi er et lille, engageret team af arkitekter, ingeniører og håndværkere, der tror på, at godt design og solidt byggeri hører uløseligt sammen. Hvert projekt vi påtager os, håndteres med omhu, præcision og et langsigtet perspektiv.</p>
     </div>
     <div class="team-grid">
       <div class="team-card">
@@ -3779,9 +3785,9 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Filali Mohamed</h3>
-          <p class="team-role">CEO &amp; Owner<br>Architect and Architectural Engineer</p>
-          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;">Mohamed leads the studio with a dual focus on architecture and structural engineering. With over a decade of experience across residential, mixed-use and public projects, he ensures that every design is both visually considered and technically sound.</p>
-          <span class="team-tag">Architecture</span>
+          <p class="team-role" data-en="CEO & Owner<br>Architect and Architectural Engineer" data-da="CEO & Ejer<br>Arkitekt og bygningsingeniør">CEO &amp; Ejer<br>Arkitekt og bygningsingeniør</p>
+          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;" data-en="Mohamed leads the studio with a dual focus on architecture and structural engineering. With over a decade of experience across residential, mixed-use and public projects, he ensures that every design is both visually considered and technically sound." data-da="Mohamed leder studiet med et dobbelt fokus på arkitektur og strukturberegning. Med over ti års erfaring inden for bolig-, blandet- og offentlige projekter sikrer han, at hvert design er både visuelt gennemtænkt og teknisk solidt.">Mohamed leder studiet med et dobbelt fokus på arkitektur og strukturberegning. Med over ti års erfaring inden for bolig-, blandet- og offentlige projekter sikrer han, at hvert design er både visuelt gennemtænkt og teknisk solidt.</p>
+          <span class="team-tag" data-en="Architecture" data-da="Arkitektur">Arkitektur</span>
         </div>
       </div>
       <div class="team-card">
@@ -3791,9 +3797,9 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Daniel Pedersen</h3>
-          <p class="team-role">Builder Contractor<br>&amp; Sales</p>
-          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;">Daniel bridges the gap between design and execution. With deep roots in the construction industry, he oversees project delivery, contractor coordination and client relations — making sure every build runs on time and to specification.</p>
-          <span class="team-tag">Construction</span>
+          <p class="team-role" data-en="Builder Contractor<br>& Sales" data-da="Byggeentreprenør<br>& Salg">Byggeentreprenør<br>&amp; Salg</p>
+          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;" data-en="Daniel bridges the gap between design and execution. With deep roots in the construction industry, he oversees project delivery, contractor coordination and client relations — making sure every build runs on time and to specification." data-da="Daniel bygger bro mellem design og udførelse. Med dybe rødder i byggebranchen står han for projektlevering, koordinering af håndværkere og kunderelationer — og sikrer, at hvert byggeri holder tidsplan og specifikationer.">Daniel bygger bro mellem design og udførelse. Med dybe rødder i byggebranchen står han for projektlevering, koordinering af håndværkere og kunderelationer — og sikrer, at hvert byggeri holder tidsplan og specifikationer.</p>
+          <span class="team-tag" data-en="Construction" data-da="Byggeri">Byggeri</span>
         </div>
       </div>
       <div class="team-card">
@@ -3803,9 +3809,9 @@ footer {
         </div>
         <div class="team-info">
           <h3 class="team-name">Nicklas Pedersen</h3>
-          <p class="team-role">Marketing &amp; Brand Strategy</p>
-          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;">Nicklas shapes how And Again is perceived — from digital presence to client communications. He ensures the studio's values and visual identity come through clearly at every touchpoint, attracting clients who share our commitment to enduring work.</p>
-          <span class="team-tag">Brand &amp; Growth</span>
+          <p class="team-role" data-en="Marketing & Brand Strategy" data-da="Marketing & Brandstrategi">Marketing &amp; Brandstrategi</p>
+          <p style="margin-top:0.6rem;font-size:0.9rem;line-height:1.6;opacity:0.65;" data-en="Nicklas shapes how And Again is perceived — from digital presence to client communications. He ensures the studio's values and visual identity come through clearly at every touchpoint, attracting clients who share our commitment to enduring work." data-da="Nicklas former, hvordan And Again opfattes — fra digital tilstedeværelse til kundekommunikation. Han sikrer, at studiets værdier og visuelle identitet kommer klart til udtryk i alle sammenhænge, og tiltrækker kunder der deler vores engagement i varigt arbejde.">Nicklas former, hvordan And Again opfattes — fra digital tilstedeværelse til kundekommunikation. Han sikrer, at studiets værdier og visuelle identitet kommer klart til udtryk i alle sammenhænge, og tiltrækker kunder der deler vores engagement i varigt arbejde.</p>
+          <span class="team-tag" data-en="Brand & Growth" data-da="Brand & Vækst">Brand &amp; Vækst</span>
         </div>
       </div>
     </div>
@@ -3852,9 +3858,10 @@ footer {
         e.preventDefault();
         if (!form.checkValidity()) { form.reportValidity(); return; }
 
+        const curLang = document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'da';
         const d   = new FormData(form);
         const btn = form.querySelector('.btn-submit');
-        if (btn) { btn.disabled = true; btn.querySelector('span').textContent = 'Sending…'; }
+        if (btn) { btn.disabled = true; btn.querySelector('span').textContent = curLang === 'da' ? 'Sender…' : 'Sending…'; }
 
         const url = SCRIPT_URL + '?' + new URLSearchParams({
           firstName:   d.get('firstName')   || '',
@@ -3881,10 +3888,14 @@ footer {
             form.style.display = 'none';
             const ok = document.createElement('div');
             ok.className = 'form-success';
+            const bookingTitle = curLang === 'da' ? 'Booking modtaget' : 'Booking received';
+            const bookingText  = curLang === 'da'
+              ? 'Vi bekræfter datoen og sender dig et Google Meet-link på email inden for et par timer.'
+              : 'We\'ll confirm the date and send you a Google Meet link by email within a few hours.';
             ok.innerHTML =
               '<svg viewBox="0 0 56 56" style="stroke:var(--blue-bright)"><circle cx="28" cy="28" r="24"/><path d="M18 28l8 8 14-14"/></svg>' +
-              '<h3>Booking received</h3>' +
-              '<p>We\'ll confirm the date and send you a Google Meet link by email within a few hours.</p>';
+              '<h3>' + bookingTitle + '</h3>' +
+              '<p>' + bookingText + '</p>';
             form.parentNode.appendChild(ok);
           }
         }, 1200);
