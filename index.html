@@ -1016,8 +1016,9 @@ body {
 .team-modal-header .section-label { color: var(--blue); margin-bottom: 12px; }
 .team-modal-header .section-label::before { background: var(--blue); }
 .team-modal-header h2 {
-  font-size: clamp(28px, 4vw, 52px); font-weight: 700;
-  letter-spacing: -0.03em; line-height: 0.95;
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 52px); font-weight: 400;
+  letter-spacing: -0.015em; line-height: 1;
 }
 .team-modal-header h2 em { font-style: italic; color: var(--blue); }
 
@@ -1431,10 +1432,11 @@ body {
   display: block;
 }
 .workflow-step-title {
-  font-size: clamp(20px, 2.5vw, 32px);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.7vw, 34px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
   margin-bottom: 10px;
 }
 .workflow-step-title em { font-style: italic; color: var(--blue-bright); }
@@ -1888,8 +1890,9 @@ footer {
 .marquee-track {
   display: flex; gap: 60px; white-space: nowrap;
   animation: marquee 30s linear infinite;
+  font-family: var(--serif);
   font-size: clamp(40px, 6vw, 80px);
-  font-weight: 700; letter-spacing: -0.02em;
+  font-weight: 400; letter-spacing: -0.01em;
 }
 .marquee-track em { font-style: italic; color: var(--blue-bright); }
 .marquee-track .dot { color: var(--blue-bright); font-size: 40px; align-self: center; }
@@ -2066,8 +2069,9 @@ footer {
 .modal-head .section-label { color: var(--blue); margin-bottom: 12px; }
 .modal-head .section-label::before { background: var(--blue); }
 .modal-head h2 {
-  font-size: clamp(26px, 4vw, 42px); font-weight: 700;
-  letter-spacing: -0.025em; line-height: 1;
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 42px); font-weight: 400;
+  letter-spacing: -0.012em; line-height: 1.04;
 }
 .modal-head h2 em { font-style: italic; color: var(--blue); }
 .modal-head p { margin-top: 10px; color: var(--dark-soft); font-size: 14px; line-height: 1.6; }
@@ -2962,7 +2966,7 @@ footer {
         <div class="section-label" style="color:var(--blue-bright)">
           <span data-en="Featured work" data-da="Udvalgte projekter">Featured work</span>
         </div>
-        <p style="font-size:clamp(28px,4vw,56px);font-weight:700;letter-spacing:-0.025em;color:var(--light);line-height:1;">
+        <p style="font-family:var(--serif);font-size:clamp(28px,4vw,56px);font-weight:400;letter-spacing:-0.012em;color:var(--light);line-height:1.05;">
           Projects that<br><em style="font-style:italic;color:var(--blue-bright)">speak quietly.</em>
         </p>
       </div>
