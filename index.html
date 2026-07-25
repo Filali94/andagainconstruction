@@ -1876,6 +1876,59 @@ body {
 .form-light .field select option { background: var(--cream-light); color: var(--dark); }
 
 /* ══════════════════════════════════════════
+   FILE UPLOAD FIELD
+══════════════════════════════════════════ */
+.file-field { margin-bottom: 20px; }
+.file-field > label {
+  display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--light-soft); margin-bottom: 10px;
+}
+.file-field > label .file-label-hint {
+  text-transform: none; letter-spacing: 0; font-family: var(--sans);
+  opacity: 0.55; margin-left: 6px; font-size: 11px;
+}
+.file-drop {
+  border: 1px dashed var(--line-dark);
+  padding: 1.2rem 1.4rem;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  transition: border-color 0.3s, background 0.3s;
+  cursor: pointer;
+}
+.file-drop.dragover { border-color: var(--blue-bright); background: rgba(74,143,224,0.06); }
+.file-btn {
+  display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;
+  padding: 10px 18px; border: 1px solid var(--line-dark); border-radius: 100px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--light); background: transparent; cursor: pointer; transition: all 0.3s;
+}
+.file-btn:hover { border-color: var(--blue-bright); color: var(--blue-bright); }
+.file-btn svg { width: 13px; height: 13px; }
+.file-drop-text { font-size: 13px; color: var(--light-faded); }
+.file-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.file-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 6px 6px 14px; border: 1px solid var(--line-dark); border-radius: 100px;
+  font-size: 12px; color: var(--light-soft); max-width: 240px;
+}
+.file-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-chip button {
+  width: 20px; height: 20px; min-width: 0; min-height: 0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.08); color: var(--light); flex-shrink: 0; font-size: 14px; line-height: 1;
+}
+.file-chip button:hover { background: var(--blue-bright); color: var(--dark); }
+.file-error { color: #e0665a; font-size: 12px; margin-top: 8px; display: none; }
+.file-error.show { display: block; }
+
+.modal-form .file-field > label { color: var(--dark-soft); }
+.modal-form .file-drop { border-color: var(--line); }
+.modal-form .file-btn { border-color: var(--line); color: var(--dark); }
+.modal-form .file-btn:hover { border-color: var(--blue); color: var(--blue); }
+.modal-form .file-drop-text { color: var(--dark-faded); }
+.modal-form .file-chip { border-color: var(--line); color: var(--dark-soft); }
+.modal-form .file-chip button { background: rgba(15,23,18,0.08); color: var(--dark); }
+
+/* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
 footer {
@@ -3196,6 +3249,22 @@ footer {
             <div class="form-row single">
               <div class="field"><label><span data-en="Tell us briefly about the project" data-da="Fortæl kort om projektet">Tell us briefly about the project</span></label><textarea name="message" rows="3" placeholder="..."></textarea></div>
             </div>
+            <div class="form-row single file-field">
+              <label>
+                <span data-en="Attachments" data-da="Vedhæftninger">Attachments</span>
+                <span class="file-label-hint" data-en="(images, PDF — max 15 MB)" data-da="(billeder, PDF — maks. 15 MB)">(images, PDF — max 15 MB)</span>
+              </label>
+              <div class="file-drop" id="apptFileDrop">
+                <input type="file" id="apptFileInput" multiple hidden>
+                <button type="button" class="file-btn" id="apptFileBtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 4l-9 9a3 3 0 004 4l9-9a5 5 0 00-7-7l-9 9a7 7 0 009 9l8-8"/></svg>
+                  <span data-en="Attach files" data-da="Vedhæft filer">Attach files</span>
+                </button>
+                <span class="file-drop-text" data-en="or drag & drop here" data-da="eller træk og slip her">or drag & drop here</span>
+              </div>
+              <div class="file-list" id="apptFileList"></div>
+              <div class="file-error" id="apptFileError" data-en="Files are too large — 15 MB total max." data-da="Filerne er for store — maks. 15 MB i alt.">Files are too large — 15 MB total max.</div>
+            </div>
             <button type="submit" class="btn-submit">
               <span>
                 <span data-en="Choose a date & time" data-da="Vælg dato & tid">Choose a date & time →</span>
@@ -3355,6 +3424,22 @@ footer {
       </div>
       <div class="form-row single">
         <div class="field"><label><span data-en="Tell us briefly about the project" data-da="Fortæl kort om projektet">Tell us briefly about the project</span></label><textarea name="message" rows="3" placeholder="..."></textarea></div>
+      </div>
+      <div class="form-row single file-field">
+        <label>
+          <span data-en="Attachments" data-da="Vedhæftninger">Attachments</span>
+          <span class="file-label-hint" data-en="(images, PDF — max 15 MB)" data-da="(billeder, PDF — maks. 15 MB)">(images, PDF — max 15 MB)</span>
+        </label>
+        <div class="file-drop" id="modalFileDrop">
+          <input type="file" id="modalFileInput" multiple hidden>
+          <button type="button" class="file-btn" id="modalFileBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 4l-9 9a3 3 0 004 4l9-9a5 5 0 00-7-7l-9 9a7 7 0 009 9l8-8"/></svg>
+            <span data-en="Attach files" data-da="Vedhæft filer">Attach files</span>
+          </button>
+          <span class="file-drop-text" data-en="or drag & drop here" data-da="eller træk og slip her">or drag & drop here</span>
+        </div>
+        <div class="file-list" id="modalFileList"></div>
+        <div class="file-error" id="modalFileError" data-en="Files are too large — 15 MB total max." data-da="Filerne er for store — maks. 15 MB i alt.">Files are too large — 15 MB total max.</div>
       </div>
       <button type="submit" class="btn-submit">
         <span>
@@ -3846,11 +3931,71 @@ footer {
     });
   })();
 
-  /* ── Formularios → Google Calendar ── */
+  /* ── Adjuntar archivos (drag & drop + selector) ── */
+  function setupFileField(prefix) {
+    const input = document.getElementById(prefix + 'FileInput');
+    const drop  = document.getElementById(prefix + 'FileDrop');
+    const btn   = document.getElementById(prefix + 'FileBtn');
+    const list  = document.getElementById(prefix + 'FileList');
+    const errEl = document.getElementById(prefix + 'FileError');
+    if (!input || !drop) return { getFiles: () => [], reset: () => {} };
+
+    const MAX_TOTAL = 15 * 1024 * 1024; // 15 MB
+    let files = [];
+
+    function totalSize() { return files.reduce((s, f) => s + f.size, 0); }
+
+    function render() {
+      list.innerHTML = '';
+      files.forEach((f, i) => {
+        const chip = document.createElement('div');
+        chip.className = 'file-chip';
+        const name = document.createElement('span');
+        name.textContent = f.name;
+        const rm = document.createElement('button');
+        rm.type = 'button';
+        rm.innerHTML = '&times;';
+        rm.setAttribute('aria-label', 'Remove file');
+        rm.addEventListener('click', () => { files.splice(i, 1); render(); });
+        chip.appendChild(name);
+        chip.appendChild(rm);
+        list.appendChild(chip);
+      });
+    }
+
+    function addFiles(fileListLike) {
+      let newTotal = totalSize();
+      let overLimit = false;
+      Array.from(fileListLike).forEach(f => {
+        if (files.some(existing => existing.name === f.name && existing.size === f.size)) return;
+        if (newTotal + f.size > MAX_TOTAL) { overLimit = true; return; }
+        newTotal += f.size;
+        files.push(f);
+      });
+      if (errEl) errEl.classList.toggle('show', overLimit);
+      render();
+    }
+
+    if (btn) btn.addEventListener('click', () => input.click());
+    input.addEventListener('change', () => { addFiles(input.files); input.value = ''; });
+    ['dragover', 'dragenter'].forEach(evt => drop.addEventListener(evt, e => { e.preventDefault(); drop.classList.add('dragover'); }));
+    ['dragleave', 'drop'].forEach(evt => drop.addEventListener(evt, e => { e.preventDefault(); drop.classList.remove('dragover'); }));
+    drop.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files) addFiles(e.dataTransfer.files); });
+
+    return {
+      getFiles: () => files,
+      reset: () => { files = []; render(); if (errEl) errEl.classList.remove('show'); }
+    };
+  }
+
+  const apptFileField  = setupFileField('appt');
+  const modalFileField = setupFileField('modal');
+
+  /* ── Formularios → Google Calendar + email con adjuntos ── */
   (function() {
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz6trHWg3bxN3UoTD_2ocZ_2KEEPc9sxt6sAAv6tZFcevwBhJ3SkhDS_JNKFvnniTBO/exec';
 
-    function wireForm(formId, successId) {
+    function wireForm(formId, successId, fileField) {
       const form = document.getElementById(formId);
       if (!form) return;
 
@@ -3863,23 +4008,25 @@ footer {
         const btn = form.querySelector('.btn-submit');
         if (btn) { btn.disabled = true; btn.querySelector('span').textContent = curLang === 'da' ? 'Sender…' : 'Sending…'; }
 
-        const url = SCRIPT_URL + '?' + new URLSearchParams({
-          firstName:   d.get('firstName')   || '',
-          lastName:    d.get('lastName')    || '',
-          email:       d.get('email')       || '',
-          phone:       d.get('phone')       || '',
-          projectType: d.get('projectType') || '',
-          message:     d.get('message')     || '',
-          date:        d.get('date')        || '',
-          time:        d.get('time')        || ''
-        }).toString();
+        const payload = new FormData();
+        payload.append('firstName',   d.get('firstName')   || '');
+        payload.append('lastName',    d.get('lastName')    || '');
+        payload.append('email',       d.get('email')       || '');
+        payload.append('phone',       d.get('phone')       || '');
+        payload.append('projectType', d.get('projectType') || '');
+        payload.append('message',     d.get('message')     || '');
+        payload.append('date',        d.get('date')        || '');
+        payload.append('time',        d.get('time')        || '');
 
-        // Dispara el GET (fetch + image beacon por fiabilidad)
-        try { fetch(url, { method: 'GET', mode: 'no-cors' }); } catch (err) {}
-        new Image().src = url;
+        const files = fileField ? fileField.getFiles() : [];
+        files.forEach((f, i) => payload.append('attachment_' + i, f, f.name));
+
+        // POST con FormData: llega al Apps Script con los campos y los archivos adjuntos
+        try { fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: payload }); } catch (err) {}
 
         // Mostrar confirmación
         setTimeout(function() {
+          if (fileField) fileField.reset();
           const success = successId && document.getElementById(successId);
           if (success) {
             form.style.display = 'none';
@@ -3902,8 +4049,8 @@ footer {
       });
     }
 
-    wireForm('appointmentForm', null);       // formulario de la sección
-    wireForm('modalForm', 'modalSuccess');   // formulario del popup "Create a project"
+    wireForm('appointmentForm', null, apptFileField);        // formulario de la sección
+    wireForm('modalForm', 'modalSuccess', modalFileField);   // formulario del popup "Create a project"
   })();
 </script>
 
