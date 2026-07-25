@@ -3995,11 +3995,23 @@ footer {
   (function() {
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz6trHWg3bxN3UoTD_2ocZ_2KEEPc9sxt6sAAv6tZFcevwBhJ3SkhDS_JNKFvnniTBO/exec';
 
+    // Apps Script's doPost no expone e.files para multipart/form-data, así que
+    // los archivos se codifican en base64 y se envían como campos de texto.
+    function arrayBufferToBase64(buffer) {
+      let binary = '';
+      const bytes = new Uint8Array(buffer);
+      const chunkSize = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunkSize) {
+        binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunkSize));
+      }
+      return btoa(binary);
+    }
+
     function wireForm(formId, successId, fileField) {
       const form = document.getElementById(formId);
       if (!form) return;
 
-      form.addEventListener('submit', function(e) {
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
         if (!form.checkValidity()) { form.reportValidity(); return; }
 
@@ -4019,9 +4031,22 @@ footer {
         payload.append('time',        d.get('time')        || '');
 
         const files = fileField ? fileField.getFiles() : [];
-        files.forEach((f, i) => payload.append('attachment_' + i, f, f.name));
+        try {
+          const encoded = await Promise.all(files.map(f =>
+            f.arrayBuffer().then(buf => ({
+              name: f.name,
+              type: f.type || 'application/octet-stream',
+              data: arrayBufferToBase64(buf)
+            }))
+          ));
+          encoded.forEach((ef, i) => {
+            payload.append('attachment_' + i + '_name', ef.name);
+            payload.append('attachment_' + i + '_type', ef.type);
+            payload.append('attachment_' + i + '_data', ef.data);
+          });
+        } catch (err) {}
 
-        // POST con FormData: llega al Apps Script con los campos y los archivos adjuntos
+        // POST con FormData: llega al Apps Script con los campos y los archivos (en base64)
         try { fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: payload }); } catch (err) {}
 
         // Mostrar confirmación
