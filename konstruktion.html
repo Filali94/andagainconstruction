@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="da" data-lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konstruktion & Statik · And Again Konstruktion</title>
+<meta name="description" content="Statiske beregninger efter Eurocode og de danske nationale annekser. Stål, beton, træ og murværk — konsekvensklasse KK1 til KK3, underskrevet af certificeret statiker.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <a href="index.html" class="header-logo">
+    <img src="last.png" alt="And Again Konstruktion" class="logo-img logo-full">
+  </a>
+  <span class="header-section-name" data-en="Engineering" data-da="Konstruktion">Konstruktion</span>
+  <nav>
+    <ul class="header-nav">
+      <li><a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a></li>
+      <li><a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a></li>
+      <li><a href="index.html#portfolio" data-en="Projects" data-da="Projekter">Projekter</a></li>
+      <li><a href="index.html#process" data-en="Process" data-da="Proces">Proces</a></li>
+      <li><a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <div style="display:flex;gap:4px;align-items:center">
+      <button class="lang-btn btn-icon" data-lang-btn="en" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:0.6;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">EN</button>
+      <span style="opacity:0.2;font-size:11px;">/</span>
+      <button class="lang-btn btn-icon active" data-lang-btn="da" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:1;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">DA</button>
+    </div>
+    <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="index.html#appointment" class="header-cta">
+      <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span data-en="Create a project" data-da="Start et projekt">Start et projekt</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menu overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-overlay-label" data-en="Menu" data-da="Menu">Menu</div>
+  <nav>
+    <ul class="menu-nav">
+      <li class="menu-nav-item"><a href="index.html"><span class="text-default" data-en="Home" data-da="Forside">Forside</span><span class="text-hover" data-en="Home" data-da="Forside">Forside</span></a></li>
+      <li class="menu-nav-item"><a href="arkitektur.html"><span class="text-default" data-en="Architecture" data-da="Arkitektur">Arkitektur</span><span class="text-hover" data-en="Architecture" data-da="Arkitektur">Arkitektur</span></a></li>
+      <li class="menu-nav-item"><a href="konstruktion.html"><span class="text-default" data-en="Engineering" data-da="Konstruktion">Konstruktion</span><span class="text-hover" data-en="Engineering" data-da="Konstruktion">Konstruktion</span></a></li>
+      <li class="menu-nav-item"><a href="index.html#portfolio"><span class="text-default" data-en="Projects" data-da="Projekter">Projekter</span><span class="text-hover" data-en="Projects" data-da="Projekter">Projekter</span></a></li>
+      <li class="menu-nav-item"><a href="index.html#contact"><span class="text-default" data-en="Contact" data-da="Kontakt">Kontakt</span><span class="text-hover" data-en="Contact" data-da="Kontakt">Kontakt</span></a></li>
+    </ul>
+  </nav>
+  <div class="menu-footer">
+    <div class="menu-footer-col">
+      <a href="index.html#portfolio" data-en="Portfolio" data-da="Projekter">Projekter</a>
+      <a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
+    </div>
+    <div class="menu-footer-col" style="text-align:right">
+      <a href="tel:+4550149558">+45 50 14 95 58</a>
+      <a href="mailto:hello@andagain.dk">hello@andagain.dk</a>
+    </div>
+  </div>
+  <a href="index.html#appointment" class="menu-cta">
+    <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+    <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
+  </a>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="lp-hero">
+  <div class="lp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=2000&q=80')"></div>
+  <div class="wrap lp-hero-inner">
+    <a href="index.html" class="lp-crumb">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12H4M11 19l-7-7 7-7"/></svg>
+      <span>And Again Konstruktion</span>
+    </a>
+    <div class="section-label" data-en="02 · Engineering" data-da="02 · Konstruktion">02 · Konstruktion</div>
+    <h1 data-en="Built to <em>last.</em>" data-da="Bygget til at <em>holde.</em>">Bygget til at <em>holde.</em></h1>
+    <p class="lp-hero-lead" data-en="Structural calculations made to Eurocode and the Danish national annexes. We work in steel, concrete, timber and masonry — and we sign the projects we calculate." data-da="Statiske beregninger udført efter Eurocode og de danske nationale annekser. Vi arbejder i stål, beton, træ og murværk — og vi skriver under på de projekter vi beregner.">Statiske beregninger udført efter Eurocode og de danske nationale annekser. Vi arbejder i stål, beton, træ og murværk — og vi skriver under på de projekter vi beregner.</p>
+    <div class="lp-hero-actions">
+      <a href="index.html#appointment" class="btn btn-blue" style="border-radius:100px;padding:14px 28px;">
+        <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
+      </a>
+      <a href="#ydelser" class="btn" style="border-radius:100px;padding:14px 28px;border:1px solid rgba(243,241,235,0.3);color:var(--light);">
+        <span data-en="See what's included" data-da="Se hvad der er med">Se hvad der er med</span>
+      </a>
+    </div>
+    <div class="lp-hero-meta">
+      <div>
+        <small data-en="Standard" data-da="Regelsæt">Regelsæt</small>
+        <strong>Eurocode · BR18</strong>
+      </div>
+      <div>
+        <small data-en="Consequence class" data-da="Konsekvensklasse">Konsekvensklasse</small>
+        <strong>KK1 – KK3</strong>
+      </div>
+      <div>
+        <small data-en="Signed by" data-da="Underskrevet af">Underskrevet af</small>
+        <strong data-en="Certified engineer" data-da="Certificeret statiker">Certificeret statiker</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INTRO
+════════════════════════════════════════ -->
+<section class="section" style="background:var(--cream-light);border-top:1px solid var(--line-soft);">
+  <div class="wrap">
+    <div class="lp-intro-grid">
+      <div>
+        <div class="section-label reveal" data-en="What it is" data-da="Hvad det er">Hvad det er</div>
+        <h2 class="section-title reveal d1" data-en="The forces <em>behind it.</em>" data-da="Kræfterne <em>bagved.</em>">Kræfterne <em>bagved.</em></h2>
+      </div>
+      <div>
+        <p class="reveal" data-en="Structural calculation is the core of a building's strength and stability. We analyse the forces acting on the structure — compression, tension, bending and moment — and document that the building stands up to them, across consequence classes KK1 to KK3." data-da="Statiske beregninger er kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — og dokumenterer at bygningen kan holde til dem, i konsekvensklasse KK1 til KK3.">Statiske beregninger er kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — og dokumenterer at bygningen kan holde til dem, i konsekvensklasse KK1 til KK3.</p>
+        <p class="reveal d1" data-en="You can bring us a finished architectural project for calculation only, or let us handle both halves. Either way the documentation is signed by a certified structural engineer and ready for the municipality." data-da="Du kan komme med et færdigt arkitektprojekt til ren beregning, eller lade os håndtere begge halvdele. Uanset hvad er dokumentationen underskrevet af en certificeret statiker og klar til kommunen.">Du kan komme med et færdigt arkitektprojekt til ren beregning, eller lade os håndtere begge halvdele. Uanset hvad er dokumentationen underskrevet af en certificeret statiker og klar til kommunen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     YDELSER
+════════════════════════════════════════ -->
+<section class="section" id="ydelser">
+  <div class="wrap">
+    <div class="section-label reveal" data-en="02 · Deliverables" data-da="02 · Ydelser">02 · Ydelser</div>
+    <h2 class="section-title reveal d1" data-en="Everything we <em>calculate.</em>" data-da="Alt vi <em>beregner.</em>">Alt vi <em>beregner.</em></h2>
+
+    <div class="lp-list reveal d1">
+      <div class="lp-list-row">
+        <span class="lp-list-num">01</span>
+        <div>
+          <h4 data-en="Static calculations · Eurocode" data-da="Statiske beregninger · Eurocode">Statiske beregninger · Eurocode</h4>
+          <p data-en="Full static documentation to Eurocode and the Danish national annexes — the package the municipality asks for." data-da="Fuld statisk dokumentation efter Eurocode og de danske nationale annekser — den pakke kommunen beder om.">Fuld statisk dokumentation efter Eurocode og de danske nationale annekser — den pakke kommunen beder om.</p>
+        </div>
+        <span class="lp-list-tag">KK1 – KK3</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">02</span>
+        <div>
+          <h4 data-en="Steel & concrete design" data-da="Stål- & betondesign">Stål- &amp; betondesign</h4>
+          <p data-en="Beams, columns, slabs and foundations sized and documented — dimensioned for the loads they will actually carry." data-da="Bjælker, søjler, dæk og fundamenter dimensioneret og dokumenteret — beregnet til de laster de reelt skal bære.">Bjælker, søjler, dæk og fundamenter dimensioneret og dokumenteret — beregnet til de laster de reelt skal bære.</p>
+        </div>
+        <span class="lp-list-tag" data-en="Load-bearing" data-da="Bærende">Bærende</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">03</span>
+        <div>
+          <h4 data-en="Timber & CLT structures" data-da="Træ- & CLT-konstruktioner">Træ- &amp; CLT-konstruktioner</h4>
+          <p data-en="Rafters, lintels, frames and cross-laminated timber — calculated for strength, deflection and the long life of the material." data-da="Spær, overliggere, rammer og krydslamineret træ — beregnet for styrke, nedbøjning og materialets lange levetid.">Spær, overliggere, rammer og krydslamineret træ — beregnet for styrke, nedbøjning og materialets lange levetid.</p>
+        </div>
+        <span class="lp-list-tag">CLT</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">04</span>
+        <div>
+          <h4 data-en="Load-bearing walls, lintels & rafters" data-da="Bærende vægge, overliggere & spær">Bærende vægge, overliggere &amp; spær</h4>
+          <p data-en="Removing a wall or opening up a facade? We document what carries the load once it is gone — and what has to take over." data-da="Skal en væg fjernes eller en facade åbnes? Vi dokumenterer hvad der bærer lasten når den er væk — og hvad der skal overtage.">Skal en væg fjernes eller en facade åbnes? Vi dokumenterer hvad der bærer lasten når den er væk — og hvad der skal overtage.</p>
+        </div>
+        <span class="lp-list-tag" data-en="Refurbishment" data-da="Ombygning">Ombygning</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">05</span>
+        <div>
+          <h4 data-en="Refurbishment assessments" data-da="Ombygning & vurdering">Ombygning &amp; vurdering</h4>
+          <p data-en="An assessment of an existing structure before you commit — what it can take, and what it will cost to change." data-da="En vurdering af den eksisterende konstruktion før du binder dig — hvad den kan holde til, og hvad det koster at ændre.">En vurdering af den eksisterende konstruktion før du binder dig — hvad den kan holde til, og hvad det koster at ændre.</p>
+        </div>
+        <span class="lp-list-tag" data-en="Existing buildings" data-da="Eksisterende byggeri">Eksisterende byggeri</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">06</span>
+        <div>
+          <h4 data-en="Heat loss & profitability calculation" data-da="Varmetabs- & rentabilitetsberegning">Varmetabs- &amp; rentabilitetsberegning</h4>
+          <p data-en="Where the building loses heat through walls, roof, windows and floors — and where an energy renovation actually pays for itself." data-da="Hvor bygningen taber varme gennem vægge, tag, vinduer og gulve — og hvor en energirenovering rent faktisk betaler sig.">Hvor bygningen taber varme gennem vægge, tag, vinduer og gulve — og hvor en energirenovering rent faktisk betaler sig.</p>
+        </div>
+        <span class="lp-list-tag" data-en="Energy" data-da="Energi">Energi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SWITCH TIL ARKITEKTUR
+════════════════════════════════════════ -->
+<section class="lp-switch">
+  <div class="wrap">
+    <a href="arkitektur.html" class="lp-switch-card reveal">
+      <div>
+        <div class="section-label" style="margin-bottom:10px;" data-en="The other half" data-da="Den anden halvdel">Den anden halvdel</div>
+        <h3 data-en="Architecture" data-da="Arkitektur">Arkitektur</h3>
+        <p data-en="From the first sketch to the keys handed over — drawn with restraint, in the same studio." data-da="Fra første skitse til nøglerne afleveres — tegnet med omtanke, i samme studie.">Fra første skitse til nøglerne afleveres — tegnet med omtanke, i samme studie.</p>
+      </div>
+      <span class="lp-switch-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA
+════════════════════════════════════════ -->
+<section class="lp-cta">
+  <div class="wrap">
+    <h2 data-en="Send us the <em>drawings.</em>" data-da="Send os <em>tegningerne.</em>">Send os <em>tegningerne.</em></h2>
+    <p data-en="Book a free 30-minute video call and attach your drawings — we'll tell you what the calculation involves and what it costs, before you commit to anything." data-da="Book et gratis 30-minutters videokald og vedhæft dine tegninger — vi fortæller dig hvad beregningen indebærer og hvad den koster, før du binder dig til noget.">Book et gratis 30-minutters videokald og vedhæft dine tegninger — vi fortæller dig hvad beregningen indebærer og hvad den koster, før du binder dig til noget.</p>
+    <a href="index.html#appointment" class="btn btn-blue" style="border-radius:100px;padding:16px 32px;">
+      <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span data-en="Book a meeting" data-da="Book et møde">Book et møde</span>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="last.png" alt="And Again Konstruktion" style="height:40px;margin-bottom:20px;filter:invert(1);">
+        <p data-en="Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode." data-da="Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.">Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Navigate" data-da="Navigation">Navigation</h5>
+        <a href="index.html" data-en="Home" data-da="Forside">Forside</a>
+        <a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a>
+        <a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a>
+        <a href="index.html#portfolio" data-en="Projects" data-da="Projekter">Projekter</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Connect" data-da="Forbind">Forbind</h5>
+        <a href="index.html#appointment" data-en="Book a meeting" data-da="Book et møde">Book et møde</a>
+        <a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
+        <a href="mailto:hello@andagain.dk">hello@andagain.dk</a>
+        <a href="tel:+4550149558">+45 50 14 95 58</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Social" data-da="Social">Social</h5>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Behance</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 And Again Konstruktion ApS · CVR DK 44 55 66 77</span>
+      <span data-en="Made in Copenhagen" data-da="Lavet i København">Lavet i København</span>
+    </div>
+  </div>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>
