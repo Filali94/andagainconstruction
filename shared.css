@@ -356,6 +356,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 8px 14px;
+  white-space: nowrap;
   opacity: 0.6;
   border-radius: 100px;
   transition: opacity 0.3s, background 0.3s;
