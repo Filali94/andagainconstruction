@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="da" data-lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nybyggeri af hus · And Again Konstruktion</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23100E0A'/%3E%3Cpath d='M19 49L32 14l13 35' fill='none' stroke='%23F3F1EB' stroke-width='5.5' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="And Again Konstruktion">
+<meta property="og:title" content="Nybyggeri af hus · And Again Konstruktion">
+<meta property="og:description" content="Fra tom grund til nøglefærdigt hus. Arkitektur, ingeniørrådgivning og byggetilladelse under ét tag — nybyggeri i hele Danmark.">
+<meta property="og:url" content="https://andagainconstruction.com/nybyggeri.html">
+<link rel="canonical" href="https://andagainconstruction.com/nybyggeri.html">
+<meta name="description" content="Bygger du nyt hus fra bunden? Vi tager dig fra grund og skitse til byggetilladelse og nøglefærdigt hus — arkitekt og ingeniør under ét tag, i hele Danmark.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<a href="#main" class="skip-link" data-en="Skip to content" data-da="Spring til indhold">Spring til indhold</a>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <a href="index.html" class="header-logo">
+    <img src="last.png" alt="And Again Konstruktion" class="logo-img logo-full">
+  </a>
+  <span class="header-section-name" data-en="New build" data-da="Nybyggeri">Nybyggeri</span>
+  <nav>
+    <ul class="header-nav">
+      <li><a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a></li>
+      <li><a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a></li>
+      <li><a href="index.html#portfolio" data-en="Projects" data-da="Projekter">Projekter</a></li>
+      <li><a href="index.html#process" data-en="Process" data-da="Proces">Proces</a></li>
+      <li><a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <div style="display:flex;gap:4px;align-items:center">
+      <button class="lang-btn btn-icon" data-lang-btn="en" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:0.6;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">EN</button>
+      <span style="opacity:0.2;font-size:11px;">/</span>
+      <button class="lang-btn btn-icon active" data-lang-btn="da" style="font-family:var(--mono);font-size:10px;letter-spacing:0.1em;opacity:1;width:auto;padding:0 8px;height:44px;border-radius:100px;color:inherit;">DA</button>
+    </div>
+    <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="index.html#appointment" class="header-cta">
+      <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span data-en="Create a project" data-da="Start et projekt">Start et projekt</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menu overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-overlay-label" data-en="Menu" data-da="Menu">Menu</div>
+  <nav>
+    <ul class="menu-nav">
+      <li class="menu-nav-item"><a href="index.html"><span class="text-default" data-en="Home" data-da="Forside">Forside</span><span class="text-hover" data-en="Home" data-da="Forside">Forside</span></a></li>
+      <li class="menu-nav-item"><a href="nybyggeri.html"><span class="text-default" data-en="New build" data-da="Nybyggeri">Nybyggeri</span><span class="text-hover" data-en="New build" data-da="Nybyggeri">Nybyggeri</span></a></li>
+      <li class="menu-nav-item"><a href="arkitektur.html"><span class="text-default" data-en="Architecture" data-da="Arkitektur">Arkitektur</span><span class="text-hover" data-en="Architecture" data-da="Arkitektur">Arkitektur</span></a></li>
+      <li class="menu-nav-item"><a href="konstruktion.html"><span class="text-default" data-en="Engineering" data-da="Konstruktion">Konstruktion</span><span class="text-hover" data-en="Engineering" data-da="Konstruktion">Konstruktion</span></a></li>
+      <li class="menu-nav-item"><a href="index.html#portfolio"><span class="text-default" data-en="Projects" data-da="Projekter">Projekter</span><span class="text-hover" data-en="Projects" data-da="Projekter">Projekter</span></a></li>
+      <li class="menu-nav-item"><a href="index.html#contact"><span class="text-default" data-en="Contact" data-da="Kontakt">Kontakt</span><span class="text-hover" data-en="Contact" data-da="Kontakt">Kontakt</span></a></li>
+    </ul>
+  </nav>
+  <div class="menu-footer">
+    <div class="menu-footer-col">
+      <a href="index.html#portfolio" data-en="Portfolio" data-da="Projekter">Projekter</a>
+      <a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
+    </div>
+    <div class="menu-footer-col" style="text-align:right">
+      <a href="tel:+4550149558">+45 50 14 95 58</a>
+      <a href="mailto:hello@andagain.dk">hello@andagain.dk</a>
+    </div>
+  </div>
+  <a href="index.html#appointment" class="menu-cta">
+    <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+    <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
+  </a>
+</div>
+
+<main id="main" tabindex="-1">
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="lp-hero">
+  <div class="lp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1541976590-713941681591?w=2000&q=80')"></div>
+  <div class="wrap lp-hero-inner">
+    <a href="index.html" class="lp-crumb">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12H4M11 19l-7-7 7-7"/></svg>
+      <span>And Again Konstruktion</span>
+    </a>
+    <div class="section-label" data-en="Our specialty" data-da="Vores speciale">Vores speciale</div>
+    <h1 data-en="From empty plot to <em>move-in ready house.</em>" data-da="Fra tom grund til <em>nøglefærdigt hus.</em>">Fra tom grund til <em>nøglefærdigt hus.</em></h1>
+    <p class="lp-hero-lead" data-en="Bought a plot, or planning to demolish and rebuild? We take the whole project — architecture, structural engineering and the building permit — under one roof, so you don't have to coordinate five different companies." data-da="Har du købt en grund, eller vil du rive ned og bygge nyt? Vi tager hele projektet — arkitektur, ingeniørrådgivning og byggetilladelse — under ét tag, så du ikke skal koordinere fem forskellige firmaer.">Har du købt en grund, eller vil du rive ned og bygge nyt? Vi tager hele projektet — arkitektur, ingeniørrådgivning og byggetilladelse — under ét tag, så du ikke skal koordinere fem forskellige firmaer.</p>
+    <div class="lp-hero-actions">
+      <a href="index.html#appointment" class="btn btn-blue" style="border-radius:100px;padding:14px 28px;">
+        <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
+      </a>
+      <a href="#proces" class="btn" style="border-radius:100px;padding:14px 28px;border:1px solid rgba(243,241,235,0.3);color:var(--light);">
+        <span data-en="See how it works" data-da="Se hvordan det foregår">Se hvordan det foregår</span>
+      </a>
+    </div>
+    <div class="lp-hero-meta">
+      <div>
+        <small data-en="Scope" data-da="Omfang">Omfang</small>
+        <strong data-en="Plot → keys" data-da="Grund → nøgle">Grund → nøgle</strong>
+      </div>
+      <div>
+        <small data-en="Compliance" data-da="Regelsæt">Regelsæt</small>
+        <strong>BR18 · Eurocode</strong>
+      </div>
+      <div>
+        <small data-en="Coverage" data-da="Dækker">Dækker</small>
+        <strong data-en="All of Denmark" data-da="Hele Danmark">Hele Danmark</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INTRO — hvorfor ét studie
+════════════════════════════════════════ -->
+<section class="section" style="background:var(--cream-light);border-top:1px solid var(--line-soft);">
+  <div class="wrap">
+    <div class="lp-intro-grid">
+      <div>
+        <div class="section-label reveal" data-en="Why one studio" data-da="Hvorfor ét studie">Hvorfor ét studie</div>
+        <h2 class="section-title reveal d1" data-en="One number <em>to call.</em>" data-da="Ét nummer <em>at ringe til.</em>">Ét nummer <em>at ringe til.</em></h2>
+      </div>
+      <div>
+        <p class="reveal" data-en="Building a house from scratch normally means coordinating an architect, an engineer, the municipality and a contractor yourself — and hoping their drawings agree with each other. We remove that friction: the same studio designs the house and calculates the structure that holds it up." data-da="At bygge et hus fra bunden betyder normalt, at du selv skal koordinere en arkitekt, en ingeniør, kommunen og en entreprenør — og håbe på, at deres tegninger stemmer overens. Vi fjerner den friktion: samme studie tegner huset og beregner konstruktionen der holder det oppe.">At bygge et hus fra bunden betyder normalt, at du selv skal koordinere en arkitekt, en ingeniør, kommunen og en entreprenør — og håbe på, at deres tegninger stemmer overens. Vi fjerner den friktion: samme studie tegner huset og beregner konstruktionen der holder det oppe.</p>
+        <p class="reveal d1" data-en="Whether you've just bought the plot, inherited an old house you'd rather replace, or already have a sketch from a typehus catalogue you want made real — we start from wherever you are, and carry the project through to a signed building permit and a tender-ready set of drawings." data-da="Uanset om du lige har købt grunden, arvet et gammelt hus du hellere vil erstatte, eller allerede har en skitse fra et typehuskatalog du vil have gjort virkelig — vi starter der, hvor du er, og fører projektet frem til en godkendt byggetilladelse og udbudsklare tegninger.">Uanset om du lige har købt grunden, arvet et gammelt hus du hellere vil erstatte, eller allerede har en skitse fra et typehuskatalog du vil have gjort virkelig — vi starter der, hvor du er, og fører projektet frem til en godkendt byggetilladelse og udbudsklare tegninger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROCES — grund til nøgle
+════════════════════════════════════════ -->
+<section class="section" id="proces">
+  <div class="wrap">
+    <div class="section-label reveal" data-en="How it works" data-da="Sådan foregår det">Sådan foregår det</div>
+    <h2 class="section-title reveal d1" data-en="From plot <em>to keys.</em>" data-da="Fra grund <em>til nøgle.</em>">Fra grund <em>til nøgle.</em></h2>
+
+    <div class="lp-list reveal d1">
+      <div class="lp-list-row">
+        <span class="lp-list-num">01</span>
+        <div>
+          <h4 data-en="Free first conversation" data-da="Gratis første samtale">Gratis første samtale</h4>
+          <p data-en="Tell us about the plot, the old house you're replacing, or the site you're eyeing. We talk budget, timeline and what's realistic before anything is signed." data-da="Fortæl os om grunden, det gamle hus du vil erstatte, eller den grund du kigger på. Vi taler budget, tidsplan og hvad der er realistisk, før noget er underskrevet.">Fortæl os om grunden, det gamle hus du vil erstatte, eller den grund du kigger på. Vi taler budget, tidsplan og hvad der er realistisk, før noget er underskrevet.</p>
+        </div>
+        <span class="lp-list-tag" data-en="30 min · Free" data-da="30 min · Gratis">30 min · Gratis</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">02</span>
+        <div>
+          <h4 data-en="Sketch & budget overview" data-da="Skitse & budgetoverslag">Skitse &amp; budgetoverslag</h4>
+          <p data-en="A first design for the house, checked against the plot's local plan and a rough cost overview — so you know what you're deciding on." data-da="Et første design til huset, holdt op mod grundens lokalplan, og et groft budgetoverslag — så du ved, hvad du beslutter dig for.">Et første design til huset, holdt op mod grundens lokalplan, og et groft budgetoverslag — så du ved, hvad du beslutter dig for.</p>
+        </div>
+        <span class="lp-list-tag" data-en="2–4 weeks" data-da="2–4 uger">2–4 uger</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">03</span>
+        <div>
+          <h4 data-en="Building permit" data-da="Byggetilladelse">Byggetilladelse</h4>
+          <p data-en="We prepare and submit the myndighedsprojekt and handle the dialogue with the municipality until the permit is granted." data-da="Vi udarbejder og indsender myndighedsprojektet og håndterer dialogen med kommunen, indtil byggetilladelsen er givet.">Vi udarbejder og indsender myndighedsprojektet og håndterer dialogen med kommunen, indtil byggetilladelsen er givet.</p>
+        </div>
+        <span class="lp-list-tag" data-en="4–8 weeks" data-da="4–8 uger">4–8 uger</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">04</span>
+        <div>
+          <h4 data-en="Structural calculation" data-da="Statisk beregning">Statisk beregning</h4>
+          <p data-en="Eurocode-compliant statics for the whole structure, signed by a certified engineer — the piece a permit can't be granted without." data-da="Eurocode-overholdt statik for hele konstruktionen, underskrevet af en certificeret statiker — den del en byggetilladelse ikke kan gives uden.">Eurocode-overholdt statik for hele konstruktionen, underskrevet af en certificeret statiker — den del en byggetilladelse ikke kan gives uden.</p>
+        </div>
+        <span class="lp-list-tag">Eurocode</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">05</span>
+        <div>
+          <h4 data-en="Construction documents & tender" data-da="Hovedprojekt & udbud">Hovedprojekt &amp; udbud</h4>
+          <p data-en="The full technical set a contractor prices from — details, material specifications and tender documents, ready to send out for comparable offers." data-da="Det fulde tekniske sæt en entreprenør priser efter — detaljer, materialebeskrivelser og udbudsmateriale, klar til at indhente sammenlignelige tilbud.">Det fulde tekniske sæt en entreprenør priser efter — detaljer, materialebeskrivelser og udbudsmateriale, klar til at indhente sammenlignelige tilbud.</p>
+        </div>
+        <span class="lp-list-tag" data-en="Ready to tender" data-da="Klar til udbud">Klar til udbud</span>
+      </div>
+
+      <div class="lp-list-row">
+        <span class="lp-list-num">06</span>
+        <div>
+          <h4 data-en="Site supervision to handover" data-da="Fagtilsyn til aflevering">Fagtilsyn til aflevering</h4>
+          <p data-en="Regular site visits while your contractor builds, so what was drawn is what gets delivered — through to the keys in your hand." data-da="Regelmæssige besøg på pladsen mens din entreprenør bygger, så det der blev tegnet også er det der bliver afleveret — frem til nøglerne er i din hånd.">Regelmæssige besøg på pladsen mens din entreprenør bygger, så det der blev tegnet også er det der bliver afleveret — frem til nøglerne er i din hånd.</p>
+        </div>
+        <span class="lp-list-tag" data-en="Through build" data-da="Hele byggeriet">Hele byggeriet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     KONCEPTPROJEKTER — klar til at slås til, når der er
+     rigtigt indhold (samme mønster som #team i index.html).
+     Ingen opdigtede adresser eller priser herunder.
+════════════════════════════════════════ -->
+<section class="section" id="konceptprojekter" style="display:none; background:var(--cream-light); border-top:1px solid var(--line-soft);">
+  <div class="wrap">
+    <div class="section-label reveal" data-en="Concept projects" data-da="Konceptprojekter">Konceptprojekter</div>
+    <h2 class="section-title reveal d1" data-en="What could <em>be built here.</em>" data-da="Hvad der kunne <em>bygges her.</em>">Hvad der kunne <em>bygges her.</em></h2>
+    <p class="reveal d1" style="max-width:60ch;margin-bottom:2.5rem;font-size:16px;line-height:1.7;color:var(--dark-soft);" data-en="Own design concepts for real plots currently for sale — a first idea of what could be built, illustrated before a client has committed to anything." data-da="Egne designkoncepter til rigtige grunde, der aktuelt er til salg — en første idé om, hvad der kunne bygges, illustreret før en kunde har forpligtet sig til noget.">Egne designkoncepter til rigtige grunde, der aktuelt er til salg — en første idé om, hvad der kunne bygges, illustreret før en kunde har forpligtet sig til noget.</p>
+    <div class="portfolio-grid">
+      <!-- TODO: erstat med rigtige konceptprojekter (grund, billeder, kort tekst) og fjern style="display:none" ovenfor. -->
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section class="section" style="background:var(--cream-light); border-top:1px solid var(--line-soft);">
+  <div class="wrap">
+    <div class="section-label reveal" data-en="Questions" data-da="Spørgsmål">Spørgsmål</div>
+    <h2 class="section-title reveal d1" data-en="Before you <em>get in touch.</em>" data-da="Før du <em>skriver til os.</em>">Før du <em>skriver til os.</em></h2>
+
+    <div class="lp-faq reveal d1">
+      <details class="lp-faq-item" open>
+        <summary>
+          <span data-en="What does it cost to build a house in Denmark?" data-da="Hvad koster det at bygge et hus i Danmark?">Hvad koster det at bygge et hus i Danmark?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="It depends heavily on size, standard, plot conditions and where in Denmark you build — there's no honest single number. In the free first conversation we look at your plot and ambitions and give you a concrete cost overview, rather than a generic average that won't match your project." data-da="Det afhænger meget af størrelse, standard, grundforhold og hvor i Danmark du bygger — der findes ikke ét ærligt tal. I den gratis første samtale kigger vi på din grund og dine ambitioner og giver dig et konkret budgetoverslag, i stedet for et generelt gennemsnit der ikke passer på dit projekt.">Det afhænger meget af størrelse, standard, grundforhold og hvor i Danmark du bygger — der findes ikke ét ærligt tal. I den gratis første samtale kigger vi på din grund og dine ambitioner og giver dig et konkret budgetoverslag, i stedet for et generelt gennemsnit der ikke passer på dit projekt.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="Do I need both an architect and an engineer?" data-da="Har jeg brug for både en arkitekt og en ingeniør?">Har jeg brug for både en arkitekt og en ingeniør?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="For most new builds in Denmark, yes: the municipality requires signed structural documentation (statik) alongside the architectural drawings before granting a building permit. That's the whole reason And Again exists as one studio — you get both without having to find, brief and coordinate two separate firms yourself." data-da="Til de fleste nybyggerier i Danmark, ja: kommunen kræver underskrevet statisk dokumentation ved siden af arkitekttegningerne, før byggetilladelsen kan gives. Det er hele grunden til, at And Again findes som ét studie — du får begge dele uden selv at skulle finde, briefe og koordinere to separate firmaer.">Til de fleste nybyggerier i Danmark, ja: kommunen kræver underskrevet statisk dokumentation ved siden af arkitekttegningerne, før byggetilladelsen kan gives. Det er hele grunden til, at And Again findes som ét studie — du får begge dele uden selv at skulle finde, briefe og koordinere to separate firmaer.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="How long does a building permit take?" data-da="Hvor lang tid tager en byggetilladelse?">Hvor lang tid tager en byggetilladelse?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="It varies by municipality and by how complete the application is. We handle the full submission and the back-and-forth with the municipality, so nothing gets delayed by missing paperwork on our end." data-da="Det varierer fra kommune til kommune og efter, hvor komplet ansøgningen er. Vi håndterer hele indsendelsen og dialogen med kommunen, så intet bliver forsinket af manglende papirarbejde fra vores side.">Det varierer fra kommune til kommune og efter, hvor komplet ansøgningen er. Vi håndterer hele indsendelsen og dialogen med kommunen, så intet bliver forsinket af manglende papirarbejde fra vores side.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="I've already bought the plot — can you still help?" data-da="Jeg har allerede købt grunden — kan I stadig hjælpe?">Jeg har allerede købt grunden — kan I stadig hjælpe?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="Yes — most clients come to us with the plot already in hand, sometimes with an old house on it they want to demolish. We pick the project up from wherever it stands." data-da="Ja — de fleste kunder kommer til os med grunden allerede i hånden, nogle gange med et gammelt hus på den, de vil rive ned. Vi tager fat i projektet, uanset hvor det står.">Ja — de fleste kunder kommer til os med grunden allerede i hånden, nogle gange med et gammelt hus på den, de vil rive ned. Vi tager fat i projektet, uanset hvor det står.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="Do you also build the house, or just design it?" data-da="Bygger I selv huset, eller kun tegner I det?">Bygger I selv huset, eller kun tegner I det?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="We design, calculate and secure the permit, and prepare tender-ready documents so you can get comparable offers from contractors. We're not a construction company ourselves, but we stay involved through site supervision, and can point you toward contractors we trust." data-da="Vi tegner, beregner og sikrer tilladelsen, og forbereder udbudsklare tegninger, så du kan indhente sammenlignelige tilbud fra entreprenører. Vi er ikke selv et entreprenørfirma, men vi følger projektet gennem fagtilsyn og kan pege dig i retning af entreprenører, vi stoler på.">Vi tegner, beregner og sikrer tilladelsen, og forbereder udbudsklare tegninger, så du kan indhente sammenlignelige tilbud fra entreprenører. Vi er ikke selv et entreprenørfirma, men vi følger projektet gennem fagtilsyn og kan pege dig i retning af entreprenører, vi stoler på.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SWITCH TIL ARKITEKTUR / KONSTRUKTION
+════════════════════════════════════════ -->
+<section class="lp-switch">
+  <div class="wrap">
+    <div class="section-label reveal" style="margin-bottom:1.4rem;" data-en="See the disciplines separately" data-da="Se ydelserne hver for sig">Se ydelserne hver for sig</div>
+  </div>
+  <div class="wrap" style="display:flex; flex-direction:column; gap:1px;">
+    <a href="arkitektur.html" class="lp-switch-card reveal">
+      <div>
+        <h3 data-en="Architecture" data-da="Arkitektur">Arkitektur</h3>
+        <p data-en="From the first sketch to the keys handed over — architecture drawn with restraint." data-da="Fra første skitse til nøglerne afleveres — arkitektur tegnet med omtanke.">Fra første skitse til nøglerne afleveres — arkitektur tegnet med omtanke.</p>
+      </div>
+      <span class="lp-switch-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+    <a href="konstruktion.html" class="lp-switch-card reveal d1">
+      <div>
+        <h3 data-en="Structural engineering" data-da="Strukturberegning">Strukturberegning</h3>
+        <p data-en="Statics to Eurocode, signed by a certified engineer." data-da="Statik efter Eurocode, underskrevet af en certificeret statiker.">Statik efter Eurocode, underskrevet af en certificeret statiker.</p>
+      </div>
+      <span class="lp-switch-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA
+════════════════════════════════════════ -->
+<section class="lp-cta">
+  <div class="wrap">
+    <h2 data-en="Let's talk about <em>your plot.</em>" data-da="Lad os tale om <em>din grund.</em>">Lad os tale om <em>din grund.</em></h2>
+    <p data-en="Book a free 30-minute video call. No commitment, no pressure — just a good conversation about the site, the brief and what it might cost." data-da="Book et gratis 30-minutters videokald. Uden forpligtelse og uden pres — bare en god samtale om grunden, opgaven og hvad det kan koste.">Book et gratis 30-minutters videokald. Uden forpligtelse og uden pres — bare en god samtale om grunden, opgaven og hvad det kan koste.</p>
+    <a href="index.html#appointment" class="btn btn-blue" style="border-radius:100px;padding:16px 32px;">
+      <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span data-en="Book a meeting" data-da="Book et møde">Book et møde</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="last.png" alt="And Again Konstruktion" style="height:40px;margin-bottom:20px;filter:invert(1);">
+        <p data-en="Architecture and structural engineering. One studio, one set of hands. Built around BR18 and Eurocode." data-da="Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.">Arkitektur og strukturberegning. Ét studie, ét sæt hænder. Bygget omkring BR18 og Eurocode.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Navigate" data-da="Navigation">Navigation</h5>
+        <a href="index.html" data-en="Home" data-da="Forside">Forside</a>
+        <a href="nybyggeri.html" data-en="New build" data-da="Nybyggeri">Nybyggeri</a>
+        <a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a>
+        <a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Connect" data-da="Forbind">Forbind</h5>
+        <a href="index.html#appointment" data-en="Book a meeting" data-da="Book et møde">Book et møde</a>
+        <a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
+        <a href="mailto:hello@andagain.dk">hello@andagain.dk</a>
+        <a href="tel:+4550149558">+45 50 14 95 58</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Social" data-da="Social">Social</h5>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Behance</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 And Again Konstruktion ApS · CVR DK 44 55 66 77</span>
+      <span data-en="Made in Copenhagen" data-da="Lavet i København">Lavet i København</span>
+    </div>
+  </div>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>

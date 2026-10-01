@@ -2582,3 +2582,32 @@ main:focus { outline: none; }
 @media (max-width: 340px) {
   .header:not(.is-bottom) .theme-toggle { display: none; }
 }
+
+/* ══════════════════════════════════════════
+   FAQ (nybyggeri.html y similares)
+══════════════════════════════════════════ */
+.lp-faq { border-top: 1px solid var(--line); margin-top: 2.5rem; }
+.lp-faq-item { border-bottom: 1px solid var(--line); }
+.lp-faq-item summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+  padding: 1.6rem 0; cursor: pointer; list-style: none;
+  font-family: var(--serif); font-size: clamp(17px, 1.8vw, 21px); font-weight: 400;
+  color: var(--dark);
+}
+.lp-faq-item summary::-webkit-details-marker { display: none; }
+.lp-faq-item summary::marker { content: ""; }
+.lp-faq-icon {
+  width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: transform 0.3s var(--ease-out), background 0.3s, border-color 0.3s;
+}
+.lp-faq-item[open] summary .lp-faq-icon { transform: rotate(45deg); background: var(--dark); border-color: var(--dark); }
+.lp-faq-item[open] summary .lp-faq-icon svg { stroke: var(--cream); }
+.lp-faq-icon svg { width: 12px; height: 12px; stroke: var(--dark); }
+.lp-faq-item p { font-size: 15px; line-height: 1.7; color: var(--dark-soft); padding: 0 0 1.8rem; max-width: 62ch; }
+
+/* ══════════════════════════════════════════
+   FLAGSHIP PROMO (portada → nybyggeri.html)
+══════════════════════════════════════════ */
+.flagship-promo .photo-break-label { max-width: 640px; padding: 0 1.5rem; }
+.flagship-promo .photo-break-label .btn { margin-top: 2.2rem; display: inline-flex; }
