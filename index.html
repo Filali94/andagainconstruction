@@ -146,20 +146,71 @@
 </section>
 
 <!-- ════════════════════════════════════════
-     FLAGSHIP — Nybyggeri (destaco på forsiden)
+     3D — fra tom grund til nøglefærdigt hus (build3d.js)
 ════════════════════════════════════════ -->
-<div class="photo-break flagship-promo" data-parallax>
-  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1541976590-713941681591?w=2400&q=90')"></div>
-  <div class="photo-break-overlay"></div>
-  <div class="photo-break-label">
-    <span data-en="Our specialty" data-da="Vores speciale">Vores speciale</span>
-    <h3 data-en="From empty plot to <em>move-in ready house.</em>" data-da="Fra tom grund til <em>nøglefærdigt hus.</em>">Fra tom grund til <em>nøglefærdigt hus.</em></h3>
-    <a href="nybyggeri.html" class="btn btn-blue" style="border-radius:100px;padding:14px 28px;">
-      <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-      <span data-en="See how it works" data-da="Se hvordan det foregår">Se hvordan det foregår</span>
-    </a>
+<section class="build3d" id="byg" aria-labelledby="build3d-title">
+  <div class="build3d-sticky">
+    <canvas class="build3d-canvas" aria-hidden="true"></canvas>
+    <div class="build3d-fallback" aria-hidden="true"></div>
+    <div class="wrap build3d-ui">
+      <div class="build3d-head">
+        <div class="section-label" data-en="Our specialty" data-da="Vores speciale">Vores speciale</div>
+        <h2 class="build3d-title reveal" id="build3d-title" data-en="From empty plot to <em>move-in ready house.</em>" data-da="Fra tom grund til <em>nøglefærdigt hus.</em>">Fra tom grund til <em>nøglefærdigt hus.</em></h2>
+      </div>
+      <ol class="build3d-steps">
+        <li class="build3d-step">
+          <span class="build3d-num">01</span>
+          <div>
+            <h3 data-en="The plot" data-da="Grunden">Grunden</h3>
+            <div class="build3d-step-body"><p data-en="We start with the place — the plot, the local plan, the sun and the view." data-da="Vi starter med stedet — grunden, lokalplanen, solen og udsigten.">Vi starter med stedet — grunden, lokalplanen, solen og udsigten.</p></div>
+          </div>
+        </li>
+        <li class="build3d-step">
+          <span class="build3d-num">02</span>
+          <div>
+            <h3 data-en="The sketch" data-da="Skitsen">Skitsen</h3>
+            <div class="build3d-step-body"><p data-en="The house takes shape as lines: a first proposal with an honest budget." data-da="Huset tager form som streg: et første forslag med et ærligt budget.">Huset tager form som streg: et første forslag med et ærligt budget.</p></div>
+          </div>
+        </li>
+        <li class="build3d-step">
+          <span class="build3d-num">03</span>
+          <div>
+            <h3 data-en="The structure" data-da="Statikken">Statikken</h3>
+            <div class="build3d-step-body"><p data-en="The engineer calculates the frame that will carry it all — to Eurocode." data-da="Ingeniøren beregner skelettet, der skal bære det hele — efter Eurocode.">Ingeniøren beregner skelettet, der skal bære det hele — efter Eurocode.</p></div>
+          </div>
+        </li>
+        <li class="build3d-step">
+          <span class="build3d-num">04</span>
+          <div>
+            <h3 data-en="The permit" data-da="Byggetilladelsen">Byggetilladelsen</h3>
+            <div class="build3d-step-body"><p data-en="The municipality says yes — walls and floors rise." data-da="Kommunen siger ja — vægge og dæk rejser sig.">Kommunen siger ja — vægge og dæk rejser sig.</p></div>
+          </div>
+        </li>
+        <li class="build3d-step">
+          <span class="build3d-num">05</span>
+          <div>
+            <h3 data-en="The roof" data-da="Taget">Taget</h3>
+            <div class="build3d-step-body"><p data-en="The roof closes the house: sealed, insulated and built to BR18." data-da="Taget lukker huset: tæt, isoleret og bygget efter BR18.">Taget lukker huset: tæt, isoleret og bygget efter BR18.</p></div>
+          </div>
+        </li>
+        <li class="build3d-step">
+          <span class="build3d-num">06</span>
+          <div>
+            <h3 data-en="Move-in ready" data-da="Nøglefærdigt">Nøglefærdigt</h3>
+            <div class="build3d-step-body"><p data-en="The lights come on. The keys are in your hand." data-da="Lyset tændes. Nøglerne er i din hånd.">Lyset tændes. Nøglerne er i din hånd.</p></div>
+          </div>
+        </li>
+      </ol>
+      <div class="build3d-foot">
+        <div class="build3d-progress" aria-hidden="true"><span class="build3d-progress-fill"></span></div>
+        <a href="nybyggeri.html" class="btn btn-blue" style="border-radius:100px;padding:14px 28px;">
+          <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span data-en="See how it works" data-da="Se hvordan det foregår">Se hvordan det foregår</span>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- ════════════════════════════════════════
      TEAM
@@ -1177,6 +1228,7 @@
   ];
   let currentLabel = 'Home';
   function updateSectionLabel() {
+    if (!headerPageTitle) return; // element no longer exists in the header
     let active = 'Home';
     for (const s of sections) {
       const el = document.getElementById(s.id);
@@ -1758,6 +1810,8 @@
     wireForm('modalForm', 'modalSuccess', modalFileField);   // formulario del popup "Create a project"
   })();
 </script>
+<script src="effects.js" defer></script>
+<script type="module" src="build3d.js"></script>
 
 </body>
 </html>
