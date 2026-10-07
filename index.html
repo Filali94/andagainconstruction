@@ -45,11 +45,11 @@
   <span class="header-section-name" id="headerSectionName" data-en="Home" data-da="Hjem">Hjem</span>
   <nav>
     <ul class="header-nav">
-      <li><a href="#about" data-en="About" data-da="Om os">About</a></li>
+      <li><a href="#about" data-en="About" data-da="Om os">Om os</a></li>
+      <li><a href="nybyggeri.html" data-en="New build" data-da="Nybyggeri">Nybyggeri</a></li>
       <li><a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a></li>
       <li><a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a></li>
-      <li><a href="#portfolio" data-en="Projects" data-da="Projekter">Projects</a></li>
-      <li><a href="#contact" data-en="Contact" data-da="Kontakt">Contact</a></li>
+      <li><a href="#contact" data-en="Contact" data-da="Kontakt">Kontakt</a></li>
     </ul>
   </nav>
   <div class="header-actions">
@@ -81,14 +81,14 @@
       <li class="menu-nav-item"><a href="nybyggeri.html"><span class="text-default" data-en="New build" data-da="Nybyggeri">Nybyggeri</span><span class="text-hover" data-en="New build" data-da="Nybyggeri">Nybyggeri</span></a></li>
       <li class="menu-nav-item"><a href="arkitektur.html"><span class="text-default" data-en="Architecture" data-da="Arkitektur">Arkitektur</span><span class="text-hover" data-en="Architecture" data-da="Arkitektur">Arkitektur</span></a></li>
       <li class="menu-nav-item"><a href="konstruktion.html"><span class="text-default" data-en="Engineering" data-da="Konstruktion">Konstruktion</span><span class="text-hover" data-en="Engineering" data-da="Konstruktion">Konstruktion</span></a></li>
-      <li class="menu-nav-item"><a href="#portfolio"><span class="text-default" data-en="Projects" data-da="Projekter">Projekter</span><span class="text-hover" data-en="Projects" data-da="Projekter">Projekter</span></a></li>
+      <li class="menu-nav-item"><a href="#portfolio"><span class="text-default" data-en="Inspiration" data-da="Inspiration">Inspiration</span><span class="text-hover" data-en="Inspiration" data-da="Inspiration">Inspiration</span></a></li>
       <li class="menu-nav-item"><a href="#process"><span class="text-default" data-en="Process" data-da="Proces">Proces</span><span class="text-hover" data-en="Process" data-da="Proces">Proces</span></a></li>
       <li class="menu-nav-item"><a href="#contact"><span class="text-default" data-en="Contact" data-da="Kontakt">Kontakt</span><span class="text-hover" data-en="Contact" data-da="Kontakt">Kontakt</span></a></li>
     </ul>
   </nav>
   <div class="menu-footer">
     <div class="menu-footer-col">
-      <a href="#portfolio" data-en="Portfolio" data-da="Projekter">Projekter</a>
+      <a href="#services" data-en="Services" data-da="Ydelser">Ydelser</a>
       <a href="#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
     </div>
     <div class="menu-footer-col" style="text-align:right">
@@ -105,110 +105,131 @@
 <main id="main" tabindex="-1">
 
 <!-- ════════════════════════════════════════
-     SCROLL VIDEO (top)
+     HERO — 3D: fra tom grund til nøglefærdigt hus (build3d.js)
 ════════════════════════════════════════ -->
-<section class="scroll-video-section">
-  <div class="scroll-video-sticky">
-    <video class="scroll-video-el" muted playsinline preload="auto">
-      <source src="hero-1080.mp4" type="video/mp4">
-    </video>
-    <div class="scroll-video-grain"></div>
-    <div class="scroll-video-vignette"></div>
-    <div class="scroll-video-fog"></div>
-    <div class="scroll-video-logo-wrap">
-      <img src="last.png" alt="And Again Konstruktion" class="scroll-video-logo">
-    </div>
-    <div class="scroll-video-bar"><div class="scroll-video-bar-fill"></div></div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     ABOUT
-════════════════════════════════════════ -->
-<section class="text-cta section" id="about">
-  <div class="wrap">
-    <div class="text-cta-inner">
-      <div class="text-cta-left">
-        <div class="section-label reveal" data-en="01 · About us" data-da="01 · Om os">01 · About us</div>
-        <p class="base-heading reveal d1 open-team" data-en="A studio for enduring work." data-da="Et studie for varige værker." style="cursor:pointer;border-bottom:1px solid var(--line);padding-bottom:8px;transition:border-color 0.3s;" onmouseenter="this.style.borderColor='var(--blue)'" onmouseleave="this.style.borderColor='var(--line)'">A studio for enduring work.</p>
-        <button class="btn btn-dark reveal d2 open-team" style="margin-top:8px;">
-          <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-          <span data-en="Meet the And Again team" data-da="Mød And Again teamet">Meet the And Again team</span>
-        </button>
-      </div>
-      <div class="text-cta-right">
-        <p class="reveal" data-en="And Again is your single point of contact when you build a new house in Denmark — from empty plot to move-in ready home. We design, calculate and handle the building permit, so you don't have to coordinate five different companies." data-da="And Again er dit ene kontaktpunkt, når du bygger nyt hus i Danmark — fra tom grund til nøglefærdig bolig. Vi tegner, beregner og søger byggetilladelsen, så du ikke skal koordinere fem forskellige firmaer.">And Again er dit ene kontaktpunkt, når du bygger nyt hus i Danmark — fra tom grund til nøglefærdig bolig. Vi tegner, beregner og søger byggetilladelsen, så du ikke skal koordinere fem forskellige firmaer.</p>
-        <p class="reveal d1" data-en="Most of our clients come to us with a plot already in hand — some with an old house they'd rather replace. We work across new-build villas, extensions, refurbishments and small public commissions throughout Denmark." data-da="De fleste af vores kunder kommer til os med en grund allerede i hånden — nogle med et gammelt hus, de hellere vil erstatte. Vi arbejder med nybyggeri af villaer, tilbygninger, ombygninger og mindre offentlige opgaver i hele Danmark.">De fleste af vores kunder kommer til os med en grund allerede i hånden — nogle med et gammelt hus, de hellere vil erstatte. Vi arbejder med nybyggeri af villaer, tilbygninger, ombygninger og mindre offentlige opgaver i hele Danmark.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     3D — fra tom grund til nøglefærdigt hus (build3d.js)
-════════════════════════════════════════ -->
-<section class="build3d" id="byg" aria-labelledby="build3d-title">
+<section class="build3d build3d--hero" id="hero" aria-labelledby="hero-title">
   <div class="build3d-sticky">
     <canvas class="build3d-canvas" aria-hidden="true"></canvas>
     <div class="build3d-fallback" aria-hidden="true"></div>
     <div class="wrap build3d-ui">
       <div class="build3d-head">
-        <div class="section-label" data-en="Our specialty" data-da="Vores speciale">Vores speciale</div>
-        <h2 class="build3d-title reveal" id="build3d-title" data-en="From empty plot to <em>move-in ready house.</em>" data-da="Fra tom grund til <em>nøglefærdigt hus.</em>">Fra tom grund til <em>nøglefærdigt hus.</em></h2>
+        <div class="section-label" data-en="New builds across Denmark" data-da="Nybyggeri i hele Danmark">Nybyggeri i hele Danmark</div>
+        <h1 class="build3d-title reveal" id="hero-title" data-en="From empty plot to <em>move-in ready house.</em>" data-da="Fra tom grund til <em>nøglefærdigt hus.</em>">Fra tom grund til <em>nøglefærdigt hus.</em></h1>
+        <p class="build3d-lead reveal" data-en="Architecture, structural engineering and the building permit under one roof — so you only have one number to call." data-da="Arkitektur, statik og byggetilladelse under ét tag — så du kun har ét nummer at ringe til.">Arkitektur, statik og byggetilladelse under ét tag — så du kun har ét nummer at ringe til.</p>
+        <div class="build3d-actions reveal">
+          <a href="#appointment" class="btn btn-solid btn-pill">
+            <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
+            <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span>
+          </a>
+          <a href="#services" class="btn btn-ghost btn-pill">
+            <span data-en="Our services" data-da="Vores ydelser">Vores ydelser</span>
+            <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow"/></svg></span>
+          </a>
+        </div>
       </div>
-      <ol class="build3d-steps">
-        <li class="build3d-step">
-          <span class="build3d-num">01</span>
-          <div>
-            <h3 data-en="The plot" data-da="Grunden">Grunden</h3>
-            <div class="build3d-step-body"><p data-en="We start with the place — the plot, the local plan, the sun and the view." data-da="Vi starter med stedet — grunden, lokalplanen, solen og udsigten.">Vi starter med stedet — grunden, lokalplanen, solen og udsigten.</p></div>
+      <div class="build3d-timeline">
+        <div class="build3d-foot">
+          <div class="build3d-progress" aria-hidden="true"><span class="build3d-progress-fill"></span></div>
+          <div class="build3d-cue" aria-hidden="true">
+            <svg class="ic"><use href="icons.svg#i-mouse"/></svg>
+            <span data-en="Scroll to build the house" data-da="Scroll og byg huset">Scroll og byg huset</span>
           </div>
-        </li>
-        <li class="build3d-step">
-          <span class="build3d-num">02</span>
-          <div>
-            <h3 data-en="The sketch" data-da="Skitsen">Skitsen</h3>
-            <div class="build3d-step-body"><p data-en="The house takes shape as lines: a first proposal with an honest budget." data-da="Huset tager form som streg: et første forslag med et ærligt budget.">Huset tager form som streg: et første forslag med et ærligt budget.</p></div>
-          </div>
-        </li>
-        <li class="build3d-step">
-          <span class="build3d-num">03</span>
-          <div>
-            <h3 data-en="The structure" data-da="Statikken">Statikken</h3>
-            <div class="build3d-step-body"><p data-en="The engineer calculates the frame that will carry it all — to Eurocode." data-da="Ingeniøren beregner skelettet, der skal bære det hele — efter Eurocode.">Ingeniøren beregner skelettet, der skal bære det hele — efter Eurocode.</p></div>
-          </div>
-        </li>
-        <li class="build3d-step">
-          <span class="build3d-num">04</span>
-          <div>
-            <h3 data-en="The permit" data-da="Byggetilladelsen">Byggetilladelsen</h3>
-            <div class="build3d-step-body"><p data-en="The municipality says yes — walls and floors rise." data-da="Kommunen siger ja — vægge og dæk rejser sig.">Kommunen siger ja — vægge og dæk rejser sig.</p></div>
-          </div>
-        </li>
-        <li class="build3d-step">
-          <span class="build3d-num">05</span>
-          <div>
-            <h3 data-en="The roof" data-da="Taget">Taget</h3>
-            <div class="build3d-step-body"><p data-en="The roof closes the house: sealed, insulated and built to BR18." data-da="Taget lukker huset: tæt, isoleret og bygget efter BR18.">Taget lukker huset: tæt, isoleret og bygget efter BR18.</p></div>
-          </div>
-        </li>
-        <li class="build3d-step">
-          <span class="build3d-num">06</span>
-          <div>
-            <h3 data-en="Move-in ready" data-da="Nøglefærdigt">Nøglefærdigt</h3>
-            <div class="build3d-step-body"><p data-en="The lights come on. The keys are in your hand." data-da="Lyset tændes. Nøglerne er i din hånd.">Lyset tændes. Nøglerne er i din hånd.</p></div>
-          </div>
-        </li>
-      </ol>
-      <div class="build3d-foot">
-        <div class="build3d-progress" aria-hidden="true"><span class="build3d-progress-fill"></span></div>
-        <a href="nybyggeri.html" class="btn btn-blue" style="border-radius:100px;padding:14px 28px;">
-          <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-          <span data-en="See how it works" data-da="Se hvordan det foregår">Se hvordan det foregår</span>
-        </a>
+        </div>
+        <ol class="build3d-steps">
+          <li class="build3d-step">
+            <span class="build3d-num"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-plot"/></svg>01</span>
+            <div>
+              <h3 data-en="The plot" data-da="Grunden">Grunden</h3>
+              <div class="build3d-step-body"><p data-en="We start with the place — the plot, the local plan, the sun and the view." data-da="Vi starter med stedet — grunden, lokalplanen, solen og udsigten.">Vi starter med stedet — grunden, lokalplanen, solen og udsigten.</p></div>
+            </div>
+          </li>
+          <li class="build3d-step">
+            <span class="build3d-num"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-sketch"/></svg>02</span>
+            <div>
+              <h3 data-en="The sketch" data-da="Skitsen">Skitsen</h3>
+              <div class="build3d-step-body"><p data-en="The house takes shape as lines: a first proposal with an honest budget." data-da="Huset tager form som streg: et første forslag med et ærligt budget.">Huset tager form som streg: et første forslag med et ærligt budget.</p></div>
+            </div>
+          </li>
+          <li class="build3d-step">
+            <span class="build3d-num"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-truss"/></svg>03</span>
+            <div>
+              <h3 data-en="The structure" data-da="Statikken">Statikken</h3>
+              <div class="build3d-step-body"><p data-en="The engineer calculates the frame that will carry it all — to Eurocode." data-da="Ingeniøren beregner skelettet, der skal bære det hele — efter Eurocode.">Ingeniøren beregner skelettet, der skal bære det hele — efter Eurocode.</p></div>
+            </div>
+          </li>
+          <li class="build3d-step">
+            <span class="build3d-num"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-permit"/></svg>04</span>
+            <div>
+              <h3 data-en="The permit" data-da="Byggetilladelsen">Byggetilladelsen</h3>
+              <div class="build3d-step-body"><p data-en="The municipality says yes — walls and floors rise." data-da="Kommunen siger ja — vægge og dæk rejser sig.">Kommunen siger ja — vægge og dæk rejser sig.</p></div>
+            </div>
+          </li>
+          <li class="build3d-step">
+            <span class="build3d-num"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-roof"/></svg>05</span>
+            <div>
+              <h3 data-en="The roof" data-da="Taget">Taget</h3>
+              <div class="build3d-step-body"><p data-en="The roof closes the house: sealed, insulated and built to BR18." data-da="Taget lukker huset: tæt, isoleret og bygget efter BR18.">Taget lukker huset: tæt, isoleret og bygget efter BR18.</p></div>
+            </div>
+          </li>
+          <li class="build3d-step">
+            <span class="build3d-num"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-key"/></svg>06</span>
+            <div>
+              <h3 data-en="Move-in ready" data-da="Nøglefærdigt">Nøglefærdigt</h3>
+              <div class="build3d-step-body"><p data-en="The lights come on. The keys are in your hand." data-da="Lyset tændes. Nøglerne er i din hånd.">Lyset tændes. Nøglerne er i din hånd.</p></div>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     TRUST STRIP
+════════════════════════════════════════ -->
+<section class="trust" aria-label="And Again">
+  <div class="wrap trust-grid">
+    <div class="trust-item reveal">
+      <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-layers"/></svg></span></span>
+      <div><strong data-en="Architect + engineer" data-da="Arkitekt + ingeniør">Arkitekt + ingeniør</strong><small data-en="Under one roof" data-da="Under ét tag">Under ét tag</small></div>
+    </div>
+    <div class="trust-item reveal d1">
+      <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-shield"/></svg></span></span>
+      <div><strong>BR18 &amp; Eurocode</strong><small data-en="From the first line" data-da="Fra første streg">Fra første streg</small></div>
+    </div>
+    <div class="trust-item reveal d2">
+      <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-dk"/></svg></span></span>
+      <div><strong data-en="All of Denmark" data-da="Hele Danmark">Hele Danmark</strong><small data-en="Any size of house" data-da="Alle størrelser">Alle størrelser</small></div>
+    </div>
+    <div class="trust-item reveal d3">
+      <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-chat"/></svg></span></span>
+      <div><strong data-en="Free first conversation" data-da="Gratis første samtale">Gratis første samtale</strong><small data-en="30 min · No commitment" data-da="30 min · Uforpligtende">30 min · Uforpligtende</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section class="sec sec--alt" id="about">
+  <div class="wrap split">
+    <div class="split-text">
+      <div class="section-label reveal" data-en="01 · About us" data-da="01 · Om os">01 · Om os</div>
+      <h2 class="section-title reveal d1" data-en="One studio. <em>The whole house.</em>" data-da="Ét studie. <em>Hele huset.</em>">Ét studie. <em>Hele huset.</em></h2>
+      <p class="reveal" data-en="And Again is your single point of contact when you build a new house in Denmark — from empty plot to move-in ready home. We design, calculate and handle the building permit, so you don't have to coordinate five different companies." data-da="And Again er dit ene kontaktpunkt, når du bygger nyt hus i Danmark — fra tom grund til nøglefærdig bolig. Vi tegner, beregner og søger byggetilladelsen, så du ikke skal koordinere fem forskellige firmaer.">And Again er dit ene kontaktpunkt, når du bygger nyt hus i Danmark — fra tom grund til nøglefærdig bolig. Vi tegner, beregner og søger byggetilladelsen, så du ikke skal koordinere fem forskellige firmaer.</p>
+      <p class="reveal d1" data-en="Most of our clients come to us with a plot already in hand — some with an old house they'd rather replace. We work across new-build villas, extensions, refurbishments and small public commissions throughout Denmark." data-da="De fleste af vores kunder kommer til os med en grund allerede i hånden — nogle med et gammelt hus, de hellere vil erstatte. Vi arbejder med nybyggeri af villaer, tilbygninger, ombygninger og mindre offentlige opgaver i hele Danmark.">De fleste af vores kunder kommer til os med en grund allerede i hånden — nogle med et gammelt hus, de hellere vil erstatte. Vi arbejder med nybyggeri af villaer, tilbygninger, ombygninger og mindre offentlige opgaver i hele Danmark.</p>
+      <button class="btn btn-solid btn-pill reveal d2 open-team">
+        <span data-en="Meet the team" data-da="Mød teamet">Mød teamet</span>
+        <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-user"/></svg></span>
+      </button>
+    </div>
+    <figure class="frame reveal d1" data-depth style="--ratio: 4 / 5">
+      <div class="frame-inner"><img src="https://images.unsplash.com/photo-1704307163247-cde12ba3ff28?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Nordisk træhus med sadeltag, store glaspartier og terrasse" loading="lazy" decoding="async"></div>
+      <figcaption class="float-card">
+        <span class="ibadge ibadge--sm"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-key"/></svg></span></span>
+        <div><small data-en="From plot" data-da="Fra grund">Fra grund</small><strong data-en="to keys" data-da="til nøgle">til nøgle</strong></div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -270,191 +291,85 @@
   </div>
 </section>
 
+<!-- ════════════════════════════════════════
+     SERVICES — one card per landing page
+════════════════════════════════════════ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="section-label reveal" data-en="02 · Services" data-da="02 · Ydelser">02 · Ydelser</div>
+        <h2 class="section-title reveal d1" data-en="Three ways <em>to start.</em>" data-da="Tre veje <em>ind.</em>">Tre veje <em>ind.</em></h2>
+      </div>
+      <p class="sec-lead reveal d2" data-en="Build the whole house with us — or take architecture or engineering on its own. Each page shows exactly what's included." data-da="Byg hele huset med os — eller få arkitektur eller statik for sig. Hver side viser præcis, hvad der er med.">Byg hele huset med os — eller få arkitektur eller statik for sig. Hver side viser præcis, hvad der er med.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="reveal d1">
+        <a href="nybyggeri.html" class="svc-card">
+          <div class="svc-media">
+            <img src="https://images.unsplash.com/photo-1704307023984-813727deade9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Nyt træhus med sadeltag og terrasse" loading="lazy" decoding="async">
+            <span class="tag" data-en="Our specialty" data-da="Vores speciale">Vores speciale</span>
+          </div>
+          <div class="svc-body">
+            <div class="svc-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-house"/></svg></span></span><span class="svc-num">01</span></div>
+            <h3 data-en="New build" data-da="Nybyggeri">Nybyggeri</h3>
+            <p data-en="From empty plot to move-in ready house — handled as one project." data-da="Fra tom grund til nøglefærdigt hus — håndteret som ét projekt.">Fra tom grund til nøglefærdigt hus — håndteret som ét projekt.</p>
+            <ul class="svc-list">
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Design &amp; budget" data-da="Tegning &amp; budget">Tegning &amp; budget</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Engineering &amp; building permit" data-da="Statik &amp; byggetilladelse">Statik &amp; byggetilladelse</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Tender &amp; site supervision" data-da="Udbud &amp; fagtilsyn">Udbud &amp; fagtilsyn</span></li>
+            </ul>
+            <span class="svc-link"><span data-en="Read more" data-da="Læs mere">Læs mere</span><span class="dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span></span>
+          </div>
+        </a>
+      </div>
+      <div class="reveal d2">
+        <a href="arkitektur.html" class="svc-card">
+          <div class="svc-media">
+            <img src="https://images.unsplash.com/photo-1774884736128-841eabe693ce?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Sort træhus med glasgavl" loading="lazy" decoding="async">
+          </div>
+          <div class="svc-body">
+            <div class="svc-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-compass"/></svg></span></span><span class="svc-num">02</span></div>
+            <h3 data-en="Architecture" data-da="Arkitektur">Arkitektur</h3>
+            <p data-en="From the first sketch to the keys — drawn with respect for the site and for everyday life." data-da="Fra første skitse til nøglerne — tegnet med respekt for stedet og for hverdagen.">Fra første skitse til nøglerne — tegnet med respekt for stedet og for hverdagen.</p>
+            <ul class="svc-list">
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Sketch design &amp; 3D" data-da="Skitseforslag &amp; 3D">Skitseforslag &amp; 3D</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Building permit drawings" data-da="Myndighedsprojekt">Myndighedsprojekt</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Construction documents &amp; supervision" data-da="Hovedprojekt &amp; tilsyn">Hovedprojekt &amp; tilsyn</span></li>
+            </ul>
+            <span class="svc-link"><span data-en="Read more" data-da="Læs mere">Læs mere</span><span class="dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span></span>
+          </div>
+        </a>
+      </div>
+      <div class="reveal d3">
+        <a href="konstruktion.html" class="svc-card">
+          <div class="svc-media">
+            <img src="https://images.unsplash.com/photo-1741916540147-9be1d2b20d32?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Tagspær i træ mod en blå himmel" loading="lazy" decoding="async">
+          </div>
+          <div class="svc-body">
+            <div class="svc-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-truss"/></svg></span></span><span class="svc-num">03</span></div>
+            <h3 data-en="Engineering" data-da="Konstruktion">Konstruktion</h3>
+            <p data-en="Structural calculations to Eurocode — signed by a certified engineer." data-da="Statiske beregninger efter Eurocode — underskrevet af certificeret statiker.">Statiske beregninger efter Eurocode — underskrevet af certificeret statiker.</p>
+            <ul class="svc-list">
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Steel, concrete, timber &amp; masonry" data-da="Stål, beton, træ &amp; murværk">Stål, beton, træ &amp; murværk</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Consequence class KK1–KK3" data-da="Konsekvensklasse KK1–KK3">Konsekvensklasse KK1–KK3</span></li>
+              <li><svg class="ic" aria-hidden="true"><use href="icons.svg#i-check"/></svg><span data-en="Heat loss &amp; energy" data-da="Varmetab &amp; energi">Varmetab &amp; energi</span></li>
+            </ul>
+            <span class="svc-link"><span data-en="Read more" data-da="Læs mere">Læs mere</span><span class="dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- PHOTO BREAK 1 -->
+<!-- PHOTO BREAK -->
 <div class="photo-break" data-parallax>
-  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=2400&q=90')"></div>
+  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1780689978569-9a281be2e4ec?auto=format&amp;fit=crop&amp;w=2400&amp;q=80')"></div>
   <div class="photo-break-overlay"></div>
   <div class="photo-break-label">
-    <span data-en="Architecture · Copenhagen" data-da="Arkitektur · København">Architecture · Copenhagen</span>
-    <h3>Design with <em>restraint.</em></h3>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════
-     BIG WORDS — how we help (hover image reveal)
-════════════════════════════════════════ -->
-<section class="bigwords-section" id="do">
-  <div class="wrap">
-    <div class="bigwords-head">
-      <div class="section-label reveal" data-en="02 · What we do" data-da="02 · Hvad vi laver">02 · What we do</div>
-      <h2 class="section-title reveal d1">How we<br><em>help you.</em></h2>
-    </div>
-  </div>
-  <div class="bigwords-list">
-
-    <a href="nybyggeri.html" class="bigword-row reveal">
-      <div class="bigword-img" style="background-image:url('https://images.unsplash.com/photo-1541976590-713941681591?w=1600&q=80')"></div>
-      <div class="wrap bigword-inner">
-        <span class="bigword-num">01</span>
-        <p class="bigword-desc" data-en="From empty plot to move-in ready house — architecture, engineering and the building permit, handled as one project." data-da="Fra tom grund til nøglefærdigt hus — arkitektur, ingeniørrådgivning og byggetilladelse, håndteret som ét projekt.">Fra tom grund til nøglefærdigt hus — arkitektur, ingeniørrådgivning og byggetilladelse, håndteret som ét projekt.</p>
-        <h3 class="bigword-word" data-en="Build" data-da="Byg">Byg</h3>
-        <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </div>
-    </a>
-
-    <a href="arkitektur.html" class="bigword-row reveal">
-      <div class="bigword-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80')"></div>
-      <div class="wrap bigword-inner">
-        <span class="bigword-num">02</span>
-        <p class="bigword-desc" data-en="From the first sketch to the keys handed over — architecture drawn with restraint and a deep care for how a building feels." data-da="Fra første skitse til nøglerne afleveres — arkitektur tegnet med omtanke.">From the first sketch to the keys handed over — architecture drawn with restraint and a deep care for how a building feels.</p>
-        <h3 class="bigword-word" data-en="Design" data-da="Design">Design</h3>
-        <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </div>
-    </a>
-
-    <a href="konstruktion.html" class="bigword-row reveal">
-      <div class="bigword-img" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80')"></div>
-      <div class="wrap bigword-inner">
-        <span class="bigword-num">03</span>
-        <p class="bigword-desc" data-en="Structural calculations to Eurocode and the Danish annexes — steel, concrete, timber and masonry, signed by a certified engineer." data-da="Statiske beregninger efter Eurocode — stål, beton, træ og murværk, underskrevet af en certificeret statiker.">Structural calculations to Eurocode and the Danish annexes — steel, concrete, timber and masonry, signed by a certified engineer.</p>
-        <h3 class="bigword-word" data-en="Calculate" data-da="Beregn">Beregn</h3>
-        <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </div>
-    </a>
-
-    <a href="#capabilities" class="bigword-row reveal">
-      <div class="bigword-img" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80')"></div>
-      <div class="wrap bigword-inner">
-        <span class="bigword-num">04</span>
-        <p class="bigword-desc" data-en="Authority drawings and building permits handled end to end, through the municipal process — no unnecessary middlemen." data-da="Myndighedstegninger og byggetilladelser håndteret fra start til slut — uden unødige mellemled.">Authority drawings and building permits handled end to end, through the municipal process — no unnecessary middlemen.</p>
-        <h3 class="bigword-word" data-en="Approve" data-da="Godkend">Godkend</h3>
-        <span class="bigword-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     SERVICES
-════════════════════════════════════════ -->
-<section class="services-section section" id="services">
-  <div class="wrap">
-    <div class="services-header">
-      <div>
-        <div class="section-label reveal" data-en="— In detail" data-da="— I detaljen">— In detail</div>
-        <h2 class="section-title reveal d1">
-          Two disciplines,<br><em>one practice.</em>
-        </h2>
-      </div>
-    </div>
-    <div class="services-grid">
-      <div class="service-block reveal d1">
-        <div class="service-num">— 01 / ARKITEKTUR</div>
-        <h3 class="service-title">Architectural<br><em>design.</em></h3>
-        <p class="service-desc" data-en="From the first sketch to the keys handed over. We design with restraint, with respect for the site, and with a deep care for how a building feels in everyday use." data-da="Fra første skitse til nøglerne afleveres.">From the first sketch to the keys handed over. We design with restraint, with respect for the site, and with a deep care for how a building feels in everyday use.</p>
-        <ul class="service-list">
-          <li><span data-en="Concept & sketch design" data-da="Koncept & skitseforslag">Concept & sketch design</span><span class="num">01</span></li>
-          <li><span data-en="Building permit drawings" data-da="Myndighedsprojekt">Building permit drawings</span><span class="num">02</span></li>
-          <li><span data-en="Construction documents" data-da="Hovedprojekt">Construction documents</span><span class="num">03</span></li>
-          <li><span data-en="Interior & material specification" data-da="Interiør & materialevalg">Interior & material specification</span><span class="num">04</span></li>
-          <li><span data-en="Site supervision" data-da="Fagtilsyn">Site supervision</span><span class="num">05</span></li>
-        </ul>
-      </div>
-      <div class="service-block reveal d2">
-        <div class="service-num">— 02 / KONSTRUKTION</div>
-        <h3 class="service-title">Structural<br><em>calculation.</em></h3>
-        <p class="service-desc" data-en="Calculations made to Eurocode and the Danish national annexes. We work in steel, concrete, timber and masonry — and we sign the projects we calculate." data-da="Beregninger udført efter Eurocode og de danske nationale annekser.">Calculations made to Eurocode and the Danish national annexes. We work in steel, concrete, timber and masonry — and we sign the projects we calculate.</p>
-        <ul class="service-list">
-          <li><span data-en="Static calculations · Eurocode" data-da="Statiske beregninger · Eurocode">Static calculations · Eurocode</span><span class="num">01</span></li>
-          <li><span data-en="Steel & concrete design" data-da="Stål- & betondesign">Steel & concrete design</span><span class="num">02</span></li>
-          <li><span data-en="Timber & CLT structures" data-da="Træ- & CLT-konstruktioner">Timber & CLT structures</span><span class="num">03</span></li>
-          <li><span data-en="Refurbishment assessments" data-da="Ombygning & vurdering">Refurbishment assessments</span><span class="num">04</span></li>
-          <li><span data-en="Certified structural engineer" data-da="Certificeret statiker">Certified structural engineer</span><span class="num">05</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     AUTHORITY PROJECTS / SPECIALIST SERVICES
-════════════════════════════════════════ -->
-<section class="capabilities-section section" id="capabilities">
-  <div class="wrap">
-    <div class="services-header">
-      <div>
-        <div class="section-label reveal" data-en="03 · Authority projects" data-da="03 · Myndighedsprojekter">03 · Authority projects</div>
-        <h2 class="section-title reveal d1">Everything for<br><em>approval & build.</em></h2>
-      </div>
-      <p class="reveal d2 cap-intro" data-en="From the first line to a finished build — sketches, visualisations, authority drawings and building permits, all under one roof." data-da="Fra første streg til færdigt byggeri — skitser, visualiseringer, myndighedstegninger og byggetilladelser, alt under ét tag.">From the first line to a finished build — sketches, visualisations, authority drawings and building permits, all under one roof.</p>
-    </div>
-
-    <div class="cap-grid">
-
-      <div class="cap-card reveal d1">
-        <div class="cap-num">01</div>
-        <h3 data-en="Architectural drawings" data-da="Arkitekttegninger">Architectural drawings</h3>
-        <p data-en="Drawings with an eye for both design and detail. Plans, elevations, sections, roof plans and 3D visualisations — aesthetic solutions that are technically buildable." data-da="Tegninger med øje for både design og detalje. Plan, facade, snit, tagplan og 3D-visualiseringer — æstetiske løsninger der er teknisk bygbare.">Drawings with an eye for both design and detail. Plans, elevations, sections, roof plans and 3D visualisations — aesthetic solutions that are technically buildable.</p>
-        <ul class="cap-list">
-          <li data-en="Floor & site plans" data-da="Grund- & situationsplan">Floor &amp; site plans</li>
-          <li data-en="Facades & sections" data-da="Facade- & snittegninger">Facades &amp; sections</li>
-          <li data-en="3D visualisation" data-da="3D-visualisering">3D visualisation</li>
-        </ul>
-      </div>
-
-      <div class="cap-card reveal d2">
-        <div class="cap-num">02</div>
-        <h3 data-en="Structural calculations" data-da="Statiske beregninger">Structural calculations</h3>
-        <p data-en="The core of a structure's strength and stability. We analyse the forces acting on a building — compression, tension, bending and moment — across complexity classes KK1 to KK3." data-da="Kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — i konsekvensklasse KK1 til KK3.">The core of a structure's strength and stability. We analyse the forces acting on a building — compression, tension, bending and moment — across complexity classes KK1 to KK3.</p>
-        <ul class="cap-list">
-          <li data-en="Load-bearing walls" data-da="Bærende vægge">Load-bearing walls</li>
-          <li data-en="Lintels & rafters" data-da="Overliggere & spær">Lintels &amp; rafters</li>
-          <li data-en="Signed by a certified engineer" data-da="Underskrevet af certificeret statiker">Signed by a certified engineer</li>
-        </ul>
-      </div>
-
-      <div class="cap-card reveal d3">
-        <div class="cap-num">03</div>
-        <h3 data-en="Building permit applications" data-da="Byggeansøgning">Building permit applications</h3>
-        <p data-en="We handle the building permit from start to finish, navigating the municipal process so your project meets every regulation and approval — with no unnecessary middlemen." data-da="Vi håndterer byggetilladelsen fra start til slut og navigerer myndighedsprocessen, så dit projekt opfylder alle regler og godkendelser — uden unødige mellemled.">We handle the building permit from start to finish, navigating the municipal process so your project meets every regulation and approval — with no unnecessary middlemen.</p>
-        <ul class="cap-list">
-          <li data-en="Authority drawings" data-da="Myndighedstegninger">Authority drawings</li>
-          <li data-en="Local plan compliance" data-da="Lokalplan-overholdelse">Local plan compliance</li>
-          <li data-en="Municipal liaison" data-da="Myndighedskommunikation">Municipal liaison</li>
-        </ul>
-      </div>
-
-      <div class="cap-card reveal d1">
-        <div class="cap-num">04</div>
-        <h3 data-en="Digitisation of archive drawings" data-da="Digitalisering af arkivtegninger">Digitisation of archive drawings</h3>
-        <p data-en="We convert old physical plans into secure, future-proof digital files — site plans, floor plans, facades, sections and change drawings — so they're never lost again." data-da="Vi konverterer gamle fysiske tegninger til sikre, fremtidssikrede digitale filer — situationsplaner, plantegninger, facader, snit og ændringstegninger.">We convert old physical plans into secure, future-proof digital files — site plans, floor plans, facades, sections and change drawings — so they're never lost again.</p>
-      </div>
-
-      <div class="cap-card reveal d2">
-        <div class="cap-num">05</div>
-        <h3 data-en="Profitability calculation" data-da="Rentabilitetsberegning">Profitability calculation</h3>
-        <p data-en="A clear economic analysis of where an energy renovation pays off best — renovation costs, potential savings and the payback period, in black and white." data-da="En klar økonomisk analyse af, hvor en energirenovering bedst betaler sig — omkostninger, besparelser og tilbagebetalingstid, sort på hvidt.">A clear economic analysis of where an energy renovation pays off best — renovation costs, potential savings and the payback period, in black and white.</p>
-      </div>
-
-      <div class="cap-card reveal d3">
-        <div class="cap-num">06</div>
-        <h3 data-en="Heat loss calculation" data-da="Varmetabsberegning">Heat loss calculation</h3>
-        <p data-en="A detailed analysis of heat lost through the building envelope — walls, roof, windows and floors — identifying thermal bridges and guiding smart renovation investment." data-da="En detaljeret analyse af varmetab gennem klimaskærmen — vægge, tag, vinduer og gulve — der identificerer kuldebroer og guider investeringen.">A detailed analysis of heat lost through the building envelope — walls, roof, windows and floors — identifying thermal bridges and guiding smart renovation investment.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO BREAK 2 -->
-<div class="photo-break" data-parallax>
-  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2400&q=90')"></div>
-  <div class="photo-break-overlay"></div>
-  <div class="photo-break-label">
-    <span data-en="Structural Engineering" data-da="Strukturberegning">Structural Engineering</span>
-    <h3>Built to <em>last.</em></h3>
+    <span data-en="Built for the Danish landscape" data-da="Bygget til det danske landskab">Bygget til det danske landskab</span>
+    <h3 data-en="Houses that <em>belong.</em>" data-da="Huse, der <em>hører til.</em>">Huse, der <em>hører til.</em></h3>
   </div>
 </div>
 
@@ -463,32 +378,155 @@
 ════════════════════════════════════════ -->
 <section class="why-section section" id="why">
   <div class="wrap">
-    <div class="section-label reveal" data-en="03 · Why us" data-da="03 · Hvorfor os">03 · Why us</div>
-    <h2 class="section-title reveal d1">Why choose <em>And Again?</em></h2>
+    <div class="section-label reveal" data-en="03 · Why us" data-da="03 · Hvorfor os">03 · Hvorfor os</div>
+    <h2 class="section-title reveal d1" data-en="Why choose <em>And Again?</em>" data-da="Hvorfor vælge <em>And Again?</em>">Hvorfor vælge <em>And Again?</em></h2>
     <div class="why-grid">
       <div class="why-cell reveal d1">
-        <svg class="why-icon" viewBox="0 0 48 48"><path d="M8 40h32M12 40V20l12-12 12 12v20M18 40V28h12v12"/></svg>
-        <h4 data-en="One responsible hand" data-da="Én ansvarlig hånd">One responsible hand</h4>
-        <p data-en="Architecture and engineering coordinated in the same studio. Fewer interfaces, fewer misunderstandings." data-da="Arkitektur og ingeniørarbejde koordineret i samme studie.">Architecture and engineering coordinated in the same studio. Fewer interfaces, fewer misunderstandings, one number to call.</p>
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-layers"/></svg></span></span>
+        <h4 data-en="One responsible hand" data-da="Én ansvarlig hånd">Én ansvarlig hånd</h4>
+        <p data-en="Architecture and engineering coordinated in the same studio. Fewer interfaces, fewer misunderstandings, one number to call." data-da="Arkitektur og ingeniørarbejde koordineret i samme studie. Færre mellemled, færre misforståelser — ét nummer at ringe til.">Arkitektur og ingeniørarbejde koordineret i samme studie. Færre mellemled, færre misforståelser — ét nummer at ringe til.</p>
       </div>
       <div class="why-cell reveal d2">
-        <svg class="why-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 6v18l12 8"/></svg>
-        <h4 data-en="Built around BR18" data-da="Bygget omkring BR18">Built around BR18</h4>
-        <p data-en="Every drawing and every calculation produced to comply with the Danish Building Regulations and the relevant Eurocode annexes from day one." data-da="Hver tegning og beregning leveret i overensstemmelse med Bygningsreglementet.">Every drawing and every calculation produced to comply with the Danish Building Regulations and the relevant Eurocode annexes from day one.</p>
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-shield"/></svg></span></span>
+        <h4 data-en="Built around BR18" data-da="Bygget omkring BR18">Bygget omkring BR18</h4>
+        <p data-en="Every drawing and every calculation produced to comply with the Danish Building Regulations and the relevant Eurocode annexes from day one." data-da="Hver tegning og hver beregning udarbejdes efter Bygningsreglementet og de relevante Eurocode-annekser fra dag ét.">Hver tegning og hver beregning udarbejdes efter Bygningsreglementet og de relevante Eurocode-annekser fra dag ét.</p>
       </div>
       <div class="why-cell reveal d3">
-        <svg class="why-icon" viewBox="0 0 48 48"><path d="M6 24l12-12 6 6 18-18M30 0h12v12"/><path d="M6 42h36"/></svg>
-        <h4 data-en="Quiet but precise" data-da="Stille men præcis">Quiet but precise</h4>
-        <p data-en="We work without noise. Detailed budgets, honest timelines, and the kind of buildings that age well." data-da="Vi arbejder uden støj. Detaljerede budgetter, ærlige tidsplaner.">We work without noise. Detailed budgets, honest timelines, and the kind of buildings that age well rather than make headlines.</p>
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-dk"/></svg></span></span>
+        <h4 data-en="All of Denmark" data-da="Hele Danmark">Hele Danmark</h4>
+        <p data-en="We design new builds across the whole country — from a family home to a large villa, whatever the size." data-da="Vi tegner nybyggeri i hele landet — fra parcelhus til stor villa, uanset størrelse.">Vi tegner nybyggeri i hele landet — fra parcelhus til stor villa, uanset størrelse.</p>
+      </div>
+      <div class="why-cell reveal d4">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-ruler"/></svg></span></span>
+        <h4 data-en="Quiet but precise" data-da="Stille men præcis">Stille men præcis</h4>
+        <p data-en="Detailed budgets, honest timelines and the kind of houses that age well rather than make headlines." data-da="Detaljerede budgetter, ærlige tidsplaner og huse, der ældes smukt i stedet for at skabe overskrifter.">Detaljerede budgetter, ærlige tidsplaner og huse, der ældes smukt i stedet for at skabe overskrifter.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════
-     STATS
+     PROCESS — short version (full one on nybyggeri.html)
 ════════════════════════════════════════ -->
-<div class="stats-section">
+<section class="sec sec--alt" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="section-label reveal" data-en="04 · How we work" data-da="04 · Sådan arbejder vi">04 · Sådan arbejder vi</div>
+        <h2 class="section-title reveal d1" data-en="From sketch <em>to keys.</em>" data-da="Fra skitse <em>til nøgle.</em>">Fra skitse <em>til nøgle.</em></h2>
+      </div>
+      <a href="nybyggeri.html#proces" class="btn btn-outline btn-pill reveal d2">
+        <span data-en="See the full process" data-da="Se hele processen">Se hele processen</span>
+        <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow"/></svg></span>
+      </a>
+    </div>
+    <ol class="steps4">
+      <li class="reveal d1">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-chat"/></svg></span></span>
+        <span class="steps4-num">01</span>
+        <h3 data-en="Free conversation" data-da="Gratis samtale">Gratis samtale</h3>
+        <p data-en="30 minutes about your plot, your wishes and your budget." data-da="30 minutter om din grund, dine ønsker og dit budget.">30 minutter om din grund, dine ønsker og dit budget.</p>
+        <span class="tag" data-en="30 min · Free" data-da="30 min · Gratis">30 min · Gratis</span>
+      </li>
+      <li class="reveal d2">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-plan"/></svg></span></span>
+        <span class="steps4-num">02</span>
+        <h3 data-en="Sketch &amp; budget" data-da="Skitse &amp; budget">Skitse &amp; budget</h3>
+        <p data-en="A first proposal with plans, sections and a cost estimate." data-da="Et første forslag med planer, snit og et prisoverslag.">Et første forslag med planer, snit og et prisoverslag.</p>
+        <span class="tag" data-en="2–4 weeks" data-da="2–4 uger">2–4 uger</span>
+      </li>
+      <li class="reveal d3">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-permit"/></svg></span></span>
+        <span class="steps4-num">03</span>
+        <h3 data-en="Permit &amp; engineering" data-da="Tilladelse &amp; statik">Tilladelse &amp; statik</h3>
+        <p data-en="Permit drawings and Eurocode statics — we deal with the municipality." data-da="Myndighedsprojekt og statik efter Eurocode — vi taler med kommunen.">Myndighedsprojekt og statik efter Eurocode — vi taler med kommunen.</p>
+        <span class="tag" data-en="4–8 weeks" data-da="4–8 uger">4–8 uger</span>
+      </li>
+      <li class="reveal d4">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-key"/></svg></span></span>
+        <span class="steps4-num">04</span>
+        <h3 data-en="Build &amp; handover" data-da="Byggeri &amp; aflevering">Byggeri &amp; aflevering</h3>
+        <p data-en="Tender-ready drawings and site supervision until the keys are yours." data-da="Udbudsklart hovedprojekt og fagtilsyn, til nøglerne er dine.">Udbudsklart hovedprojekt og fagtilsyn, til nøglerne er dine.</p>
+        <span class="tag" data-en="Through the build" data-da="Hele byggeriet">Hele byggeriet</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INSPIRATION — Nordic reference images (not our own projects)
+════════════════════════════════════════ -->
+<section class="portfolio-section section" id="portfolio">
+  <div class="wrap">
+    <div class="portfolio-header">
+      <div>
+        <div class="section-label reveal" data-en="05 · Inspiration" data-da="05 · Inspiration">05 · Inspiration</div>
+        <h2 class="section-title reveal d1" data-en="Calm houses <em>with character.</em>" data-da="Rolige huse <em>med karakter.</em>">Rolige huse <em>med karakter.</em></h2>
+        <p class="portfolio-note reveal d2" data-en="Nordic architecture that inspires the way we draw — timber, daylight and simple forms." data-da="Nordisk arkitektur, der inspirerer den måde, vi tegner på — træ, dagslys og enkle former.">Nordisk arkitektur, der inspirerer den måde, vi tegner på — træ, dagslys og enkle former.</p>
+      </div>
+      <a href="nybyggeri.html" class="btn btn-outline btn-pill reveal d2">
+        <span data-en="Build your own" data-da="Byg dit eget">Byg dit eget</span>
+        <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow"/></svg></span>
+      </a>
+    </div>
+    <div class="portfolio-grid">
+      <figure class="project p1 reveal d1">
+        <img src="https://images.unsplash.com/photo-1790793206996-460010768bae?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Sort træhus med hvide vinduer på en grøn mark" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Black timber" data-da="Sort træ">Sort træ</em></div>
+          <div class="project-tag" data-en="Country house" data-da="Landhus">Landhus</div>
+        </figcaption>
+      </figure>
+      <figure class="project p2 reveal d2">
+        <img src="https://images.unsplash.com/photo-1469964062538-06fad433a132?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Gråt træhus med sadeltag" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Gable roof" data-da="Sadeltag">Sadeltag</em></div>
+          <div class="project-tag" data-en="Timber facade" data-da="Træfacade">Træfacade</div>
+        </figcaption>
+      </figure>
+      <figure class="project p3 reveal d1">
+        <img src="https://images.unsplash.com/photo-1502473379243-ba6449c3b6c4?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Sorte og hvide husvolumener med store vinduer" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Simple volumes" data-da="Enkle volumener">Enkle volumener</em></div>
+          <div class="project-tag" data-en="Minimalism" data-da="Minimalisme">Minimalisme</div>
+        </figcaption>
+      </figure>
+      <figure class="project p4 reveal d2">
+        <img src="https://images.unsplash.com/photo-1726681205806-a13071a81cc6?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Moderne træhus i et åbent landskab" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Open landscape" data-da="Åbent landskab">Åbent landskab</em></div>
+          <div class="project-tag">Villa</div>
+        </figcaption>
+      </figure>
+      <figure class="project p5 reveal d1">
+        <img src="https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Lyst nordisk interiør med træ og dagslys" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Bright rooms" data-da="Lyse rum">Lyse rum</em></div>
+          <div class="project-tag" data-en="Interior" data-da="Interiør">Interiør</div>
+        </figcaption>
+      </figure>
+      <figure class="project p6 reveal d2">
+        <img src="https://images.unsplash.com/photo-1697538022262-7eb736179973?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Langt træhus med flisesti" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Long house" data-da="Længehus">Længehus</em></div>
+          <div class="project-tag" data-en="Timber" data-da="Træ">Træ</div>
+        </figcaption>
+      </figure>
+      <figure class="project p7 reveal d3">
+        <img src="https://images.unsplash.com/photo-1758299892077-14ecca1c6a86?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Mørkt hus under en overskyet himmel" loading="lazy" decoding="async">
+        <figcaption class="project-info">
+          <div class="project-name"><em data-en="Dark facade" data-da="Mørk facade">Mørk facade</em></div>
+          <div class="project-tag" data-en="Coastal" data-da="Kystnært">Kystnært</div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     STATS — skjult indtil der er rigtige tal (fjern style="display:none")
+════════════════════════════════════════ -->
+<div class="stats-section" style="display:none">
   <div class="wrap">
     <div class="stats-grid">
       <div class="stat-item reveal">
@@ -511,359 +549,10 @@
   </div>
 </div>
 
-<!-- PHOTO BREAK 3 -->
-<div class="photo-break" data-parallax>
-  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=2400&q=90')"></div>
-  <div class="photo-break-overlay"></div>
-  <div class="photo-break-label">
-    <span data-en="Our work" data-da="Vores arbejde">Our work</span>
-    <h3>Quiet <em>buildings,</em><br>lasting impact.</h3>
-  </div>
-</div>
-
 <!-- ════════════════════════════════════════
-     PORTFOLIO
+     TESTIMONIALS — skjult indtil der er rigtige kundeudtalelser (fjern style="display:none")
 ════════════════════════════════════════ -->
-<section class="portfolio-section section" id="portfolio">
-  <div class="wrap">
-    <div class="portfolio-header">
-      <div>
-        <div class="section-label reveal" data-en="04 · Selected work" data-da="04 · Udvalgte projekter">04 · Selected work</div>
-        <h2 class="section-title reveal d1">Recent <em>projects.</em></h2>
-      </div>
-      <a href="#contact" class="btn btn-outline reveal d2">
-        <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
-        <span data-en="All projects" data-da="Alle projekter">All projects</span>
-      </a>
-    </div>
-    <div class="portfolio-grid">
-      <a href="#" class="project p1 reveal d1">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em data-en="Søhus" data-da="Søhus">Søhus</em> <span data-en="House" data-da="Hus">House</span></div>
-          <div class="project-tag" data-en="Residential · 2025" data-da="Bolig · 2025">Residential · 2025</div>
-        </div>
-      </a>
-      <a href="#" class="project p2 reveal d2">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em>Egholm</em></div>
-          <div class="project-tag" data-en="Refurbishment · 2024" data-da="Ombygning · 2024">Refurbishment · 2024</div>
-        </div>
-      </a>
-      <a href="#" class="project p3 reveal d1">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em>Brønshøj</em> <span data-en="Block" data-da="Karré">Block</span></div>
-          <div class="project-tag" data-en="Residential · 2024" data-da="Bolig · 2024">Residential · 2024</div>
-        </div>
-      </a>
-      <a href="#" class="project p4 reveal d2">
-        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1200&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em>Nordhavn</em> <span data-en="Pavilion" data-da="Pavillon">Pavilion</span></div>
-          <div class="project-tag" data-en="Public · 2025" data-da="Offentlig · 2025">Public · 2025</div>
-        </div>
-      </a>
-      <a href="#" class="project p5 reveal d1">
-        <img src="https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=800&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em>Klampenborg</em></div>
-          <div class="project-tag" data-en="Villa · 2023" data-da="Villa · 2023">Villa · 2023</div>
-        </div>
-      </a>
-      <a href="#" class="project p6 reveal d2">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em>Frederiksberg</em></div>
-          <div class="project-tag" data-en="Interior · 2024" data-da="Interiør · 2024">Interior · 2024</div>
-        </div>
-      </a>
-      <a href="#" class="project p7 reveal d3">
-        <img src="https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=800&q=80" alt="">
-        <div class="project-info">
-          <div class="project-name"><em>Vesterbro</em> <span data-en="Attic" data-da="Tagbolig">Attic</span></div>
-          <div class="project-tag" data-en="Refurbishment · 2024" data-da="Ombygning · 2024">Refurbishment · 2024</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     WORKFLOW
-════════════════════════════════════════ -->
-<section class="workflow-section">
-  <div class="wrap">
-    <div class="section-label reveal" style="color:var(--blue-bright)">
-      <span data-en="How it works" data-da="Sådan fungerer det">How it works</span>
-    </div>
-    <h2 class="section-title reveal d1" style="color:var(--light);">
-      From first call<br><em>to finished build.</em>
-    </h2>
-
-    <div class="workflow-steps" id="workflowSteps">
-      <!-- Línea vertical -->
-      <div class="workflow-line">
-        <div class="workflow-line-fill" id="workflowLineFill"></div>
-      </div>
-
-      <!-- Paso 1 -->
-      <div class="workflow-step" data-workflow-step>
-        <div class="workflow-content-left">
-          <span class="workflow-step-num">01</span>
-          <h3 class="workflow-step-title">First <em>conversation</em></h3>
-          <p class="workflow-step-desc" data-en="A free 30-minute call to understand your site, your brief and your vision. No pressure, no commitment — just a good conversation." data-da="Et gratis 30-minutters opkald for at forstå din grund og din vision.">A free 30-minute call to understand your site, your brief and your vision. No pressure, no commitment — just a good conversation.</p>
-          <span class="workflow-step-time">
-            <svg class="workflow-step-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
-            30 min · Free
-          </span>
-        </div>
-        <div class="workflow-node">
-          <div class="workflow-node-circle">01</div>
-        </div>
-        <div class="workflow-content-right">
-          <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;" viewBox="0 0 64 64"><rect x="8" y="16" width="34" height="32" rx="3"/><path d="M42 26l14-7v26l-14-7z"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;" data-en="Google Meet or in-person" data-da="Google Meet eller fysisk møde">Google Meet or in-person</p>
-        </div>
-      </div>
-
-      <!-- Paso 2 -->
-      <div class="workflow-step alt" data-workflow-step>
-        <div class="workflow-content-left">
-          <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;margin-left:auto;display:block;" viewBox="0 0 64 64"><rect x="8" y="8" width="48" height="48" rx="2"/><path d="M20 32h24M20 22h16M20 42h20"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;" data-en="Plans, sections &amp; estimate" data-da="Planer, snit &amp; overslag">Plans, sections & estimate</p>
-        </div>
-        <div class="workflow-node">
-          <div class="workflow-node-circle">02</div>
-        </div>
-        <div class="workflow-content-right">
-          <span class="workflow-step-num">02</span>
-          <h3 class="workflow-step-title">Sketch <em>proposal</em></h3>
-          <p class="workflow-step-desc" data-en="A first design proposal with plans, sections and a rough cost estimate. We walk through it together and you decide if it feels right." data-da="Et første designforslag med planer, snit og et groft prisestimat.">A first design proposal with plans, sections and a rough cost estimate. We walk through it together and you decide if it feels right.</p>
-          <span class="workflow-step-time">
-            <svg class="workflow-step-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
-            2–4 weeks
-          </span>
-        </div>
-      </div>
-
-      <!-- Paso 3 -->
-      <div class="workflow-step" data-workflow-step>
-        <div class="workflow-content-left">
-          <span class="workflow-step-num">03</span>
-          <h3 class="workflow-step-title">Permit <em>drawings</em></h3>
-          <p class="workflow-step-desc" data-en="We prepare and submit the building permit application to the local municipality with all required documentation." data-da="Vi udarbejder og indsender byggetilladelsen til kommunen.">We prepare and submit the building permit application to the local municipality with all required documentation.</p>
-          <span class="workflow-step-time">
-            <svg class="workflow-step-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
-            4–8 weeks
-          </span>
-        </div>
-        <div class="workflow-node">
-          <div class="workflow-node-circle">03</div>
-        </div>
-        <div class="workflow-content-right">
-          <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;" viewBox="0 0 64 64"><path d="M16 56V24L32 8 48 24v32"/><path d="M24 56V38h16v18"/><rect x="28" y="18" width="8" height="8" rx="1"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;" data-en="Municipality approved" data-da="Godkendt af kommunen">Municipality approved</p>
-        </div>
-      </div>
-
-      <!-- Paso 4 -->
-      <div class="workflow-step alt" data-workflow-step>
-        <div class="workflow-content-left">
-          <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;margin-left:auto;display:block;" viewBox="0 0 64 64"><path d="M12 52V16l20-8 20 8v36"/><path d="M24 52V36h16v16"/><path d="M12 28h40M12 40h40"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;" data-en="Eurocode certified" data-da="Eurocode-certificeret">Eurocode certified</p>
-        </div>
-        <div class="workflow-node">
-          <div class="workflow-node-circle">04</div>
-        </div>
-        <div class="workflow-content-right">
-          <span class="workflow-step-num">04</span>
-          <h3 class="workflow-step-title">Structural <em>calculation</em></h3>
-          <p class="workflow-step-desc" data-en="Eurocode-compliant calculation report for the structure, signed by our certified structural engineer." data-da="Eurocode-overholdt beregningsrapport, underskrevet af vores certificerede statiker.">Eurocode-compliant calculation report for the structure, signed by our certified structural engineer.</p>
-          <span class="workflow-step-time">
-            <svg class="workflow-step-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
-            3–6 weeks
-          </span>
-        </div>
-      </div>
-
-      <!-- Paso 5 -->
-      <div class="workflow-step" data-workflow-step>
-        <div class="workflow-content-left">
-          <span class="workflow-step-num">05</span>
-          <h3 class="workflow-step-title">Construction <em>documents</em></h3>
-          <p class="workflow-step-desc" data-en="Detailed drawings, material specs and tender documents — everything the contractor needs to build the project well." data-da="Detaljerede tegninger, materialebeskrivelser og udbudsmateriale.">Detailed drawings, material specs and tender documents — everything the contractor needs to build the project well.</p>
-          <span class="workflow-step-time">
-            <svg class="workflow-step-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
-            6–10 weeks
-          </span>
-        </div>
-        <div class="workflow-node">
-          <div class="workflow-node-circle">05</div>
-        </div>
-        <div class="workflow-content-right">
-          <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;" viewBox="0 0 64 64"><path d="M16 8h32v48H16z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;" data-en="Ready to tender" data-da="Klar til udbud">Ready to tender</p>
-        </div>
-      </div>
-
-      <!-- Paso 6 — Final -->
-      <div class="workflow-step alt" data-workflow-step>
-        <div class="workflow-content-left">
-          <svg style="width:64px;height:64px;stroke:var(--blue);fill:none;stroke-width:0.8;opacity:0.5;margin-left:auto;display:block;" viewBox="0 0 64 64"><path d="M32 12l4 8 9 1-6.5 6.5 1.5 9L32 32l-8 4.5 1.5-9L19 21l9-1z"/><circle cx="32" cy="32" r="20"/></svg>
-          <p style="font-size:13px;color:var(--light-faded);margin-top:12px;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;text-align:right;" data-en="Keys handed over" data-da="Nøgler afleveret">Keys handed over</p>
-        </div>
-        <div class="workflow-node">
-          <div class="workflow-node-circle" style="border-color:var(--blue-bright);color:var(--blue-bright);">06</div>
-        </div>
-        <div class="workflow-content-right">
-          <span class="workflow-step-num">06</span>
-          <h3 class="workflow-step-title">On-site <em>supervision</em></h3>
-          <p class="workflow-step-desc" data-en="Regular site visits during construction to ensure the project is built as drawn — and to solve the small surprises that always appear." data-da="Regelmæssige besøg på pladsen under byggeriet.">Regular site visits during construction to ensure the project is built as drawn — and to solve the small surprises that always appear.</p>
-          <span class="workflow-step-time">
-            <svg class="workflow-step-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
-            Through build
-          </span>
-        </div>
-      </div>
-
-    </div><!-- end workflow-steps -->
-  </div>
-</section>
-
-<!-- HORIZONTAL SCROLL CAROUSEL -->
-<div class="h-scroll-wrapper" id="hScrollWrapper">
-  <div class="h-scroll-sticky" style="background:var(--dark);">
-    <div class="h-scroll-header">
-      <div>
-        <div class="section-label" style="color:var(--blue-bright)">
-          <span data-en="Featured work" data-da="Udvalgte projekter">Featured work</span>
-        </div>
-        <p style="font-family:var(--serif);font-size:clamp(28px,4vw,56px);font-weight:400;letter-spacing:-0.012em;color:var(--light);line-height:1.05;">
-          Projects that<br><em style="font-style:italic;color:var(--blue-bright)">speak quietly.</em>
-        </p>
-      </div>
-      <div class="h-scroll-progress" id="hScrollDots">
-        <div class="h-scroll-progress-dot active"></div>
-        <div class="h-scroll-progress-dot"></div>
-        <div class="h-scroll-progress-dot"></div>
-        <div class="h-scroll-progress-dot"></div>
-        <div class="h-scroll-progress-dot"></div>
-      </div>
-    </div>
-    <div class="h-scroll-track" id="hScrollTrack">
-      <div class="h-scroll-slide">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=85" alt="Søhus House">
-        <div class="h-scroll-caption">
-          <div class="h-scroll-caption-name"><em>Søhus</em> House</div>
-          <div class="h-scroll-caption-tag" data-en="Residential · 2025" data-da="Bolig · 2025">Residential · 2025</div>
-        </div>
-      </div>
-      <div class="h-scroll-slide">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=85" alt="Egholm">
-        <div class="h-scroll-caption">
-          <div class="h-scroll-caption-name"><em>Egholm</em></div>
-          <div class="h-scroll-caption-tag" data-en="Refurbishment · 2024" data-da="Ombygning · 2024">Refurbishment · 2024</div>
-        </div>
-      </div>
-      <div class="h-scroll-slide">
-        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1400&q=85" alt="Nordhavn Pavilion">
-        <div class="h-scroll-caption">
-          <div class="h-scroll-caption-name"><em>Nordhavn</em> Pavilion</div>
-          <div class="h-scroll-caption-tag" data-en="Public · 2025" data-da="Offentlig · 2025">Public · 2025</div>
-        </div>
-      </div>
-      <div class="h-scroll-slide">
-        <img src="https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=1400&q=85" alt="Klampenborg">
-        <div class="h-scroll-caption">
-          <div class="h-scroll-caption-name"><em>Klampenborg</em></div>
-          <div class="h-scroll-caption-tag" data-en="Villa · 2023" data-da="Villa · 2023">Villa · 2023</div>
-        </div>
-      </div>
-      <div class="h-scroll-slide">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1400&q=85" alt="Frederiksberg">
-        <div class="h-scroll-caption">
-          <div class="h-scroll-caption-name"><em>Frederiksberg</em></div>
-          <div class="h-scroll-caption-tag" data-en="Interior · 2024" data-da="Interiør · 2024">Interior · 2024</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PHOTO BREAK 4 -->
-<div class="photo-break" data-parallax>
-  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e03d6bce9a1?w=2400&q=90')"></div>
-  <div class="photo-break-overlay"></div>
-  <div class="photo-break-label">
-    <span data-en="From concept to construction" data-da="Fra koncept til byggeri">From concept to construction</span>
-    <h3>One team, <em>every step.</em></h3>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════
-     PROCESS
-════════════════════════════════════════ -->
-<section class="process-section section" id="process">
-  <div class="wrap">
-    <div class="section-label reveal" data-en="05 · How we work" data-da="05 · Sådan arbejder vi">05 · How we work</div>
-    <h2 class="section-title reveal d1">From sketch <em>to keys.</em></h2>
-    <div class="process-list">
-      <div class="process-row reveal">
-        <div class="process-step">01</div>
-        <div><h4><span data-en="First" data-da="Første">First</span> <em data-en="conversation" data-da="samtale">conversation</em></h4></div>
-        <p data-en="A 30-minute meeting — in person or on Google Meet — to understand your site, your brief and your dreams for the project. Always free." data-da="Et 30-minutters møde — fysisk eller på Google Meet — for at forstå din grund, dit projekt og dine drømme. Altid gratis.">A 30-minute meeting — in person or on Google Meet — to understand your site, your brief and your dreams for the project. Always free.</p>
-        <div class="process-time" data-en="30 min · Free" data-da="30 min · Gratis">30 min · Free</div>
-      </div>
-      <div class="process-row reveal">
-        <div class="process-step">02</div>
-        <div><h4><span data-en="Sketch" data-da="Skitse-">Sketch</span> <em data-en="proposal" data-da="forslag">proposal</em></h4></div>
-        <p data-en="A first design proposal with plans, sections and a rough estimate of cost. We sit down, walk through it, and you decide if it feels right." data-da="Et første designforslag med planer, snit og et groft prisestimat.">A first design proposal with plans, sections and a rough estimate of cost. We sit down, walk through it, and you decide if it feels right.</p>
-        <div class="process-time" data-en="2–4 weeks" data-da="2–4 uger">2–4 weeks</div>
-      </div>
-      <div class="process-row reveal">
-        <div class="process-step">03</div>
-        <div><h4><span data-en="Permit" data-da="Myndigheds-">Permit</span> <em data-en="drawings" data-da="projekt">drawings</em></h4></div>
-        <p data-en="We prepare and submit the building permit application to the local municipality with all required documentation." data-da="Vi udarbejder og indsender byggetilladelsen til kommunen.">We prepare and submit the building permit application (byggetilladelse) to the local municipality with all required documentation.</p>
-        <div class="process-time" data-en="4–8 weeks" data-da="4–8 uger">4–8 weeks</div>
-      </div>
-      <div class="process-row reveal">
-        <div class="process-step">04</div>
-        <div><h4><span data-en="Structural" data-da="Strukturel">Structural</span> <em data-en="calculation" data-da="beregning">calculation</em></h4></div>
-        <p data-en="Eurocode-compliant calculation report for the structure, signed by our certified structural engineer." data-da="Eurocode-overholdt beregningsrapport for konstruktionen.">Eurocode-compliant calculation report for the structure, signed by our certified structural engineer (certificeret statiker).</p>
-        <div class="process-time" data-en="3–6 weeks" data-da="3–6 uger">3–6 weeks</div>
-      </div>
-      <div class="process-row reveal">
-        <div class="process-step">05</div>
-        <div><h4><span data-en="Construction" data-da="Hoved-">Construction</span> <em data-en="documents" data-da="projekt">documents</em></h4></div>
-        <p data-en="Detailed drawings, material specifications and tender documents — everything the contractor needs to build the project well." data-da="Detaljerede tegninger, materialebeskrivelser og udbudsmateriale.">Detailed drawings, material specifications and tender documents — everything the contractor needs to build the project well.</p>
-        <div class="process-time" data-en="6–10 weeks" data-da="6–10 uger">6–10 weeks</div>
-      </div>
-      <div class="process-row reveal">
-        <div class="process-step">06</div>
-        <div><h4><span data-en="On-site" data-da="Tilsyn">On-site</span> <em data-en="supervision" data-da="på pladsen">supervision</em></h4></div>
-        <p data-en="Regular site visits during construction to ensure the project is built as drawn." data-da="Regelmæssige besøg på pladsen under byggeriet.">Regular site visits during construction to ensure the project is built as drawn — and to solve the small surprises that always appear.</p>
-        <div class="process-time" data-en="Through build" data-da="Hele byggeriet">Through build</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO BREAK 5 -->
-<div class="photo-break" data-parallax>
-  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=2400&q=90')"></div>
-  <div class="photo-break-overlay"></div>
-  <div class="photo-break-label">
-    <span data-en="Copenhagen · Denmark" data-da="København · Danmark">Copenhagen · Denmark</span>
-    <h3>Where vision <em>meets</em><br>execution.</h3>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════
-     TESTIMONIALS
-════════════════════════════════════════ -->
-<section class="testimonials-section section" id="testimonials">
+<section class="testimonials-section section" id="testimonials" style="display:none">
   <div class="wrap">
     <div class="section-label reveal" data-en="06 · What clients say" data-da="06 · Hvad kunder siger">06 · What clients say</div>
     <h2 class="section-title reveal d1">Words from <em>our clients.</em></h2>
@@ -907,28 +596,28 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></svg>
           <span>Google Meet</span>
         </div>
-        <div class="banner-label reveal d1" data-en="07 · Book a meeting" data-da="07 · Book et møde">07 · Book a meeting</div>
+        <div class="banner-label reveal d1" data-en="06 · Book a meeting" data-da="06 · Book et møde">06 · Book et møde</div>
         <h2 class="banner-title reveal d2">
           Let's talk<br><em>about your project.</em>
         </h2>
         <p class="banner-desc reveal d3" data-en="Book a free 30-minute video call. We'll discuss your site, your idea and the kind of building you'd like to make. After the call we'll send you a written brief and an indicative timeline — no commitment, no pressure." data-da="Book et gratis 30-minutters videokald. Uden forpligtelse, uden pres.">Book a free 30-minute video call. We'll discuss your site, your idea and the kind of building you'd like to make. After the call we'll send you a written brief and an indicative timeline — no commitment, no pressure.</p>
         <div class="reveal d4">
           <div class="info-block">
-            <svg class="info-icon" viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><path d="M18 10v8l5 3"/></svg>
+            <svg class="info-icon ic" aria-hidden="true"><use href="icons.svg#i-clock"/></svg>
             <div class="info-block-text">
               <small data-en="Duration" data-da="Varighed">Duration</small>
               <strong data-en="30 minutes · Free of charge" data-da="30 minutter · Gratis">30 minutes · Free of charge</strong>
             </div>
           </div>
           <div class="info-block">
-            <svg class="info-icon" viewBox="0 0 36 36"><rect x="4" y="9" width="18" height="18" rx="2"/><path d="M22 15l9-4.5v15L22 21z"/></svg>
+            <svg class="info-icon ic" aria-hidden="true"><use href="icons.svg#i-video"/></svg>
             <div class="info-block-text">
               <small data-en="Platform" data-da="Platform">Platform</small>
               <strong data-en="Google Meet · Link sent by email" data-da="Google Meet · Link sendes på email">Google Meet · Link sent by email</strong>
             </div>
           </div>
           <div class="info-block">
-            <svg class="info-icon" viewBox="0 0 36 36"><path d="M6 28V12l12-6 12 6v16M14 28v-9h8v9M6 28h24"/></svg>
+            <svg class="info-icon ic" aria-hidden="true"><use href="icons.svg#i-house"/></svg>
             <div class="info-block-text">
               <small data-en="What we'll cover" data-da="Hvad vi taler om">What we'll cover</small>
               <strong data-en="Project scope, budget, timeline, next steps" data-da="Projektomfang, budget, tidsplan, næste skridt">Project scope, budget, timeline, next steps</strong>
@@ -1001,17 +690,17 @@
 ════════════════════════════════════════ -->
 <section class="contact-section section" id="contact">
   <div class="wrap">
-    <div class="section-label reveal" data-en="08 · Contact" data-da="08 · Kontakt">08 · Contact</div>
+    <div class="section-label reveal" data-en="07 · Contact" data-da="07 · Kontakt">07 · Kontakt</div>
     <h2 class="section-title reveal d1" data-en="Or just write to us." data-da="Eller skriv bare til os.">Eller skriv bare <em>til os.</em></h2>
     <div class="contact-inner">
       <div class="contact-info">
         <p class="reveal" data-en="If a video call feels like too much for now, drop us a line. We read every message and answer within one working day." data-da="Skriv til os. Vi læser hver besked og svarer inden for én arbejdsdag.">Skriv til os. Vi læser hver besked og svarer inden for én arbejdsdag.</p>
         <ul class="contact-list reveal d1">
-          <li><small data-en="Studio" data-da="Studio">Studio</small><span>Refsnæsgade 14, 2200 København N</span></li>
-          <li><small data-en="Email" data-da="Email">Email</small><a href="mailto:hello@andagain.dk">hello@andagain.dk</a></li>
-          <li><small data-en="Phone" data-da="Telefon">Telefon</small><a href="tel:+4550149558">+45 50 14 95 58</a></li>
-          <li><small data-en="CVR" data-da="CVR">CVR</small><span>DK 44 55 66 77</span></li>
-          <li><small data-en="Hours" data-da="Åbningstider">Hours</small><span data-en="Mon–Fri · 09:00–17:00" data-da="Man–Fre · 09:00–17:00">Mon–Fri · 09:00–17:00</span></li>
+          <li><small><svg class="ic" aria-hidden="true"><use href="icons.svg#i-pin"/></svg><span data-en="Studio" data-da="Studio">Studio</span></small><span>Refsnæsgade 14, 2200 København N</span></li>
+          <li><small><svg class="ic" aria-hidden="true"><use href="icons.svg#i-mail"/></svg><span data-en="Email" data-da="Email">Email</span></small><a href="mailto:hello@andagain.dk">hello@andagain.dk</a></li>
+          <li><small><svg class="ic" aria-hidden="true"><use href="icons.svg#i-phone"/></svg><span data-en="Phone" data-da="Telefon">Telefon</span></small><a href="tel:+4550149558">+45 50 14 95 58</a></li>
+          <li><small><svg class="ic" aria-hidden="true"><use href="icons.svg#i-doc"/></svg><span data-en="CVR" data-da="CVR">CVR</span></small><span>DK 44 55 66 77</span></li>
+          <li><small><svg class="ic" aria-hidden="true"><use href="icons.svg#i-clock"/></svg><span data-en="Hours" data-da="Åbningstider">Hours</span></small><span data-en="Mon–Fri · 09:00–17:00" data-da="Man–Fre · 09:00–17:00">Mon–Fri · 09:00–17:00</span></li>
         </ul>
       </div>
       <div class="form-light reveal d2">
@@ -1071,7 +760,7 @@
         <a href="nybyggeri.html" data-en="New build" data-da="Nybyggeri">Nybyggeri</a>
         <a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a>
         <a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a>
-        <a href="#portfolio" data-en="Projects" data-da="Projekter">Projects</a>
+        <a href="#portfolio" data-en="Inspiration" data-da="Inspiration">Inspiration</a>
       </div>
       <div class="footer-col">
         <h5 data-en="Connect" data-da="Forbind">Connect</h5>
@@ -1502,82 +1191,6 @@
     });
   });
 
-  /* ── Scroll Video ── */
-  (function() {
-    const section = document.querySelector('.scroll-video-section');
-    const video   = document.querySelector('.scroll-video-el');
-    const logo    = document.querySelector('.scroll-video-logo');
-    const barFill = document.querySelector('.scroll-video-bar-fill');
-    if (!section || !video) return;
-
-    video.pause();
-    try { video.currentTime = 0; } catch (e) {}
-
-    // Hasta que el vídeo tenga datos suficientes se mantiene el fondo negro,
-    // así no se ve el "salto" mientras carga.
-    function markReady() { video.classList.add('is-ready'); }
-    if (video.readyState >= 2) {
-      markReady();
-    } else {
-      video.addEventListener('loadeddata', markReady, { once: true });
-      video.addEventListener('canplay',    markReady, { once: true });
-    }
-
-    let animDone = false;
-    if (logo) {
-      setTimeout(() => {
-        logo.classList.add('logo-visible');
-        logo.addEventListener('animationend', () => { animDone = true; }, { once: true });
-      }, 200);
-    }
-
-    // Scroll drives a *target* only — seeks are throttled to animation frames
-    // and gated on the decoder being idle, so Chrome is never flooded.
-    let targetProgress = 0;
-    let displayTime    = 0;
-    let running        = false;
-
-    function computeProgress() {
-      const total    = section.offsetHeight - window.innerHeight;
-      const scrolled = -section.getBoundingClientRect().top;
-      return Math.min(1, Math.max(0, total > 0 ? scrolled / total : 0));
-    }
-
-    function onScroll() {
-      targetProgress = computeProgress();
-      // Cheap DOM updates can run every scroll event
-      if (barFill) barFill.style.width = (targetProgress * 100) + '%';
-      if (logo && animDone) {
-        const fadeOut = targetProgress > 0.7 ? 1 - ((targetProgress - 0.7) / 0.3) : 1;
-        logo.style.opacity   = Math.max(0, fadeOut);
-        logo.style.transform = 'scale(' + (1 + targetProgress * 0.05) + ')';
-      }
-      if (!running) { running = true; requestAnimationFrame(render); }
-    }
-
-    function render() {
-      const dur = video.duration || 0;
-      if (!dur) { running = false; return; }
-      const targetTime = targetProgress * dur;
-      // Ease toward the target so motion stays smooth between decoded frames
-      displayTime += (targetTime - displayTime) * 0.2;
-      if (Math.abs(targetTime - displayTime) < 0.004) displayTime = targetTime;
-      // Only issue a seek when the previous one has finished decoding
-      if (!video.seeking && Math.abs(video.currentTime - displayTime) > 0.01) {
-        try { video.currentTime = displayTime; } catch (e) {}
-      }
-      if (Math.abs(targetTime - displayTime) > 0.004) {
-        requestAnimationFrame(render);
-      } else {
-        running = false;
-      }
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    video.addEventListener('loadedmetadata', onScroll);
-    onScroll();
-  })();
 
 </script>
 

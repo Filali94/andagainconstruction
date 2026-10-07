@@ -31,10 +31,9 @@
   <span class="header-section-name" data-en="Engineering" data-da="Konstruktion">Konstruktion</span>
   <nav>
     <ul class="header-nav">
+      <li><a href="nybyggeri.html" data-en="New build" data-da="Nybyggeri">Nybyggeri</a></li>
       <li><a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a></li>
-      <li><a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a></li>
-      <li><a href="index.html#portfolio" data-en="Projects" data-da="Projekter">Projekter</a></li>
-      <li><a href="index.html#process" data-en="Process" data-da="Proces">Proces</a></li>
+      <li><a href="konstruktion.html" aria-current="page" data-en="Engineering" data-da="Konstruktion">Konstruktion</a></li>
       <li><a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a></li>
     </ul>
   </nav>
@@ -67,13 +66,13 @@
       <li class="menu-nav-item"><a href="nybyggeri.html"><span class="text-default" data-en="New build" data-da="Nybyggeri">Nybyggeri</span><span class="text-hover" data-en="New build" data-da="Nybyggeri">Nybyggeri</span></a></li>
       <li class="menu-nav-item"><a href="arkitektur.html"><span class="text-default" data-en="Architecture" data-da="Arkitektur">Arkitektur</span><span class="text-hover" data-en="Architecture" data-da="Arkitektur">Arkitektur</span></a></li>
       <li class="menu-nav-item"><a href="konstruktion.html"><span class="text-default" data-en="Engineering" data-da="Konstruktion">Konstruktion</span><span class="text-hover" data-en="Engineering" data-da="Konstruktion">Konstruktion</span></a></li>
-      <li class="menu-nav-item"><a href="index.html#portfolio"><span class="text-default" data-en="Projects" data-da="Projekter">Projekter</span><span class="text-hover" data-en="Projects" data-da="Projekter">Projekter</span></a></li>
+      <li class="menu-nav-item"><a href="index.html#portfolio"><span class="text-default" data-en="Inspiration" data-da="Inspiration">Inspiration</span><span class="text-hover" data-en="Inspiration" data-da="Inspiration">Inspiration</span></a></li>
       <li class="menu-nav-item"><a href="index.html#contact"><span class="text-default" data-en="Contact" data-da="Kontakt">Kontakt</span><span class="text-hover" data-en="Contact" data-da="Kontakt">Kontakt</span></a></li>
     </ul>
   </nav>
   <div class="menu-footer">
     <div class="menu-footer-col">
-      <a href="index.html#portfolio" data-en="Portfolio" data-da="Projekter">Projekter</a>
+      <a href="index.html#services" data-en="Services" data-da="Ydelser">Ydelser</a>
       <a href="index.html#contact" data-en="Contact" data-da="Kontakt">Kontakt</a>
     </div>
     <div class="menu-footer-col" style="text-align:right">
@@ -93,7 +92,7 @@
      HERO
 ════════════════════════════════════════ -->
 <section class="lp-hero">
-  <div class="lp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=2000&q=80')"></div>
+  <div class="lp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1741916540147-9be1d2b20d32?auto=format&amp;fit=crop&amp;w=2000&amp;q=80')"></div>
   <div class="wrap lp-hero-inner">
     <a href="index.html" class="lp-crumb">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12H4M11 19l-7-7 7-7"/></svg>
@@ -103,24 +102,28 @@
     <h1 data-en="Built to <em>last.</em>" data-da="Bygget til at <em>holde.</em>">Bygget til at <em>holde.</em></h1>
     <p class="lp-hero-lead" data-en="Structural calculations made to Eurocode and the Danish national annexes. We work in steel, concrete, timber and masonry — and we sign the projects we calculate." data-da="Statiske beregninger udført efter Eurocode og de danske nationale annekser. Vi arbejder i stål, beton, træ og murværk — og vi skriver under på de projekter vi beregner.">Statiske beregninger udført efter Eurocode og de danske nationale annekser. Vi arbejder i stål, beton, træ og murværk — og vi skriver under på de projekter vi beregner.</p>
     <div class="lp-hero-actions">
-      <a href="index.html#appointment" class="btn btn-blue" style="border-radius:100px;padding:14px 28px;">
-        <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+      <a href="index.html#appointment" class="btn btn-light btn-pill">
         <span data-en="Book a free consultation" data-da="Book en gratis samtale">Book en gratis samtale</span>
+        <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span>
       </a>
-      <a href="#ydelser" class="btn" style="border-radius:100px;padding:14px 28px;border:1px solid rgba(243,241,235,0.3);color:var(--light);">
+      <a href="#ydelser" class="btn btn-ghost-light btn-pill">
         <span data-en="See what's included" data-da="Se hvad der er med">Se hvad der er med</span>
+        <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow"/></svg></span>
       </a>
     </div>
     <div class="lp-hero-meta">
       <div>
+        <svg class="ic" aria-hidden="true"><use href="icons.svg#i-shield"/></svg>
         <small data-en="Standard" data-da="Regelsæt">Regelsæt</small>
         <strong>Eurocode · BR18</strong>
       </div>
       <div>
+        <svg class="ic" aria-hidden="true"><use href="icons.svg#i-truss"/></svg>
         <small data-en="Consequence class" data-da="Konsekvensklasse">Konsekvensklasse</small>
         <strong>KK1 – KK3</strong>
       </div>
       <div>
+        <svg class="ic" aria-hidden="true"><use href="icons.svg#i-permit"/></svg>
         <small data-en="Signed by" data-da="Underskrevet af">Underskrevet af</small>
         <strong data-en="Certified engineer" data-da="Certificeret statiker">Certificeret statiker</strong>
       </div>
@@ -131,16 +134,51 @@
 <!-- ════════════════════════════════════════
      INTRO
 ════════════════════════════════════════ -->
-<section class="section" style="background:var(--cream-light);border-top:1px solid var(--line-soft);">
+<section class="sec sec--alt">
+  <div class="wrap split">
+    <div class="split-text">
+      <div class="section-label reveal" data-en="What it is" data-da="Hvad det er">Hvad det er</div>
+      <h2 class="section-title reveal d1" data-en="The forces <em>behind it.</em>" data-da="Kræfterne <em>bagved.</em>">Kræfterne <em>bagved.</em></h2>
+      <p class="reveal" data-en="Structural calculation is the core of a building's strength and stability. We analyse the forces acting on the structure — compression, tension, bending and moment — and document that the building stands up to them, across consequence classes KK1 to KK3." data-da="Statiske beregninger er kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — og dokumenterer at bygningen kan holde til dem, i konsekvensklasse KK1 til KK3.">Statiske beregninger er kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — og dokumenterer at bygningen kan holde til dem, i konsekvensklasse KK1 til KK3.</p>
+      <p class="reveal d1" data-en="You can bring us a finished architectural project for calculation only, or let us handle both halves. Either way the documentation is signed by a certified structural engineer and ready for the municipality." data-da="Du kan komme med et færdigt arkitektprojekt til ren beregning, eller lade os håndtere begge halvdele. Uanset hvad er dokumentationen underskrevet af en certificeret statiker og klar til kommunen.">Du kan komme med et færdigt arkitektprojekt til ren beregning, eller lade os håndtere begge halvdele. Uanset hvad er dokumentationen underskrevet af en certificeret statiker og klar til kommunen.</p>
+    </div>
+    <figure class="frame reveal d1" data-depth style="--ratio: 4 / 5">
+      <div class="frame-inner"><img src="https://images.unsplash.com/photo-1764737734436-7eb904d3a4ab?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Ingeniør der måler på tekniske tegninger med en skydelære" loading="lazy" decoding="async"></div>
+      <figcaption class="float-card">
+        <span class="ibadge ibadge--sm"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-shield"/></svg></span></span>
+        <div><small data-en="Signed by" data-da="Underskrevet af">Underskrevet af</small><strong data-en="a certified engineer" data-da="certificeret statiker">certificeret statiker</strong></div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MATERIALER
+════════════════════════════════════════ -->
+<section class="sec">
   <div class="wrap">
-    <div class="lp-intro-grid">
-      <div>
-        <div class="section-label reveal" data-en="What it is" data-da="Hvad det er">Hvad det er</div>
-        <h2 class="section-title reveal d1" data-en="The forces <em>behind it.</em>" data-da="Kræfterne <em>bagved.</em>">Kræfterne <em>bagved.</em></h2>
+    <div class="section-label reveal" data-en="Materials" data-da="Materialer">Materialer</div>
+    <h2 class="section-title reveal d1" data-en="We calculate <em>in all four.</em>" data-da="Vi regner <em>i alle fire.</em>">Vi regner <em>i alle fire.</em></h2>
+    <div class="icon-row">
+      <div class="reveal d1">
+        <svg class="ic ic-lg" aria-hidden="true"><use href="icons.svg#i-beam"/></svg>
+        <h3 data-en="Steel" data-da="Stål">Stål</h3>
+        <p data-en="Beams, columns and frames — sized for the loads they will actually carry." data-da="Bjælker, søjler og rammer — dimensioneret til de laster, de reelt skal bære.">Bjælker, søjler og rammer — dimensioneret til de laster, de reelt skal bære.</p>
       </div>
-      <div>
-        <p class="reveal" data-en="Structural calculation is the core of a building's strength and stability. We analyse the forces acting on the structure — compression, tension, bending and moment — and document that the building stands up to them, across consequence classes KK1 to KK3." data-da="Statiske beregninger er kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — og dokumenterer at bygningen kan holde til dem, i konsekvensklasse KK1 til KK3.">Statiske beregninger er kernen i konstruktionens styrke og stabilitet. Vi analyserer kræfterne på bygningen — tryk, træk, bøjning og moment — og dokumenterer at bygningen kan holde til dem, i konsekvensklasse KK1 til KK3.</p>
-        <p class="reveal d1" data-en="You can bring us a finished architectural project for calculation only, or let us handle both halves. Either way the documentation is signed by a certified structural engineer and ready for the municipality." data-da="Du kan komme med et færdigt arkitektprojekt til ren beregning, eller lade os håndtere begge halvdele. Uanset hvad er dokumentationen underskrevet af en certificeret statiker og klar til kommunen.">Du kan komme med et færdigt arkitektprojekt til ren beregning, eller lade os håndtere begge halvdele. Uanset hvad er dokumentationen underskrevet af en certificeret statiker og klar til kommunen.</p>
+      <div class="reveal d2">
+        <svg class="ic ic-lg" aria-hidden="true"><use href="icons.svg#i-concrete"/></svg>
+        <h3 data-en="Concrete" data-da="Beton">Beton</h3>
+        <p data-en="Foundations, slabs and walls that keep the house stable for generations." data-da="Fundamenter, dæk og vægge, der holder huset stabilt i generationer.">Fundamenter, dæk og vægge, der holder huset stabilt i generationer.</p>
+      </div>
+      <div class="reveal d3">
+        <svg class="ic ic-lg" aria-hidden="true"><use href="icons.svg#i-wood"/></svg>
+        <h3 data-en="Timber &amp; CLT" data-da="Træ &amp; CLT">Træ &amp; CLT</h3>
+        <p data-en="Rafters, frames and cross-laminated timber — strong, light and with a low carbon footprint." data-da="Spær, rammer og krydslamineret træ — stærkt, let og med et lavt CO₂-aftryk.">Spær, rammer og krydslamineret træ — stærkt, let og med et lavt CO₂-aftryk.</p>
+      </div>
+      <div class="reveal d4">
+        <svg class="ic ic-lg" aria-hidden="true"><use href="icons.svg#i-brick"/></svg>
+        <h3 data-en="Masonry" data-da="Murværk">Murværk</h3>
+        <p data-en="Load-bearing walls and lintels — also when a wall has to go." data-da="Bærende vægge og overliggere — også når en væg skal fjernes.">Bærende vægge og overliggere — også når en væg skal fjernes.</p>
       </div>
     </div>
   </div>
@@ -149,107 +187,191 @@
 <!-- ════════════════════════════════════════
      YDELSER
 ════════════════════════════════════════ -->
-<section class="section" id="ydelser">
+<section class="sec sec--alt" id="ydelser">
   <div class="wrap">
-    <div class="section-label reveal" data-en="02 · Deliverables" data-da="02 · Ydelser">02 · Ydelser</div>
-    <h2 class="section-title reveal d1" data-en="Everything we <em>calculate.</em>" data-da="Alt vi <em>beregner.</em>">Alt vi <em>beregner.</em></h2>
-
-    <div class="lp-list reveal d1">
-      <div class="lp-list-row">
-        <span class="lp-list-num">01</span>
-        <div>
-          <h4 data-en="Static calculations · Eurocode" data-da="Statiske beregninger · Eurocode">Statiske beregninger · Eurocode</h4>
-          <p data-en="Full static documentation to Eurocode and the Danish national annexes — the package the municipality asks for." data-da="Fuld statisk dokumentation efter Eurocode og de danske nationale annekser — den pakke kommunen beder om.">Fuld statisk dokumentation efter Eurocode og de danske nationale annekser — den pakke kommunen beder om.</p>
-        </div>
-        <span class="lp-list-tag">KK1 – KK3</span>
+    <div class="sec-head">
+      <div>
+        <div class="section-label reveal" data-en="Deliverables" data-da="Ydelser">Ydelser</div>
+        <h2 class="section-title reveal d1" data-en="Everything we <em>calculate.</em>" data-da="Alt vi <em>beregner.</em>">Alt vi <em>beregner.</em></h2>
       </div>
+      <p class="sec-lead reveal d2" data-en="From a single beam to the whole house — documented to Eurocode and ready for the municipality." data-da="Fra en enkelt bjælke til hele huset — dokumenteret efter Eurocode og klar til kommunen.">Fra en enkelt bjælke til hele huset — dokumenteret efter Eurocode og klar til kommunen.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="reveal d1"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-truss"/></svg></span></span><span class="tag">KK1 – KK3</span></div>
+        <h3 data-en="Static calculations · Eurocode" data-da="Statiske beregninger · Eurocode">Statiske beregninger · Eurocode</h3>
+        <p data-en="Full static documentation to Eurocode and the Danish national annexes — the package the municipality asks for." data-da="Fuld statisk dokumentation efter Eurocode og de danske nationale annekser — den pakke kommunen beder om.">Fuld statisk dokumentation efter Eurocode og de danske nationale annekser — den pakke kommunen beder om.</p>
+      </article></div>
+      <div class="reveal d2"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-beam"/></svg></span></span><span class="tag" data-en="Load-bearing" data-da="Bærende">Bærende</span></div>
+        <h3 data-en="Steel &amp; concrete design" data-da="Stål- &amp; betondesign">Stål- &amp; betondesign</h3>
+        <p data-en="Beams, columns, slabs and foundations sized and documented — dimensioned for the loads they will actually carry." data-da="Bjælker, søjler, dæk og fundamenter dimensioneret og dokumenteret — beregnet til de laster de reelt skal bære.">Bjælker, søjler, dæk og fundamenter dimensioneret og dokumenteret — beregnet til de laster de reelt skal bære.</p>
+      </article></div>
+      <div class="reveal d3"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-wood"/></svg></span></span><span class="tag">CLT</span></div>
+        <h3 data-en="Timber &amp; CLT structures" data-da="Træ- &amp; CLT-konstruktioner">Træ- &amp; CLT-konstruktioner</h3>
+        <p data-en="Rafters, lintels, frames and cross-laminated timber — calculated for strength, deflection and the long life of the material." data-da="Spær, overliggere, rammer og krydslamineret træ — beregnet for styrke, nedbøjning og materialets lange levetid.">Spær, overliggere, rammer og krydslamineret træ — beregnet for styrke, nedbøjning og materialets lange levetid.</p>
+      </article></div>
+      <div class="reveal d4"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-brick"/></svg></span></span><span class="tag" data-en="Refurbishment" data-da="Ombygning">Ombygning</span></div>
+        <h3 data-en="Load-bearing walls, lintels &amp; rafters" data-da="Bærende vægge, overliggere &amp; spær">Bærende vægge, overliggere &amp; spær</h3>
+        <p data-en="Removing a wall or opening up a facade? We document what carries the load once it is gone — and what has to take over." data-da="Skal en væg fjernes eller en facade åbnes? Vi dokumenterer hvad der bærer lasten når den er væk — og hvad der skal overtage.">Skal en væg fjernes eller en facade åbnes? Vi dokumenterer hvad der bærer lasten når den er væk — og hvad der skal overtage.</p>
+      </article></div>
+      <div class="reveal d1"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-search"/></svg></span></span><span class="tag" data-en="Existing buildings" data-da="Eksisterende byggeri">Eksisterende byggeri</span></div>
+        <h3 data-en="Refurbishment assessments" data-da="Ombygning &amp; vurdering">Ombygning &amp; vurdering</h3>
+        <p data-en="An assessment of an existing structure before you commit — what it can take, and what it will cost to change." data-da="En vurdering af den eksisterende konstruktion før du binder dig — hvad den kan holde til, og hvad det koster at ændre.">En vurdering af den eksisterende konstruktion før du binder dig — hvad den kan holde til, og hvad det koster at ændre.</p>
+      </article></div>
+      <div class="reveal d2"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-thermo"/></svg></span></span><span class="tag" data-en="Energy" data-da="Energi">Energi</span></div>
+        <h3 data-en="Heat loss calculation" data-da="Varmetabsberegning">Varmetabsberegning</h3>
+        <p data-en="A detailed analysis of heat lost through walls, roof, windows and floors — finding the thermal bridges and showing where improving pays off." data-da="En detaljeret analyse af varmetabet gennem vægge, tag, vinduer og gulve — der finder kuldebroerne og viser, hvor det kan betale sig at forbedre.">En detaljeret analyse af varmetabet gennem vægge, tag, vinduer og gulve — der finder kuldebroerne og viser, hvor det kan betale sig at forbedre.</p>
+      </article></div>
+      <div class="reveal d3"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-chart"/></svg></span></span><span class="tag" data-en="Renovation" data-da="Renovering">Renovering</span></div>
+        <h3 data-en="Profitability calculation" data-da="Rentabilitetsberegning">Rentabilitetsberegning</h3>
+        <p data-en="A clear economic analysis of where an energy renovation pays off best — costs, savings and the payback period, in black and white." data-da="En klar økonomisk analyse af, hvor en energirenovering betaler sig bedst — omkostninger, besparelser og tilbagebetalingstid, sort på hvidt.">En klar økonomisk analyse af, hvor en energirenovering betaler sig bedst — omkostninger, besparelser og tilbagebetalingstid, sort på hvidt.</p>
+      </article></div>
+      <div class="reveal d4"><article class="feat">
+        <div class="feat-top"><span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-permit"/></svg></span></span><span class="tag" data-en="Permit" data-da="Tilladelse">Tilladelse</span></div>
+        <h3 data-en="Documentation for the municipality" data-da="Dokumentation til kommunen">Dokumentation til kommunen</h3>
+        <p data-en="Structural documentation ready to go with the permit application — signed by a certified engineer." data-da="Statisk dokumentation, der er klar til at sende med byggeansøgningen — underskrevet af certificeret statiker.">Statisk dokumentation, der er klar til at sende med byggeansøgningen — underskrevet af certificeret statiker.</p>
+      </article></div>
+    </div>
+  </div>
+</section>
 
-      <div class="lp-list-row">
-        <span class="lp-list-num">02</span>
-        <div>
-          <h4 data-en="Steel & concrete design" data-da="Stål- & betondesign">Stål- &amp; betondesign</h4>
-          <p data-en="Beams, columns, slabs and foundations sized and documented — dimensioned for the loads they will actually carry." data-da="Bjælker, søjler, dæk og fundamenter dimensioneret og dokumenteret — beregnet til de laster de reelt skal bære.">Bjælker, søjler, dæk og fundamenter dimensioneret og dokumenteret — beregnet til de laster de reelt skal bære.</p>
-        </div>
-        <span class="lp-list-tag" data-en="Load-bearing" data-da="Bærende">Bærende</span>
+<!-- PHOTO BAND -->
+<div class="photo-break photo-break--short" data-parallax>
+  <div class="photo-break-img" style="background-image:url('https://images.unsplash.com/photo-1737116748146-a6be49d6cb54?auto=format&amp;fit=crop&amp;w=2400&amp;q=80')"></div>
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-label">
+    <span data-en="Structural engineering" data-da="Statik">Statik</span>
+    <h3 data-en="What you don't see <em>carries it all.</em>" data-da="Det, du ikke ser, <em>bærer det hele.</em>">Det, du ikke ser, <em>bærer det hele.</em></h3>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     FORLØB
+════════════════════════════════════════ -->
+<section class="sec" id="forloeb">
+  <div class="wrap split split--top">
+    <div class="sticky-col">
+      <div class="section-label reveal" data-en="The process" data-da="Forløbet">Forløbet</div>
+      <h2 class="section-title reveal d1" data-en="From drawing <em>to signature.</em>" data-da="Fra tegning <em>til underskrift.</em>">Fra tegning <em>til underskrift.</em></h2>
+      <p class="sec-lead reveal d2" data-en="You know what the calculation involves and costs before you commit to anything." data-da="Du ved, hvad beregningen omfatter og koster, før du binder dig til noget.">Du ved, hvad beregningen omfatter og koster, før du binder dig til noget.</p>
+      <figure class="frame reveal d2" data-depth style="--ratio: 4 / 3; margin-top: 2.4rem">
+        <div class="frame-inner"><img src="https://images.unsplash.com/photo-1673978483073-f6e8e5b086c1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Betonkonstruktion under opførelse med stempler og forskalling" loading="lazy" decoding="async"></div>
+      </figure>
+    </div>
+    <div class="tl">
+      <div class="tl-row reveal">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-doc"/></svg></span></span>
+        <div><span class="tl-num">01</span><h3 data-en="Send the drawings" data-da="Send tegningerne">Send tegningerne</h3><p data-en="Book a call and attach your drawings — or let us draw them." data-da="Book en samtale og vedhæft dine tegninger — eller lad os tegne dem.">Book en samtale og vedhæft dine tegninger — eller lad os tegne dem.</p></div>
+        <span class="tag" data-en="30 min · Free" data-da="30 min · Gratis">30 min · Gratis</span>
       </div>
-
-      <div class="lp-list-row">
-        <span class="lp-list-num">03</span>
-        <div>
-          <h4 data-en="Timber & CLT structures" data-da="Træ- & CLT-konstruktioner">Træ- &amp; CLT-konstruktioner</h4>
-          <p data-en="Rafters, lintels, frames and cross-laminated timber — calculated for strength, deflection and the long life of the material." data-da="Spær, overliggere, rammer og krydslamineret træ — beregnet for styrke, nedbøjning og materialets lange levetid.">Spær, overliggere, rammer og krydslamineret træ — beregnet for styrke, nedbøjning og materialets lange levetid.</p>
-        </div>
-        <span class="lp-list-tag">CLT</span>
+      <div class="tl-row reveal">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-search"/></svg></span></span>
+        <div><span class="tl-num">02</span><h3 data-en="Assessment &amp; price" data-da="Vurdering &amp; pris">Vurdering &amp; pris</h3><p data-en="We review the project and tell you what the calculation involves and costs, before you commit." data-da="Vi gennemgår projektet og fortæller, hvad beregningen omfatter og koster, før du binder dig.">Vi gennemgår projektet og fortæller, hvad beregningen omfatter og koster, før du binder dig.</p></div>
+        <span class="tag" data-en="No commitment" data-da="Uforpligtende">Uforpligtende</span>
       </div>
-
-      <div class="lp-list-row">
-        <span class="lp-list-num">04</span>
-        <div>
-          <h4 data-en="Load-bearing walls, lintels & rafters" data-da="Bærende vægge, overliggere & spær">Bærende vægge, overliggere &amp; spær</h4>
-          <p data-en="Removing a wall or opening up a facade? We document what carries the load once it is gone — and what has to take over." data-da="Skal en væg fjernes eller en facade åbnes? Vi dokumenterer hvad der bærer lasten når den er væk — og hvad der skal overtage.">Skal en væg fjernes eller en facade åbnes? Vi dokumenterer hvad der bærer lasten når den er væk — og hvad der skal overtage.</p>
-        </div>
-        <span class="lp-list-tag" data-en="Refurbishment" data-da="Ombygning">Ombygning</span>
+      <div class="tl-row reveal">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-truss"/></svg></span></span>
+        <div><span class="tl-num">03</span><h3 data-en="Calculation" data-da="Beregning">Beregning</h3><p data-en="The structure is designed to Eurocode and the Danish national annexes." data-da="Konstruktionen dimensioneres efter Eurocode og de danske nationale annekser.">Konstruktionen dimensioneres efter Eurocode og de danske nationale annekser.</p></div>
+        <span class="tag" data-en="3–6 weeks" data-da="3–6 uger">3–6 uger</span>
       </div>
-
-      <div class="lp-list-row">
-        <span class="lp-list-num">05</span>
-        <div>
-          <h4 data-en="Refurbishment assessments" data-da="Ombygning & vurdering">Ombygning &amp; vurdering</h4>
-          <p data-en="An assessment of an existing structure before you commit — what it can take, and what it will cost to change." data-da="En vurdering af den eksisterende konstruktion før du binder dig — hvad den kan holde til, og hvad det koster at ændre.">En vurdering af den eksisterende konstruktion før du binder dig — hvad den kan holde til, og hvad det koster at ændre.</p>
-        </div>
-        <span class="lp-list-tag" data-en="Existing buildings" data-da="Eksisterende byggeri">Eksisterende byggeri</span>
-      </div>
-
-      <div class="lp-list-row">
-        <span class="lp-list-num">06</span>
-        <div>
-          <h4 data-en="Heat loss & profitability calculation" data-da="Varmetabs- & rentabilitetsberegning">Varmetabs- &amp; rentabilitetsberegning</h4>
-          <p data-en="Where the building loses heat through walls, roof, windows and floors — and where an energy renovation actually pays for itself." data-da="Hvor bygningen taber varme gennem vægge, tag, vinduer og gulve — og hvor en energirenovering rent faktisk betaler sig.">Hvor bygningen taber varme gennem vægge, tag, vinduer og gulve — og hvor en energirenovering rent faktisk betaler sig.</p>
-        </div>
-        <span class="lp-list-tag" data-en="Energy" data-da="Energi">Energi</span>
+      <div class="tl-row reveal">
+        <span class="ibadge"><span><svg class="ic" aria-hidden="true"><use href="icons.svg#i-shield"/></svg></span></span>
+        <div><span class="tl-num">04</span><h3 data-en="Signed documentation" data-da="Underskrevet dokumentation">Underskrevet dokumentation</h3><p data-en="You receive the structural documentation, signed by a certified engineer and ready for the municipality." data-da="Du får den statiske dokumentation, underskrevet af certificeret statiker og klar til kommunen.">Du får den statiske dokumentation, underskrevet af certificeret statiker og klar til kommunen.</p></div>
+        <span class="tag" data-en="Ready to submit" data-da="Klar til kommunen">Klar til kommunen</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════
-     SWITCH TIL ARKITEKTUR
+     FAQ
 ════════════════════════════════════════ -->
-<section class="lp-switch">
-  <div class="wrap" style="display:flex; flex-direction:column; gap:1px;">
-    <a href="nybyggeri.html" class="lp-switch-card reveal">
-      <div>
-        <div class="section-label" style="margin-bottom:10px;" data-en="Building from scratch?" data-da="Bygger du fra bunden?">Bygger du fra bunden?</div>
-        <h3 data-en="New build — plot to keys" data-da="Nybyggeri — grund til nøgle">Nybyggeri — grund til nøgle</h3>
-        <p data-en="If you want the whole project handled — architecture, engineering and the building permit — this is where it starts." data-da="Vil du have hele projektet håndteret — arkitektur, ingeniørrådgivning og byggetilladelse — er det her, det starter.">Vil du have hele projektet håndteret — arkitektur, ingeniørrådgivning og byggetilladelse — er det her, det starter.</p>
-      </div>
-      <span class="lp-switch-arrow">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-    <a href="arkitektur.html" class="lp-switch-card reveal d1">
-      <div>
-        <div class="section-label" style="margin-bottom:10px;" data-en="The other half" data-da="Den anden halvdel">Den anden halvdel</div>
-        <h3 data-en="Architecture" data-da="Arkitektur">Arkitektur</h3>
-        <p data-en="From the first sketch to the keys handed over — drawn with restraint, in the same studio." data-da="Fra første skitse til nøglerne afleveres — tegnet med omtanke, i samme studie.">Fra første skitse til nøglerne afleveres — tegnet med omtanke, i samme studie.</p>
-      </div>
-      <span class="lp-switch-arrow">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
-      </span>
-    </a>
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="section-label reveal" data-en="Questions" data-da="Spørgsmål">Spørgsmål</div>
+    <h2 class="section-title reveal d1" data-en="What we're <em>often asked.</em>" data-da="Det bliver vi <em>ofte spurgt om.</em>">Det bliver vi <em>ofte spurgt om.</em></h2>
+    <div class="lp-faq reveal d1">
+      <details class="lp-faq-item" open>
+        <summary>
+          <span data-en="What does a structural calculation cost?" data-da="Hvad koster en statisk beregning?">Hvad koster en statisk beregning?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="It depends on the size and complexity of the structure. Attach your drawings when you book the free conversation, and you'll get a price before you commit." data-da="Det afhænger af konstruktionens omfang og kompleksitet. Vedhæft tegningerne, når du booker den gratis samtale, så får du en pris, før du binder dig.">Det afhænger af konstruktionens omfang og kompleksitet. Vedhæft tegningerne, når du booker den gratis samtale, så får du en pris, før du binder dig.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="Can you calculate another architect's drawings?" data-da="Kan I regne på et andet arkitektfirmas tegninger?">Kan I regne på et andet arkitektfirmas tegninger?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="Yes. You can bring a finished architectural project for calculation only. We go through the drawings and tell you if anything needs adjusting before it goes to the municipality." data-da="Ja. Du kan komme med et færdigt arkitektprojekt til ren beregning. Vi gennemgår tegningerne og siger til, hvis noget skal justeres, før det sendes til kommunen.">Ja. Du kan komme med et færdigt arkitektprojekt til ren beregning. Vi gennemgår tegningerne og siger til, hvis noget skal justeres, før det sendes til kommunen.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="What is a consequence class (KK1–KK3)?" data-da="Hvad er en konsekvensklasse (KK1–KK3)?">Hvad er en konsekvensklasse (KK1–KK3)?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="The consequence class describes how serious it would be if the structure failed — from KK1 (low) to KK3 (high). It decides, among other things, how thoroughly the calculation has to be documented and checked. We determine it for your project at the start." data-da="Konsekvensklassen beskriver, hvor alvorlige følgerne ville være, hvis konstruktionen svigtede — fra KK1 (lav) til KK3 (høj). Den afgør blandt andet, hvor grundigt beregningen skal dokumenteres og kontrolleres. Vi fastlægger den for dit projekt fra start.">Konsekvensklassen beskriver, hvor alvorlige følgerne ville være, hvis konstruktionen svigtede — fra KK1 (lav) til KK3 (høj). Den afgør blandt andet, hvor grundigt beregningen skal dokumenteres og kontrolleres. Vi fastlægger den for dit projekt fra start.</p>
+      </details>
+      <details class="lp-faq-item">
+        <summary>
+          <span data-en="I want to remove a load-bearing wall — what's needed?" data-da="Jeg vil fjerne en bærende væg — hvad skal der til?">Jeg vil fjerne en bærende væg — hvad skal der til?</span>
+          <span class="lp-faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p data-en="It has to be documented what takes over the load — typically a beam in steel or timber. We calculate the solution and deliver the documentation the municipality and the builder need." data-da="Det skal dokumenteres, hvad der overtager lasten — typisk en bjælke i stål eller træ. Vi beregner løsningen og leverer den dokumentation, kommunen og håndværkeren skal bruge.">Det skal dokumenteres, hvad der overtager lasten — typisk en bjælke i stål eller træ. Vi beregner løsningen og leverer den dokumentation, kommunen og håndværkeren skal bruge.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MERE FRA AND AGAIN
+════════════════════════════════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="section-label reveal" data-en="More from And Again" data-da="Mere fra And Again">Mere fra And Again</div>
+    <div class="xgrid">
+      <a href="nybyggeri.html" class="xcard reveal d1">
+        <img src="https://images.unsplash.com/photo-1704307023984-813727deade9?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="" loading="lazy" decoding="async">
+        <div class="xcard-body">
+          <div>
+            <small data-en="Building from scratch?" data-da="Bygger du fra bunden?">Bygger du fra bunden?</small>
+            <h3 data-en="New build" data-da="Nybyggeri">Nybyggeri</h3>
+            <p data-en="The whole project — architecture, engineering and the building permit — under one roof." data-da="Hele projektet — arkitektur, statik og byggetilladelse — under ét tag.">Hele projektet — arkitektur, statik og byggetilladelse — under ét tag.</p>
+          </div>
+          <span class="dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span>
+        </div>
+      </a>
+      <a href="arkitektur.html" class="xcard reveal d2">
+        <img src="https://images.unsplash.com/photo-1774884736128-841eabe693ce?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="" loading="lazy" decoding="async">
+        <div class="xcard-body">
+          <div>
+            <small data-en="The other half" data-da="Den anden halvdel">Den anden halvdel</small>
+            <h3 data-en="Architecture" data-da="Arkitektur">Arkitektur</h3>
+            <p data-en="From the first sketch to the keys handed over — drawn with restraint, in the same studio." data-da="Fra første skitse til nøglerne afleveres — tegnet med omtanke, i samme studie.">Fra første skitse til nøglerne afleveres — tegnet med omtanke, i samme studie.</p>
+          </div>
+          <span class="dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-arrow-ur"/></svg></span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════
      CTA
 ════════════════════════════════════════ -->
-<section class="lp-cta">
+<section class="lp-cta lp-cta--img" style="--bg: url('https://images.unsplash.com/photo-1690719095815-549c60090c9f?auto=format&amp;fit=crop&amp;w=2000&amp;q=80')">
   <div class="wrap">
     <h2 data-en="Send us the <em>drawings.</em>" data-da="Send os <em>tegningerne.</em>">Send os <em>tegningerne.</em></h2>
     <p data-en="Book a free 30-minute video call and attach your drawings — we'll tell you what the calculation involves and what it costs, before you commit to anything." data-da="Book et gratis 30-minutters videokald og vedhæft dine tegninger — vi fortæller dig hvad beregningen indebærer og hvad den koster, før du binder dig til noget.">Book et gratis 30-minutters videokald og vedhæft dine tegninger — vi fortæller dig hvad beregningen indebærer og hvad den koster, før du binder dig til noget.</p>
-    <a href="index.html#appointment" class="btn btn-blue" style="border-radius:100px;padding:16px 32px;">
-      <svg viewBox="0 0 14 11" fill="none" width="14" height="11"><path d="M0.6 0V6H13.1" stroke="currentColor" stroke-width="1.2"/><rect x="9.19" y="2.23" width="5.56" height="5.56" transform="rotate(45 9.19 2.23)" stroke="currentColor" stroke-width="1.2"/></svg>
+    <a href="index.html#appointment" class="btn btn-light btn-pill">
       <span data-en="Book a meeting" data-da="Book et møde">Book et møde</span>
+      <span class="btn-dot"><svg class="ic" aria-hidden="true"><use href="icons.svg#i-calendar"/></svg></span>
     </a>
   </div>
 </section>
@@ -272,7 +394,7 @@
         <a href="nybyggeri.html" data-en="New build" data-da="Nybyggeri">Nybyggeri</a>
         <a href="arkitektur.html" data-en="Architecture" data-da="Arkitektur">Arkitektur</a>
         <a href="konstruktion.html" data-en="Engineering" data-da="Konstruktion">Konstruktion</a>
-        <a href="index.html#portfolio" data-en="Projects" data-da="Projekter">Projekter</a>
+        <a href="index.html#portfolio" data-en="Inspiration" data-da="Inspiration">Inspiration</a>
       </div>
       <div class="footer-col">
         <h5 data-en="Connect" data-da="Forbind">Forbind</h5>

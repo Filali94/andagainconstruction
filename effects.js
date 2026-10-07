@@ -1,6 +1,7 @@
 /* ══════════════════════════════════════════════════════════════
    effects.js — shared micro-interactions for every page
    · word-by-word heading reveals
+   · photo depth inside frames + filling process timelines
    · magnetic buttons
    · 3D tilt + light glare on project images
    · cursor spotlight on cards
@@ -63,9 +64,39 @@
     });
   }
 
+  /* ── 2. Scroll-linked depth ─────────────────────────────────
+     · framed photos drift inside their frame ([data-depth])
+     · process timelines fill their line as you read (.tl) */
+  const depthEls = Array.from(document.querySelectorAll('[data-depth]'));
+  const timelines = Array.from(document.querySelectorAll('.tl'));
+  if (!reduced && (depthEls.length || timelines.length)) {
+    let tick = false;
+    const update = () => {
+      tick = false;
+      const vh = window.innerHeight;
+      depthEls.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -80 || r.top > vh + 80) return;
+        const img = el.querySelector('img');
+        if (!img) return;
+        const t = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2); // -1 … 1
+        img.style.transform = 'translate3d(0,' + (t * 6).toFixed(2) + '%,0)';
+      });
+      timelines.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        const p = Math.min(1, Math.max(0, (vh * 0.62 - r.top) / r.height));
+        el.style.setProperty('--p', p.toFixed(3));
+      });
+    };
+    const onScroll = () => { if (!tick) { tick = true; requestAnimationFrame(update); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  }
+
   if (!finePointer || reduced) return;
 
-  /* ── 2. Magnetic buttons ─────────────────────────────────── */
+  /* ── 3. Magnetic buttons ─────────────────────────────────── */
   document.querySelectorAll('.btn, .header-cta').forEach((btn) => {
     const pull = btn.classList.contains('header-cta') ? 0.18 : 0.26;
     btn.style.transition = 'transform .5s cubic-bezier(.22,1,.36,1), background .3s, color .3s, border-color .3s, box-shadow .3s';
@@ -78,7 +109,7 @@
     btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
   });
 
-  /* ── 3. 3D tilt + glare on project images ───────────────── */
+  /* ── 4. 3D tilt + glare on project images ───────────────── */
   document.querySelectorAll('.project').forEach((card) => {
     const glare = document.createElement('span');
     glare.className = 'tilt-glare';
@@ -95,8 +126,8 @@
     card.addEventListener('pointerleave', () => { card.style.transform = ''; });
   });
 
-  /* ── 4. Cursor spotlight on cards ───────────────────────── */
-  document.querySelectorAll('.cap-card, .why-cell, .testimonial, .lp-switch-card').forEach((el) => {
+  /* ── 5. Cursor spotlight on cards ───────────────────────── */
+  document.querySelectorAll('.cap-card, .why-cell, .testimonial, .lp-switch-card, .feat').forEach((el) => {
     el.classList.add('has-spotlight');
     el.addEventListener('pointermove', (e) => {
       const r = el.getBoundingClientRect();

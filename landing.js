@@ -100,4 +100,34 @@ document.addEventListener('DOMContentLoaded', function () {
     if (bg) bg.style.transform = 'scale(1.06) translate3d(0,' + (window.scrollY * 0.12) + 'px,0)';
   }, { passive: true });
 
+  // ── Bandas de foto: zoom ligado al scroll + texto que aparece ──
+  const photoBreaks = document.querySelectorAll('[data-parallax]');
+  if (photoBreaks.length) {
+    const labelIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        const label = e.target.querySelector('.photo-break-label');
+        if (label) label.classList.toggle('visible', e.isIntersecting);
+      });
+    }, { threshold: 0.3 });
+    photoBreaks.forEach(s => labelIO.observe(s));
+
+    let zoomTick = false;
+    const updateZoom = () => {
+      zoomTick = false;
+      const vh = window.innerHeight;
+      photoBreaks.forEach(section => {
+        const img = section.querySelector('.photo-break-img');
+        if (!img) return;
+        const rect = section.getBoundingClientRect();
+        const progress = Math.min(1, Math.max(0, (vh - rect.top) / (vh + rect.height)));
+        img.style.transform = 'scale(' + (1.14 + progress * 0.12) + ') translate3d(0,' + ((progress - 0.5) * 80) + 'px,0)';
+      });
+    };
+    window.addEventListener('scroll', () => {
+      if (!zoomTick) { zoomTick = true; requestAnimationFrame(updateZoom); }
+    }, { passive: true });
+    window.addEventListener('resize', updateZoom);
+    updateZoom();
+  }
+
 });

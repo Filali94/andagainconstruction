@@ -19,24 +19,36 @@ function hasWebGL() {
   }
 }
 
+// As a page hero, the plot and the sketch draw themselves on load;
+// scrolling then carries the house from structure to lights-on.
+const INTRO = 0.31;
+const INTRO_MS = 2600;
+
 function setup(section) {
   section.classList.add('is-live');
   const canvas = section.querySelector('.build3d-canvas');
   const steps = [...section.querySelectorAll('.build3d-step')];
   const fill = section.querySelector('.build3d-progress-fill');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hero = section.classList.contains('build3d--hero');
 
   let current = reduced ? 1 : 0;
   let scene3d = null;
   let visible = false;
   let raf = 0;
   let lastStep = -1;
+  let introStart = 0;
 
-  function readProgress() {
+  function readProgress(now) {
     if (reduced) return 1;
     const r = section.getBoundingClientRect();
     const total = section.offsetHeight - window.innerHeight;
-    return total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    const s = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    if (!hero) return s;
+    if (s > 0.0005) return INTRO + s * (1 - INTRO);
+    if (!introStart) return 0;
+    const t = Math.min(1, Math.max(0, (now - introStart) / INTRO_MS));
+    return INTRO * (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
   }
 
   function updateUI(p) {
@@ -53,10 +65,11 @@ function setup(section) {
 
   function frame(time) {
     raf = 0;
-    const target = readProgress();
+    const target = readProgress(performance.now());
     current += (target - current) * 0.09;
     if (Math.abs(target - current) < 0.0004) current = target;
     updateUI(current);
+    section.classList.toggle('is-moving', current > (hero ? INTRO : 0) + 0.03);
     if (scene3d) section.classList.toggle('is-dusk', scene3d.render(current, time || 0) > 0.5);
     if (visible && !reduced) raf = requestAnimationFrame(frame);
   }
@@ -75,8 +88,10 @@ function setup(section) {
     if (!hasWebGL()) { section.classList.add('no-webgl'); return; }
     import(THREE_URL)
       .then((THREE) => {
-        scene3d = createScene(THREE, canvas, kick);
+        scene3d = createScene(THREE, canvas, kick, { hero });
         section.classList.add('is-ready');
+        // Let the loading screen clear before the pen starts drawing
+        if (hero) introStart = performance.now() + 700;
         kick();
       })
       .catch(() => section.classList.add('no-webgl'));
@@ -89,7 +104,7 @@ function setup(section) {
 
 /* ─────────────────────────────────────────────────────────────── */
 
-function createScene(THREE, canvas, onChange) {
+function createScene(THREE, canvas, onChange, opts = {}) {
   const mobile = matchMedia('(max-width: 768px)').matches;
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
@@ -364,8 +379,9 @@ function createScene(THREE, canvas, onChange) {
     vw = w; vh = h;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
-    if (w >= 900) camera.setViewOffset(w, h, -w * 0.16, 0, w, h);      // model sits right of the text
-    else if (w < 769) camera.setViewOffset(w, h, 0, h * 0.02, w, h);   // model sits between title and steps
+    if (w >= 900 && opts.hero) camera.setViewOffset(w, h, -w * 0.24, h * 0.06, w, h); // right of the headline, above the timeline
+    else if (w >= 900) camera.setViewOffset(w, h, -w * 0.16, 0, w, h);    // model sits right of the text
+    else if (w < 769) camera.setViewOffset(w, h, 0, h * (opts.hero ? -0.05 : 0.02), w, h); // model sits between title and steps
     else camera.clearViewOffset();
     camera.updateProjectionMatrix();
     onChange();
@@ -384,6 +400,7 @@ function createScene(THREE, canvas, onChange) {
   const cam = mobile
     ? { r0: 68, r1: 62, h0: 58, h1: 19, tx: 2.4 }
     : { r0: 44, r1: 47, h0: 50, h1: 12, tx: 3.4 };
+  if (opts.hero && !mobile) Object.assign(cam, { r0: 78, r1: 68, h0: 68, h1: 16 });
 
   /* ── One frame for progress p (0..1). Returns the dusk amount. ── */
   function render(p, time) {
