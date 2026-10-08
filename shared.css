@@ -31,8 +31,9 @@ input,textarea { -webkit-appearance: none; appearance: none; background: none; b
   --line:         rgba(26,23,18,0.14);
   --line-soft:    rgba(26,23,18,0.06);
   --line-dark:    rgba(243,241,235,0.15);
-  --mono:         'JetBrains Mono', monospace;
-  --sans:         'Outfit', sans-serif;
+  /* Only two typefaces on the site: Newsreader for headings, Geist for everything else */
+  --sans:         'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono:         var(--sans);   /* small uppercase labels now use Geist too */
   --serif:        'Newsreader', Georgia, serif;
 
   /* fluid.glass easings */
