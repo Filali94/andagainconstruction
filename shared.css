@@ -3192,3 +3192,75 @@ figure.project { margin: 0; }
 @media (max-width: 480px) {
   .header.is-bottom .header-section-name { left: auto; right: 58px; transform: none; font-size: 9.5px; }
 }
+
+/* ══════════════════════════════════════════
+   READABLE BODY TEXT — larger paragraphs site-wide
+   (headings untouched; only the text that explains things)
+══════════════════════════════════════════ */
+:root { --text-lg: clamp(17px, 1.25vw, 19px); --text-md: 16.5px; }
+body { font-size: 17px; }
+
+/* Main section paragraphs */
+.split-text p,
+.sec-lead,
+.portfolio-note,
+.contact-info p,
+.banner-desc,
+.lp-intro-grid p,
+.lp-cta p { font-size: var(--text-lg); line-height: 1.7; }
+
+/* Hero intros */
+.build3d-lead,
+.lp-hero-lead { font-size: clamp(17px, 1.4vw, 20px); font-weight: 400; }
+
+/* Card and list text */
+.feat p,
+.icon-row p,
+.steps4 p,
+.why-cell p,
+.svc-card p,
+.xcard p,
+.lp-list-row p,
+.lp-switch-card p,
+.process-row p,
+.service-desc,
+.modal-head p,
+.form-success p { font-size: var(--text-md); line-height: 1.65; }
+.tl-row p,
+.lp-faq-item p { font-size: var(--text-lg); line-height: 1.7; }
+.svc-list li { font-size: 16px; }
+.svc-list .ic { font-size: 17px; }
+
+/* 3D build steps */
+.build3d-step-body > p { font-size: 16px; max-width: 36ch; }
+@media (min-width: 769px) {
+  .build3d--hero .build3d-step-body > p { font-size: 15px; max-width: 26ch; }
+}
+
+/* Contact, booking, footer */
+.contact-list a, .contact-list span { font-size: 17px; }
+.info-block-text strong { font-size: 16px; }
+.footer-col a, .footer-col p { font-size: 15.5px; }
+.team-role { font-size: 15px; }
+.team-modal .team-info p { font-size: 16px !important; }
+/* 16px+ in form fields also stops iPhones from zooming in on tap */
+.field input, .field select, .field textarea { font-size: 16.5px; }
+
+/* Small mono labels: a touch bigger so they stay legible */
+.tag { font-size: 10.5px; }
+.trust-item small, .float-card small { font-size: 10.5px; }
+.trust-item strong { font-size: 20px; }
+
+@media (max-width: 768px) {
+  :root { --text-lg: 17px; --text-md: 16.5px; }
+  .build3d-lead { font-size: 16px; }
+  .lp-hero-lead { font-size: 17px; }
+}
+
+/* Short laptop screens (e.g. 1280×720): keep the hero headline and the step timeline apart */
+@media (min-width: 769px) and (max-height: 800px) {
+  .build3d--hero .build3d-ui { padding-top: 6.2rem; }
+  .build3d--hero .build3d-title { font-size: clamp(40px, 7.4vh, 64px); }
+  .build3d-lead { margin-top: 1rem; }
+  .build3d-actions { margin-top: 1.4rem; }
+}
