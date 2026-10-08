@@ -2924,7 +2924,7 @@ body::after {
 .build3d.is-dusk .btn-ghost,
 .build3d.no-webgl .btn-ghost,
 .build3d:not(.is-live) .btn-ghost { color: #F3F1EB; background: rgba(23,20,15,.35); box-shadow: inset 0 0 0 1px rgba(243,241,235,.3); }
-.build3d-fallback { background-image: url('https://images.unsplash.com/photo-1780689978569-9a281be2e4ec?auto=format&fit=crop&w=2000&q=80'); }
+.build3d-fallback { background-image: url('img/projekt-terrasse.jpg'); background-position: 70% center; }
 
 @media (max-width: 768px) {
   .build3d--hero { height: 400vh; }
@@ -3288,4 +3288,9 @@ body { font-size: 18px; }
 .feat-top .tag { white-space: normal; max-width: 62%; text-align: right; line-height: 1.35; }
 @media (max-width: 360px) {
   .tag { font-size: 10.5px; letter-spacing: .1em; }
+}
+
+/* Photo fallback (no WebGL) on phones: text runs over the whole render, so darken it evenly */
+@media (max-width: 768px) {
+  .build3d-fallback::after { background: linear-gradient(180deg, rgba(23,20,15,.84), rgba(23,20,15,.72)); }
 }
